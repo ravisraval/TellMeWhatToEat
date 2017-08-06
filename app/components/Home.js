@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Messages from './Messages';
 import Map from './Map';
+import AutoSearch from './Landing_page/auto_complete_container.js';
 
 class Home extends React.Component {
   render() {
@@ -44,6 +45,7 @@ class Home extends React.Component {
           </div>
         </div>
         <Map/>
+        <AutoSearch/>
       </div>
     );
   }
