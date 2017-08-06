@@ -8,8 +8,8 @@ class FindByLocation extends React.Component {
     let options = {
       types: ['addresses']
     };
-    let autoComplete = new google.maps.places.Autocomplete(searchLocation, options);
-    this.listeners(autoComplete);
+    // let autoComplete = new google.maps.places.Autocomplete(searchLocation, options);
+    // this.listeners(autoComplete);
   }
   //bonus: attempt to get browser history
 
