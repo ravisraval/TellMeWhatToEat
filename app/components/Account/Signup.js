@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { signup } from '../../actions/auth';
 import { facebookLogin, twitterLogin, googleLogin, vkLogin, githubLogin } from '../../actions/oauth';
 import Messages from '../Messages';
