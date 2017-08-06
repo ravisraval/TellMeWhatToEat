@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
-import AutoCompleteSearch from './auto_complete_search';
+import FindByLocation from './auto_complete_search.js';
 
 export default connect(
   null,
   null
-)(AutoCompleteSearch);
+)(FindByLocation);
