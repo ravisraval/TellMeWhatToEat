@@ -9,7 +9,7 @@ class Map extends React.Component {
     //which was an object with a title & pos
     //maybe have places[0] == home
     this.state = {
-      places: []
+      places: [{latLng: new google.maps.LatLng(37.7758, -122.435), title: "meow"}]
     };
   }
 
