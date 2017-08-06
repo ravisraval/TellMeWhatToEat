@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import Messages from './Messages';
 import Map from './Map';
 
-
 class Home extends React.Component {
   render() {
     return (
