@@ -9,6 +9,8 @@ import Signup from './components/Account/Signup';
 import Profile from './components/Account/Profile';
 import Forgot from './components/Account/Forgot';
 import Reset from './components/Account/Reset';
+import Test from './components/Test';
+import Test2 from './components/Test2';
 
 export default function getRoutes(store) {
   const ensureAuthenticated = (nextState, replace) => {
