@@ -16,7 +16,8 @@ class FindByLocation extends React.Component {
   listeners(autoComplete) {
     autoComplete.addListener('places_changed', () => {
       console.log("YUPppp");
-      let place = autoComplete.getPlaces();
+      let place = autoComplete.getPlace();
+      console.log(place.geometry.location);
       return place;
       //return address of place here, use this for additional api calls
     });
