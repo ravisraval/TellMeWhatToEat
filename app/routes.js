@@ -3,7 +3,6 @@ import { IndexRoute, Route } from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
 import Contact from './components/Contact';
-import Map from './components/Map';
 import NotFound from './components/NotFound';
 import Login from './components/Account/Login';
 import Signup from './components/Account/Signup';

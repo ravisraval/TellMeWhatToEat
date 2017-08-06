@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Test extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>No way</h1>
       </div>
     );
