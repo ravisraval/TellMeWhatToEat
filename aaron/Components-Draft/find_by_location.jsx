@@ -13,6 +13,10 @@ class FindByLocation extends React.Component {
   }
   //bonus: attempt to get browser history
 
+  handleSearch(e) {
+
+  }
+
   listeners(autoComplete) {
     autoComplete.addListener('places_changed', () => {
       let place = autoComplete.getPlace();
