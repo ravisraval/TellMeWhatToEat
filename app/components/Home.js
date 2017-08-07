@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Messages from './Messages';
 import Map from './Map';
 import AutoSearch from './Landing_page/auto_complete_container';
+import FindRestaurants from './find_restaurants';
 
 class Home extends React.Component {
   render() {
@@ -44,6 +45,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <FindRestaurants/>
         <Map/>
         <AutoSearch/>
       </div>

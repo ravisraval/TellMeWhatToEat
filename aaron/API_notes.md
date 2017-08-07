@@ -8,6 +8,11 @@ Yelp Fusion API Key:
 "expires_in": 15551999,
 "token_type": "Bearer"
 
+
+FourSquare API stuff:
+Client_id: 5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX
+Client_secret: CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B
+
 To authenticate API calls with the access token, set the Authorization HTTP header value as Bearer ACCESS_TOKEN.
 
 Initial API call will be a GET request
