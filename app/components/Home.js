@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Messages from './Messages';
-import Map from './Map';
-import AutoSearch from './Landing_page/auto_complete_container';
+// import Map from './Landing_page/Map';
+// import AutoSearch from './Landing_page/auto_complete_container';
+import ComboMapSearch from './Landing_page/combo_map_search';
 
 class Home extends React.Component {
   render() {
@@ -44,8 +45,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <Map/>
-        <AutoSearch/>
+        <ComboMapSearch/>
       </div>
     );
   }
