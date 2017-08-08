@@ -6,25 +6,35 @@ class AddressSearch extends React.Component {
     super(props);
     this.state = {
       lng: null,
-      lat: null
+      lat: null,
+      address: ""
     };
   }
 
-  componentDidUpdate() {
-    let self = this;
-    const geocoder = new google.maps.Geocoder;
+  update(field) {
+    return e => {
+      this.setState({
+        [field]: e.currentTarget.value
+      });
+   };
+  }
 
-    geocoder.geocode({'location': this.state}, function(results, status) {
-       if (status === 'OK') {
-         if (results[1]) {
-           self.searchLocation.value = results[1].formatted_address;
-         } else {
-           window.alert('No results found');
-         }
-       } else {
-         window.alert('Geocoder failed due to: ' + status);
-       }
-     });
+
+  componentDidUpdate() {
+    // let self = this;
+    // const geocoder = new google.maps.Geocoder;
+    //
+    // geocoder.geocode({'location': this.state}, function(results, status) {
+    //    if (status === 'OK') {
+    //      if (results[1]) {
+    //        self.searchLocation.value = results[1].formatted_address;
+    //      } else {
+    //        window.alert('No results found');
+    //      }
+    //    } else {
+    //      window.alert('Geocoder failed due to: ' + status);
+    //    }
+    //  });
   }
 
   getLocation() {
@@ -63,7 +73,11 @@ class AddressSearch extends React.Component {
   render() {
     return (
       <div>
-        <input id='searchLocation' placeholder='Enter your address'></input>
+        <input id='searchLocation'
+        placeholder='Enter your address'
+        value={this.props.address}
+        onChange={this.props.update('address')}
+        ></input>
       </div>
     );
   }
