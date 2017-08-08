@@ -10,7 +10,7 @@ class LandingPage extends React.Component {
       dineType: "All",
       address: ""
     };
-    this.update = this.update.bind(this);
+    this.updateAddress = this.updateAddress.bind(this);
   }
 
   handleSubmit(e) {
@@ -18,12 +18,10 @@ class LandingPage extends React.Component {
     //make call to search page with props
   }
 
-  update(field) {
-    return e => {
-      this.setState({
-        [field]: e.currentTarget.value
+  updateAddress(address) {
+    this.setState({
+      address: address
       });
-   };
   }
 
   updateList(field) {
@@ -49,10 +47,9 @@ class LandingPage extends React.Component {
     return (
       <div>
         {this.dineType()}
-        <AddressSearch update={this.update} address={this.state.address}/>
+        <AddressSearch updateAddress={this.updateAddress} address={this.state.address}/>
         <input type="submit" value="Tell Me What to Eat!"></input>
       </div>
-
     );
   }
 
