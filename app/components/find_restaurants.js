@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import RestaurantIndexItem from './restaurant_index_item';
 
 class FindRestaurants extends React.Component {
   constructor(props){
@@ -59,22 +60,20 @@ class FindRestaurants extends React.Component {
     let randomRestaurant;
     while (restaurantList.length < this.state.numRestaurants) {
       randomRestaurant = fooderies[Math.floor(Math.random() * ids.length)];
+      //fix for duplicates
       if (!restaurantList.includes(randomRestaurant)) {
         restaurantList.push(randomRestaurant);
       }
     }
 
-
-
     return(
       <div>
       <h2>"I'm doing something!"</h2>
       <ul>
-        {restaurantList.map(restaurant => (
-          <li>
-            {restaurant.name}
-          </li>
-        ))}
+        {restaurantList.map( restaurant => <RestaurantIndexItem
+           key={restaurant.id}
+           restaurant={restaurant}/>
+       )}
       </ul>
       </div>
     );
