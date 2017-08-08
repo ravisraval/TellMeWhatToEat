@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+//link this to restaurant show modal later
 // <Link to={`/restaurant/${restaurant.id}`}>
 // <img src={restaurant.image_url} alt={restaurant.name} />
 // </Link>

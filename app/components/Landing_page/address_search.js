@@ -63,6 +63,7 @@ class AddressSearch extends React.Component {
       const long = place.geometry.viewport["b"]["b"];
       const latt = place.geometry.viewport["f"]["b"];
       var pos = {lat: latt, lng: long};
+      this.props.updatePosition(pos);
       this.props.updateAddress(place.formatted_address);
     });
   }

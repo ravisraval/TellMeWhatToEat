@@ -8,9 +8,11 @@ class LandingPage extends React.Component {
     super(props);
     this.state = {
       dineType: "All",
-      address: ""
+      address: "",
+      position: null,
     };
     this.updateAddress = this.updateAddress.bind(this);
+    this.updatePosition = this.updatePosition.bind(this);
   }
 
   handleSubmit(e) {
@@ -21,6 +23,12 @@ class LandingPage extends React.Component {
   updateAddress(address) {
     this.setState({
       address: address
+      });
+  }
+
+  updatePosition(position) {
+    this.setState({
+      position: position
       });
   }
 
@@ -47,7 +55,10 @@ class LandingPage extends React.Component {
     return (
       <div>
         {this.dineType()}
-        <AddressSearch updateAddress={this.updateAddress} address={this.state.address}/>
+        <AddressSearch
+          updateAddress={this.updateAddress}
+          updatePosition={this.updatePosition}
+          address={this.state.address}/>
         <input type="submit" value="Tell Me What to Eat!"></input>
       </div>
     );
