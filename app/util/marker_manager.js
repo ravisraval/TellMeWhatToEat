@@ -31,13 +31,13 @@ export default class MarkerManager {
 
   iconFromDisplayPos(restaurant) {
     //get three colors and base icon off of that
-    const icon = "";
+    let icon = "";
     if (restaurant.displayPosition === 1) {
-      icon = "htttp://1";
+      icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
     } else if (restaurant.displayPosition === 2) {
-      icon = "htttp://2";
+      icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';
     } else {
-      icon = "htttp://3";
+      icon = 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png';
     }
     return icon;
   }
