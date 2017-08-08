@@ -38,18 +38,6 @@ class RestaurantIndex extends React.Component {
         this.setState({ fooderies: res.response.venues }, () => {
         });
       });
-
-    // TO GET A SINGLE VENUE'S INFO
-    // const params = {
-    //   venue_id: "47f1994cf964a520904e1fe3"
-    // };
-    // foursquare.venues.getVenue(params)
-    //   .then(res => {
-    //     console.log(res);
-    //     this.setState({ fooderies: res.response.venues }, () => {
-    //     });
-    //   });
-
   }
 
   render() {
@@ -71,7 +59,7 @@ class RestaurantIndex extends React.Component {
     return(
       <div>
       <Modal className="route-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-          <Route path="/show" component={RestaurantShow}/>
+          <Route path="/restaurants/show" component={RestaurantShow}/>
       </Modal>
       <h2>"I'm doing something!"</h2>
       <ul>
