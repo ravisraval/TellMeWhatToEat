@@ -22,19 +22,19 @@ class AddressSearch extends React.Component {
 
 
   componentDidUpdate() {
-    const geocoder = new google.maps.Geocoder;
-
-    geocoder.geocode({'location': this.state}, (results, status) => {
-       if (status === 'OK') {
-         if (results[1]) {
-           self.searchLocation.value = results[1].formatted_address;
-         } else {
-           window.alert('No results found');
-         }
-       } else {
-         window.alert('Geocoder failed due to: ' + status);
-       }
-     });
+    // const geocoder = new google.maps.Geocoder;
+    //
+    // geocoder.geocode({'location': this.state}, (results, status) => {
+    //    if (status === 'OK') {
+    //      if (results[1]) {
+    //        self.searchLocation.value = results[1].formatted_address;
+    //      } else {
+    //        window.alert('No results found');
+    //      }
+    //    } else {
+    //      window.alert('Geocoder failed due to: ' + status);
+    //    }
+    //  });
   }
 
   getLocation() {
