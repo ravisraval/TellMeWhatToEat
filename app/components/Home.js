@@ -3,26 +3,22 @@ import { connect } from 'react-redux';
 import Messages from './Messages';
 // import Map from './Landing_page/Map';
 // import AutoSearch from './Landing_page/auto_complete_container';
-import ComboMapSearch from './Landing_page/combo_map_search.js';
+import LandingPage from './Landing_page/landing_page';
 // import FindRestaurants from './find_restaurants';
 
 class Home extends React.Component {
   render() {
     return (
       <div className="landing-page-container">
-        <ComboMapSearch/>
+        <div>Tell Me What To Eat</div>
+        <div>More eating, less deciding</div>
+        <LandingPage/>
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    messages: state.messages
-  };
-};
-
-export default connect(mapStateToProps)(Home);
+export default connect(null)(Home);
 
 
 //
