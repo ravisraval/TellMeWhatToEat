@@ -17,7 +17,7 @@ export default class MarkerManager {
     restaurants
       .filter(restaurant => !this.markers[restaurant.id])
       .forEach((newRestaurant) => {
-      this.createMarkerFromRoom(newRestaurant, this.infowindow, this.handleClick);
+      this.createMarkerFromRestaurant(newRestaurant, this.infowindow, this.handleClick);
     });
     Object.keys(this.markers)
       .filter(restaurantId => !restaurantsObj[restaurantId])
@@ -42,9 +42,8 @@ export default class MarkerManager {
     return icon;
   }
 
-  createMarkerFromRoom(restaurant, infowindow, handleClick) {
+  createMarkerFromRestaurant(restaurant, infowindow, handleClick) {
     const pos = new google.maps.LatLng(restaurant.lat, restaurant.lng);
-    const icon = ;
     const marker = new google.maps.Marker({
       position: pos,
       map: this.map,
@@ -75,7 +74,7 @@ export default class MarkerManager {
 
     marker.addListener('mouseover', function () {
       infowindow.close();
-      infowindow.setContent(contentString);
+      // infowindow.setContent(contentString);
       infowindow.open(marker.map, marker);
     });
 
