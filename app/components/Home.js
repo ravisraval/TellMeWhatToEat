@@ -4,6 +4,7 @@ import Messages from './Messages';
 // import Map from './Landing_page/Map';
 // import AutoSearch from './Landing_page/auto_complete_container';
 import ComboMapSearch from './Landing_page/combo_map_search';
+import FindRestaurants from './find_restaurants';
 
 class Home extends React.Component {
   render() {
@@ -45,6 +46,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <FindRestaurants/>
         <ComboMapSearch/>
       </div>
     );

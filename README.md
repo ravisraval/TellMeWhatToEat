@@ -27,7 +27,7 @@ The external API we will be using to collect these data are:
 
 ###### Filtering & Processing Restaurant Data
 
-  Upon User inputs location, which makes an API call to Yelp and FourSqure and loads a list of restaurants that deliver to that location.
+  Upon User inputs location, which makes an API call to Yelp and FourSquare and loads a list of restaurants that deliver to that location.
   * The user will then input data that will filter results according, and return a list of meaningful restaurant/menu item choices
 
 ###### Sorting Data According to User Input
@@ -40,8 +40,8 @@ The external API we will be using to collect these data are:
   *  Functionally installed GooglePlaces API
 
 ## Group Members and Work Breakdown
-  *  Syrie Bianco, Ravi Raval, and Aaron Mondshine
-  - [ ] day 0: Stack set-up, front- and back-end auth (completed)
+
+  - [x] day 0: Stack set-up, front- and back-end auth
   - [ ] day 1: Experimenting and finalizing API integration
     - Aaron: Figuring out backend implementation of API authorization; render search results
     - Syrie: Clean up data, begin sorting through categories and generating preference-based filtering algorithms
@@ -62,10 +62,10 @@ The external API we will be using to collect these data are:
     - asssignments: TBA depending on algorithm improvement
     - Syrie: Styling and UX improvement
   - [ ] day 6: Bonus features and bug-testing
-    - respective assingments TBA
+    - respective assignments dependant upon progress
   - [ ] day 7: Styling, seeding and setting pre-set preferences
     - collaborative brainstorming on preference setting
-    - respective assingments TBA
+    - respective assignments TBD
 
 
 ## STRETCH GOALS:
