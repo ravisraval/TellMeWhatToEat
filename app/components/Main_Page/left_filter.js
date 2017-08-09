@@ -7,7 +7,8 @@ class FilterBar extends React.Component {
     this.state = {
       price: null,
       type: null,
-      open: null,
+      openNow: true,
+      openAt: null,
       deliveryTime: null,
     };
 
@@ -35,6 +36,10 @@ class FilterBar extends React.Component {
     return e => (this.setState({ [property]: e.target.value}));
   }
 
+  handleButtonClick(e){
+
+  }
+
   // renderErrors(){
   //
   // }
@@ -50,19 +55,19 @@ class FilterBar extends React.Component {
             <h2 className="filter-section-header">Price</h2>
 
             <div className="switch-button-group">
-              <button className="1">$</button>
-              <button className="2-and-fewer">$$</button>
-              <button className="3-and-fewer">$$$</button>
-              <button className="4-and-fewer">$$$$</button>
+              <button onClick={this.handleButtonClick('price')} className="1">$</button>
+              <button onClick={this.handleButtonClick('price')} className="2-and-fewer">$$</button>
+              <button onClick={this.handleButtonClick('price')} className="3-and-fewer">$$$</button>
+              <button onClick={this.handleButtonClick('price')} className="4-and-fewer">$$$$</button>
             </div>
           </section>
 
           <section className="transaction-type-section">
             <h2 className="filter-section-header">I want</h2>
             <div className="switch-button-group">
-              <button className="transaction-type">Delivery</button>
-              <button className="transaction-type">Takeout</button>
-              <button className="transaction-type">Eat Out</button>
+              <button onClick={this.handleButtonClick('type')} className="transaction-type">Delivery</button>
+              <button onClick={this.handleButtonClick('type')} className="transaction-type">Takeout</button>
+              <button onClick={this.handleButtonClick('type')} className="transaction-type">Eat Out</button>
             </div>
           </section>
 
@@ -81,6 +86,7 @@ class FilterBar extends React.Component {
 
               </div>
 
+              <div><h2>Help Me Decide</h2><span>Question Component</span></div>
             </div>
           </section>
 
