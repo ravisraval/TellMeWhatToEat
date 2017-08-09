@@ -8,17 +8,19 @@ class FilterBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      price: [1,2,3,4],
-      type: this.props.location.state.type,
-      address: this.props.location.state.address,
-      position: this.props.location.state.position,
+      price:[1, 2, 3, 4],
+      type: this.props.type || "delivery",
+      address: this.props.address,
+      position: this.props.position,
       openNow: true,
       openAt: "",
       deliveryTime: 60,
     };
+
     //bindings
 
     this.handleToggle = this.handleToggle.bind(this);
+    this.handlePrice = this.handlePrice.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
     this.updateAddress = this.updateAddress.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
@@ -62,6 +64,29 @@ class FilterBar extends React.Component {
     this.setState({ openNow: toggledBool, openAt:""});
   }
 
+  handlePrice(e){
+    const priceInt = parseInt(e.target.value);
+    const currentPrice = this.state.price;
+    let price = currentPrice;
+
+    if (currentPrice.includes(priceInt)) {
+      const i = currentPrice.indexOf(priceInt);
+      price.splice(i, 1);
+    } else {
+      price = currentPrice.concat(priceInt);
+    }
+
+    this.setState({price});
+  }
+
+  generatePriceArray(int){
+    const array = [];
+    for (let i = 1; i <= int; i++) {
+      array.push(i);
+    }
+    return array;
+  }
+
   // renderErrors(){
   //
   // }
@@ -92,11 +117,12 @@ class FilterBar extends React.Component {
 
   renderFilterBar(){
     const checked = (property, value) => {
-      return (
-      this.state[property] === value ? true : false
-      );
+      return this.state.price.includes(value);
     };
 
+    const selected = (property, value) => (
+      this.state[property] === value
+    );
 
     return (
     <nav className="filter-bar col-sm-4">
@@ -111,45 +137,45 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">Price</h2>
           <div className="switch-group">
 
-          <label htmlFor="$">$</label>
             <input
-              type="radio"
-              value="$"
+              type="checkbox"
+              value={1}
               id="$"
               className="1"
-              onChange={this.update("price")}
-              checked={checked("price","$")}
+              onChange={this.handlePrice}
+              checked={checked("price",1)}
               />
+            <label id="1" htmlFor="$">$</label>
 
-            <label htmlFor="$$">$$</label>
             <input
-              type="radio"
-              value="$$"
+              type="checkbox"
+              value={2}
               id="$$"
-              className="2-and-fewer"
-              onChange={this.update("price")}
-              checked={checked("price","$$")}
+              className="1 2"
+              onChange={this.handlePrice}
+              checked={checked("price",2)}
               />
+            <label id="2" htmlFor="$$">$$</label>
 
-            <label htmlFor="$$$">$$$</label>
             <input
-              type="radio"
-              value="$$$"
+              type="checkbox"
+              value={3}
               id="$$$"
-              className="3-and-fewer"
-              onChange={this.update("price")}
-              checked={checked("price","$$$")}
+              className="1 2 3"
+              onChange={this.handlePrice}
+              checked={checked("price",3)}
               />
+            <label htmlFor="$$$">$$$</label>
 
-            <label htmlFor="$$$$">$$$$</label>
             <input
-              type="radio"
-              value="$$$$"
+              type="checkbox"
+              value={4}
               id="$$$$"
-              className="4-and-fewer"
-              onChange={this.update("price")}
-              checked={checked("price","$$$$")}
+              className="1 2 3 4"
+              onChange={this.handlePrice}
+              checked={checked("price",4)}
               />
+            <label id="4" htmlFor="$$$$">$$$$</label>
 
           </div>
         </section>
@@ -158,35 +184,35 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">I want ...</h2>
           <div className="switch-group">
 
-          <label htmlFor="delivery" className="type">Delivery</label>
             <input
               type="radio"
               value="delivery"
               id="delivery"
               className="transaction-type"
               onChange={this.update("type")}
-              checked={checked("type","delivery")}
+              checked={selected("type","delivery")}
               />
+            <label htmlFor="delivery" className="type">Delivery</label>
 
-            <label htmlFor="takeout" className="type">Takeout</label>
             <input
               type="radio"
               value="takeout"
               id="takeout"
               className="transaction-type"
               onChange={this.update("type")}
-              checked={checked("type","takeout")}
+              checked={selected("type","takeout")}
               />
+            <label htmlFor="takeout" className="type">Takeout</label>
 
-            <label htmlFor="eatout" className="type">Eat Out</label>
             <input
               type="radio"
               value="eatout"
               id="eatout"
               className="transaction-type"
               onChange={this.update("type")}
-              checked={checked("type","eatout")}
+              checked={selected("type","eatout")}
               />
+            <label htmlFor="eatout" className="type">Eat Out</label>
 
           </div>
         </section>
