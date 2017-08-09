@@ -60,13 +60,15 @@ class RestaurantIndex extends React.Component {
 
     const params = {
       "ll": `${location.lat},${location.lng}`,
-      "query": 'Restaurants',
+      // "query": 'food',
+      "categoryId": "4d4b7105d754a06374d81259",
+      "radius": "3000"
       // "limit": '40',
-      "radius": "4000"
     };
 
     foursquare.venues.getVenues(params)
       .then(res => {
+        console.log(res.response);
         this.setState({ receivedRestaurants: res.response.venues }, () => {
       });
       });
@@ -74,7 +76,9 @@ class RestaurantIndex extends React.Component {
 
   render() {
     //LOGIC FOR PICKING RESTAURANTS
-    if (this.state.receivedRestaurants.length === 0) {return null;}
+    if (this.state.receivedRestaurants.length === 0) {return(
+      <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
+    );}
     const { receivedRestaurants } = this.state;
     const ids = Object.keys(receivedRestaurants);
     let restaurantList = [];
