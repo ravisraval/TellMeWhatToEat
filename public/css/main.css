@@ -3662,7 +3662,6 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 56px;
-  margin-bottom: 21px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
     content: " ";
@@ -5986,6 +5985,23 @@ textarea {
 #searchLocation {
   font-size: 40px;
   border: 3px solid red; }
+
+.body {
+  height: 94vh; }
+
+.restaurants-page {
+  display: flex;
+  flex-direction: row;
+  height: 86.5vh; }
+
+.restaurant-index-and-map {
+  display: flex;
+  flex-direction: row; }
+
+.filter-bar {
+  border-right: 1px solid grey;
+  background: #f0f0f0;
+  height: 100%; }
 
 .cmn-toggle {
   position: absolute;

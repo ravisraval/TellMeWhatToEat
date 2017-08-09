@@ -1,3 +1,42 @@
+
+
+
+// grid-making
+.body {
+  height: 94vh;
+}
+.restaurants-page {
+  display: flex;
+  flex-direction: row;
+  height: 86.5vh;
+}
+
+.restaurant-index-and-map {
+  display: flex;
+  flex-direction: row;
+}
+
+// left filter
+
+.filter-bar {
+  border-right: 1px solid grey;
+  background: rgba(240, 240, 240, 1);
+  height: 100%
+
+}
+
+
+
+
+
+
+
+
+
+
+
+// Open-now toggle button
+
 .cmn-toggle {
   position: absolute;
   margin-left: -9999px;

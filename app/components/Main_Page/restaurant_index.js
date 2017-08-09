@@ -107,7 +107,7 @@ class RestaurantIndex extends React.Component {
     // );
     const { restID } = this.state;
     return(
-      <div>
+      <div className="restaurant-index-and-map">
         <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
           <RestaurantShow restID={restID}/>
         </Modal>
