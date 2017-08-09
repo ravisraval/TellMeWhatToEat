@@ -11,11 +11,13 @@ class RestaurantIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      fooderies: [],
+      receivedRestaurants: [],
       numRestaurants: 3,
       isModalOpen: false,
-      restaurants: {}
+      restaurants: {},
+      position: this.props.state.position
     };
+    console.log("props");
     console.log(this.props);
     this.getRestaurants = this.getRestaurants.bind(this);
     this.openModal = this.openModal.bind(this);
@@ -31,7 +33,7 @@ class RestaurantIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.getRestaurants(this.props.position);
+    this.getRestaurants(this.state.position);
   }
 
   componentWillReceiveProps() {
@@ -39,41 +41,39 @@ class RestaurantIndex extends React.Component {
     // this.setState({ restaurants: this.props.restaurants })
     //etc for all filters
     console.log(this.props);
+    this.getRestaurants(this.props.state.location)
 
   }
 
-  listeners(autoComplete) {
-  }
-
-  getRestaurants(userLocation) {
+  getRestaurants(location) {
     const foursquare = require('react-foursquare')({
       clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
       clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
     });
 
     const params = {
-      "ll": "37.7749,-122.4194", //stand-in for actual location
+      "ll": `${location.lat},${location.lng}`,
       "query": 'Restaurants',
-      "limit": '40',
-      "radius": "4200"
+      // "limit": '40',
+      "radius": "4000"
     };
 
     foursquare.venues.getVenues(params)
       .then(res => {
-        this.setState({ fooderies: res.response.venues }, () => {
+        this.setState({ receivedRestaurants: res.response.venues }, () => {
       });
       });
   }
 
   render() {
     //LOGIC FOR PICKING RESTAURANTS
-    if (this.state.fooderies.length === 0) {return null;}
-    const { fooderies } = this.state;
-    const ids = Object.keys(fooderies);
+    if (this.state.receivedRestaurants.length === 0) {return null;}
+    const { receivedRestaurants } = this.state;
+    const ids = Object.keys(receivedRestaurants);
     let restaurantList = [];
     let randomRestaurant;
     while (restaurantList.length < this.state.numRestaurants) {
-      randomRestaurant = fooderies[Math.floor(Math.random() * ids.length)];
+      randomRestaurant = receivedRestaurants[Math.floor(Math.random() * ids.length)];
       //fix for duplicates
       if (!restaurantList.includes(randomRestaurant)) {
         restaurantList.push(randomRestaurant);
@@ -106,7 +106,7 @@ class RestaurantIndex extends React.Component {
     //    closeModal={this.closeModal}/>
     //  )
     // );
-    const { restID } = this.state;
+    const { restID, position } = this.state;
     return(
       <div className="restaurant-index-and-map">
         <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
@@ -117,7 +117,7 @@ class RestaurantIndex extends React.Component {
             {restaurantListRender}
           </ul>
         </div>
-        <RightMapDisplay restaurants={restaurants}/>
+        <RightMapDisplay restaurants={restaurants} homePos={position}/>
       </div>
     );
   }
