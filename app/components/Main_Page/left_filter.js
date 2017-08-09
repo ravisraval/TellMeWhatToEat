@@ -17,12 +17,6 @@ class FilterBar extends React.Component {
       openAt: "",
       deliveryTime: 60,
     };
-<<<<<<< HEAD
-    console.log(this.state);
-=======
-    console.log(this.props.location.state);
-
->>>>>>> b9872b07d0be794d88b42e63e7dec44fe0223464
     //bindings
 
     this.handleToggle = this.handleToggle.bind(this);
