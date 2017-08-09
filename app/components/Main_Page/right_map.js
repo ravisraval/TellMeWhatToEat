@@ -7,17 +7,16 @@ class RightMapDisplay extends React.Component {
   constructor(props) {
     super(props);
     this.restaurants = this.props.restaurants;
-    // this.restaurants = this.testRestaurants();
   }
 
   componentDidMount() {
+    const searchMap = this.refs.searchMap;
+
     const defaultBounds = {
       northEast: {lat: 37.873972, lng: -122.331297},
       southWest: {lat: 37.673972, lng: -122.531297}
     };
 
-
-    const searchMap = this.refs.searchMap;
     const mapOptions = {
       center: {lat: this.props.homePos.lat,
       lng: this.props.homePos.lng},
@@ -30,28 +29,32 @@ class RightMapDisplay extends React.Component {
     this.MarkerManager = new MarkerManager(this.searchMap, infowindow, this.handleMarkerClick.bind(this));
     this.MarkerManager.updateMarkers(this.restaurants.concat({
       id: 0,
-      lat:this.props.homePos.lat,
-      lng:this.props.homePos.lng,
+      lat: this.props.homePos.lat,
+      lng: this.props.homePos.lng,
       displayPosition: 0
     }));
-    // this.updateMap = () => {
-    //   const response = this.searchMap.getBounds().toJSON();
-    //   this.formattedBounds = {
-    //     northEast: {lat: response.north, lng: response.east},
-    //     southWest: {lat: response.south, lng: response.west}
-    //   };
-    // };
-    // google.maps.event.addListener(this.searchMap, 'bounds_changed', this.updateMap);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.restaurants !== this.props.restaurants) {
-      this.MarkerManager.updateMarkers(nextProps.restaurants.concat({
-        id: 0,
-        lat:nextProps.homePos.lat,
-        lng:nextProps.homePos.lng,
-        displayPosition: 0
-      }));
+      let timestampID = new Date().getUTCMilliseconds();
+      const restaurantsWithHome = nextProps.restaurants.concat(
+        {
+          id: timestampID,
+          lat: nextProps.homePos.lat,
+          lng: nextProps.homePos.lng,
+          displayPosition: 0
+        });
+
+      const mapOptions = {
+        center: {lat: this.props.homePos.lat,
+        lng: this.props.homePos.lng},
+        zoom: 12,
+        minZoom: 3
+      };
+      // const searchMap = this.refs.searchMap;
+      this.searchMap.setCenter({lat: this.props.homePos.lat, lng: this.props.homePos.lng});
+      this.MarkerManager.updateMarkers(restaurantsWithHome);
     }
 
   }
