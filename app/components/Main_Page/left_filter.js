@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import RestaurantIndex from './restaurant_index';
+
 
 class FilterBar extends React.Component {
   constructor(props){
@@ -44,56 +46,63 @@ class FilterBar extends React.Component {
   //
   // }
 
+  renderFilterBar(){
+    return (
+    <nav className="filter-bar">
+      <form className="filter-bar-form">
 
+        <section className="price-section">
+          <h2 className="filter-section-header">Price</h2>
+
+          <div className="switch-button-group">
+            <button onClick={this.handleButtonClick('price')} className="1">$</button>
+            <button onClick={this.handleButtonClick('price')} className="2-and-fewer">$$</button>
+            <button onClick={this.handleButtonClick('price')} className="3-and-fewer">$$$</button>
+            <button onClick={this.handleButtonClick('price')} className="4-and-fewer">$$$$</button>
+          </div>
+        </section>
+
+        <section className="transaction-type-section">
+          <h2 className="filter-section-header">I want</h2>
+          <div className="switch-button-group">
+            <button onClick={this.handleButtonClick('type')} className="transaction-type">Delivery</button>
+            <button onClick={this.handleButtonClick('type')} className="transaction-type">Takeout</button>
+            <button onClick={this.handleButtonClick('type')} className="transaction-type">Eat Out</button>
+          </div>
+        </section>
+
+        <section className="open-now-section">
+          <div className="open-now-or-later">
+
+            <div className="open-now">
+            <h2>Open Now</h2>
+              <div className="switch">
+                <input id="cmn-toggle-4" className="cmn-toggle cmn-toggle-round-flat" type="checkbox"/>
+                <label for="cmn-toggle-4"></label>
+              </div>
+            </div>
+
+            <div className="open-later">
+
+            </div>
+
+            <div><h2>Help Me Decide</h2><span>Question Component</span></div>
+          </div>
+        </section>
+
+
+
+      </form>
+    </nav>
+    );
+  }
 
   render(){
     return (
-      <nav className="filter-bar">
-        <form className="filter-bar-form">
-
-          <section className="price-section">
-            <h2 className="filter-section-header">Price</h2>
-
-            <div className="switch-button-group">
-              <button onClick={this.handleButtonClick('price')} className="1">$</button>
-              <button onClick={this.handleButtonClick('price')} className="2-and-fewer">$$</button>
-              <button onClick={this.handleButtonClick('price')} className="3-and-fewer">$$$</button>
-              <button onClick={this.handleButtonClick('price')} className="4-and-fewer">$$$$</button>
-            </div>
-          </section>
-
-          <section className="transaction-type-section">
-            <h2 className="filter-section-header">I want</h2>
-            <div className="switch-button-group">
-              <button onClick={this.handleButtonClick('type')} className="transaction-type">Delivery</button>
-              <button onClick={this.handleButtonClick('type')} className="transaction-type">Takeout</button>
-              <button onClick={this.handleButtonClick('type')} className="transaction-type">Eat Out</button>
-            </div>
-          </section>
-
-          <section className="open-now-section">
-            <div className="open-now-or-later">
-
-              <div className="open-now">
-              <h2>Open Now</h2>
-                <div className="switch">
-                  <input id="cmn-toggle-4" className="cmn-toggle cmn-toggle-round-flat" type="checkbox"/>
-                  <label for="cmn-toggle-4"></label>
-                </div>
-              </div>
-
-              <div className="open-later">
-
-              </div>
-
-              <div><h2>Help Me Decide</h2><span>Question Component</span></div>
-            </div>
-          </section>
-
-
-
-        </form>
-      </nav>
+      <div className="restaurants-page">
+        {this.renderFilterBar()}
+        <RestaurantIndex />
+      </div>
     );
   }
 
