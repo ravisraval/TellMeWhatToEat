@@ -5987,6 +5987,12 @@ textarea {
   font-size: 40px;
   border: 3px solid red; }
 
+@media only screen and (max-width: 768px) {
+  .restaurants-page {
+    flex-direction: column; }
+  .restaurant-index-and-map {
+    flex-direction: column; } }
+
 .body {
   height: 94vh; }
 

@@ -1,4 +1,12 @@
+@media only screen and (max-width: 768px) {
 
+  .restaurants-page {
+    flex-direction: column;
+  }
+  .restaurant-index-and-map {
+    flex-direction: column;
+  }
+}
 
 
 // grid-making

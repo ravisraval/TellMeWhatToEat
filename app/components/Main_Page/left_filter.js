@@ -10,8 +10,8 @@ class FilterBar extends React.Component {
       price: "$",
       type: "delivery",
       openNow: true,
-      openAt: null,
-      deliveryTime: null,
+      openAt: "",
+      deliveryTime: "",
     };
 
     //bindings
@@ -42,8 +42,7 @@ class FilterBar extends React.Component {
 
   handleToggle(e){
     const toggledBool = this.state.openNow ? false : true;
-    this.setState({ ["openNow"]: toggledBool});
-    // if (this.state.openNow) this.state.openAt = null;
+    this.setState({ openNow: toggledBool, openAt:""});
   }
 
   // renderErrors(){
@@ -76,7 +75,8 @@ class FilterBar extends React.Component {
     };
 
     return (
-    <nav className="filter-bar">
+    <nav className="filter-bar col-sm-4">
+      <h1>Restaurant Picker</h1>
       <form className="filter-bar-form">
 
         <section className="price-section">
@@ -127,7 +127,7 @@ class FilterBar extends React.Component {
         </section>
 
         <section className="transaction-type-section">
-          <h2 className="filter-section-header">I want</h2>
+          <h2 className="filter-section-header">I want ...</h2>
           <div className="switch-group">
 
           <label htmlFor="delivery" className="type">Delivery</label>
@@ -191,21 +191,18 @@ class FilterBar extends React.Component {
         </section>
 
         <section className="delivery-time-section">
-          <div className="row">
-            <div className="small-10 medium-11 columns">
-              <div className="range-slider" data-slider data-options="display_selector: #sliderOutput3;">
-                <span className="range-slider-handle" role="slider" tabIndex="0"></span>
-                <span className="range-slider-active-segment"></span>
-              </div>
-            </div>
-            <div className="small-2 medium-1 columns">
-              <span id="sliderOutput3"></span>
-            </div>
-          </div>
+          <h2 className="filter-section-header">Delivery Time</h2>
+
+          <input
+            type="range"
+            min="40"
+            max="80"
+
+          />
         </section>
 
         <section className="question-section">
-          <h2>Help Me Decide</h2>
+          <h2 className="filter-section-header">Help Me Decide</h2>
           <span>Question Component</span>
         </section>
 
@@ -218,7 +215,7 @@ class FilterBar extends React.Component {
 
   render(){
     return (
-      <div className="restaurants-page">
+      <div className="restaurants-page row">
         {this.renderFilterBar()}
         <RestaurantIndex />
       </div>

@@ -64,7 +64,7 @@ class RightMapDisplay extends React.Component {
 
   render() {
     return (
-      <div className="searchMap-container">
+      <div className="searchMap-container col-sm-3">
           <div id="map" className="searchMap" ref="searchMap"> Map </div>
       </div>
     );

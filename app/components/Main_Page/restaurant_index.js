@@ -111,9 +111,11 @@ class RestaurantIndex extends React.Component {
         <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
           <RestaurantShow restID={restID}/>
         </Modal>
-        <ul>
-          {restaurantListRender}
-        </ul>
+        <div className="restaurant-index col-sm-5">
+          <ul>
+            {restaurantListRender}
+          </ul>
+        </div>
         <RightMapDisplay restaurants={restaurants}/>
       </div>
     );
