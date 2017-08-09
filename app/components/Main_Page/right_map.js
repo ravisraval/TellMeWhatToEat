@@ -10,18 +10,6 @@ class RightMapDisplay extends React.Component {
     // this.restaurants = this.testRestaurants();
   }
 
-  // testRestaurants() {
-  //   const restaurantsObj = [
-  //     {
-  //       id: 1, lat:37.791565, lng:-122.392434, displayPosition: 1
-  //     }, {
-  //       id: 2, lat:37.791305, lng:-122.393735, displayPosition: 2
-  //     }, {
-  //       id: 3, lat:37.790051, lng:-122.390192, displayPosition: 3
-  //     }];
-  //     return restaurantsObj;
-  // }
-
   componentDidMount() {
     const defaultBounds = {
       northEast: {lat: 37.873972, lng: -122.331297},
@@ -46,14 +34,14 @@ class RightMapDisplay extends React.Component {
       lng:this.props.homePos.lng,
       displayPosition: 0
     }));
-    this.updateMap = () => {
-      const response = this.searchMap.getBounds().toJSON();
-      this.formattedBounds = {
-        northEast: {lat: response.north, lng: response.east},
-        southWest: {lat: response.south, lng: response.west}
-      };
-    };
-    google.maps.event.addListener(this.searchMap, 'bounds_changed', this.updateMap);
+    // this.updateMap = () => {
+    //   const response = this.searchMap.getBounds().toJSON();
+    //   this.formattedBounds = {
+    //     northEast: {lat: response.north, lng: response.east},
+    //     southWest: {lat: response.south, lng: response.west}
+    //   };
+    // };
+    // google.maps.event.addListener(this.searchMap, 'bounds_changed', this.updateMap);
   }
 
   componentWillReceiveProps(nextProps) {
