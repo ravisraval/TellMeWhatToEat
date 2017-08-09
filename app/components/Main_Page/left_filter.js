@@ -4,6 +4,7 @@ import RestaurantIndex from './restaurant_index';
 
 
 class FilterBar extends React.Component {
+  // TODO: ADD IN AN ADDRESS BAR
   constructor(props){
     super(props);
     this.state = {
@@ -15,6 +16,7 @@ class FilterBar extends React.Component {
       openAt: "",
       deliveryTime: 60,
     };
+    console.log(this.props.location.state);
 
     //bindings
 
@@ -76,8 +78,6 @@ class FilterBar extends React.Component {
   }
 
   renderFilterBar(){
-    console.log("current state", this.state);
-
     const checked = (property, value) => {
       return (
       this.state[property] === value ? true : false
