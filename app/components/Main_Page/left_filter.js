@@ -9,9 +9,9 @@ class FilterBar extends React.Component {
     super(props);
     this.state = {
       price: "$",
-      type: this.props.type,
-      address: this.props.address,
-      position: this.props.position,
+      type: this.props.location.state.type,
+      address: this.props.location.state.address,
+      position: this.props.location.state.position,
       openNow: true,
       openAt: "",
       deliveryTime: 60,
