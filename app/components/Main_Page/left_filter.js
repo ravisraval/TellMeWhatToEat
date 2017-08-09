@@ -261,7 +261,7 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">Delivery Time</h2>
           {this.renderSliderBarHeader()}
           <div className="slider-bar-div">
-            <span> 45 </span>
+            <span> 40 </span>
             <input
               className="slider-bar"
               type="range"
