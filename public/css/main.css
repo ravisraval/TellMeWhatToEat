@@ -6045,7 +6045,11 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 100%; }
+  width: 100%;
+  min-width: 700px; }
+
+.restaurant-index {
+  min-width: 400px; }
 
 nav.navbar.navbar-default.navbar-static-top {
   margin-bottom: 0 !important; }
@@ -6057,7 +6061,8 @@ nav.navbar.navbar-default.navbar-static-top {
 
 nav.filter-bar.col-sm-4 {
   padding-right: 0;
-  min-width: 300px; }
+  min-width: 350px;
+  width: 350px; }
 
 .title {
   font-size: 25px;
@@ -6071,6 +6076,7 @@ nav.filter-bar.col-sm-4 {
 .open-now-or-later {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding-left: 30px; }
 
 .open-later {

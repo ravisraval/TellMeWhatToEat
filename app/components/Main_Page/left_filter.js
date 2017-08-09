@@ -8,7 +8,9 @@ class FilterBar extends React.Component {
     super(props);
     this.state = {
       price: "$",
-      type: "delivery",
+      type: this.props.type,
+      address: this.props.address,
+      position: this.props.position,
       openNow: true,
       openAt: "",
       deliveryTime: 60,
@@ -229,7 +231,7 @@ class FilterBar extends React.Component {
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}
-        <RestaurantIndex />
+        <RestaurantIndex state={this.state}/>
       </div>
     );
   }
