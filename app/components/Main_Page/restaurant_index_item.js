@@ -6,21 +6,50 @@ import { Link } from 'react-router-dom';
 class RestaurantIndexItem extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      restaurant: {}
+    };
+    this.getRestaurant = this.getRestaurant.bind(this);
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.getRestaurant(this.props.restaurant.id);
+    //delete above line when implementing this.props.id = this.id
+  }
+
+  getRestaurant(venueId) {
+    const foursquare = require('react-foursquare')({
+      clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
+      clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
+    });
+
+    const params = {
+      venue_id: venueId
+    };
+    foursquare.venues.getVenue(params)
+      .then(res => {
+        this.setState({ restaurant: res.response.venue }, () => {
+        });
+      });
   }
 
   handleClick() {
     this.props.openModal(this.props.restaurant.id);
-    // this.props.history.push("/restaurants/show
   }
+
   render() {
+    const { restaurant } = this.state;
     console.log(restaurant);
-    const { restaurant } = this.props;
+    const photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
+    // FOR PHOTO RENDERING : https://developer.foursquare.com/docs/responses/photo
     return (
       <li className="restaurant-index-item">
         <button onClick={this.handleClick}>
-          <span> { restaurant.rating } </span>
+          <img src={photo}/>
           <span> { restaurant.name } </span>
+          <span> { restaurant.rating } </span>
+
         </button>
       </li>
     );
