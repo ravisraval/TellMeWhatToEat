@@ -8,7 +8,6 @@ class FilterBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      priceInt: 4,
       price:[1, 2, 3, 4],
       type: this.props.type || "delivery",
       address: this.props.address,
@@ -62,7 +61,7 @@ class FilterBar extends React.Component {
       price = currentPrice.concat(priceInt);
     }
 
-    this.setState({ priceInt, price});
+    this.setState({price});
   }
 
   generatePriceArray(int){
