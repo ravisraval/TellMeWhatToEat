@@ -22,11 +22,11 @@ class RestaurantIndex extends React.Component {
   }
 
   openModal(restID) {
-    this.setState({ isModalOpen: true, restID: restID })
+    this.setState({ isModalOpen: true, restID: restID });
   }
 
   closeModal() {
-    this.setState({ isModalOpen: false })
+    this.setState({ isModalOpen: false });
   }
 
   componentDidMount() {

@@ -6108,14 +6108,6 @@ p.later {
   border: 0;
   overflow: hidden; }
 
-.switch-group input {
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  width: 1px;
-  border: 0;
-  overflow: hidden; }
-
 .switch-group label {
   display: inline-block;
   width: 60px;
@@ -6139,7 +6131,8 @@ p.later {
   width: 80px; }
 
 .switch-group label:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: #A5DC86; }
 
 .switch-group input:checked + label {
   background-color: #A5DC86;

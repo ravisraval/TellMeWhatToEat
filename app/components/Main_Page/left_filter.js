@@ -76,8 +76,6 @@ class FilterBar extends React.Component {
   }
 
   renderFilterBar(){
-    console.log("current state", this.state);
-
     const checked = (property, value) => {
       return (
       this.state[property] === value ? true : false
@@ -93,7 +91,6 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">Price</h2>
           <div className="switch-group">
 
-          <label htmlFor="$">$</label>
             <input
               type="radio"
               value="$"
@@ -102,8 +99,8 @@ class FilterBar extends React.Component {
               onChange={this.update("price")}
               checked={checked("price","$")}
               />
+            <label htmlFor="$">$</label>
 
-            <label htmlFor="$$">$$</label>
             <input
               type="radio"
               value="$$"
@@ -112,8 +109,8 @@ class FilterBar extends React.Component {
               onChange={this.update("price")}
               checked={checked("price","$$")}
               />
+            <label htmlFor="$$">$$</label>
 
-            <label htmlFor="$$$">$$$</label>
             <input
               type="radio"
               value="$$$"
@@ -122,8 +119,8 @@ class FilterBar extends React.Component {
               onChange={this.update("price")}
               checked={checked("price","$$$")}
               />
+            <label htmlFor="$$$">$$$</label>
 
-            <label htmlFor="$$$$">$$$$</label>
             <input
               type="radio"
               value="$$$$"
@@ -132,6 +129,7 @@ class FilterBar extends React.Component {
               onChange={this.update("price")}
               checked={checked("price","$$$$")}
               />
+            <label htmlFor="$$$$">$$$$</label>
 
           </div>
         </section>
@@ -140,7 +138,6 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">I want ...</h2>
           <div className="switch-group">
 
-          <label htmlFor="delivery" className="type">Delivery</label>
             <input
               type="radio"
               value="delivery"
@@ -149,8 +146,8 @@ class FilterBar extends React.Component {
               onChange={this.update("type")}
               checked={checked("type","delivery")}
               />
+            <label htmlFor="delivery" className="type">Delivery</label>
 
-            <label htmlFor="takeout" className="type">Takeout</label>
             <input
               type="radio"
               value="takeout"
@@ -159,8 +156,8 @@ class FilterBar extends React.Component {
               onChange={this.update("type")}
               checked={checked("type","takeout")}
               />
+            <label htmlFor="takeout" className="type">Takeout</label>
 
-            <label htmlFor="eatout" className="type">Eat Out</label>
             <input
               type="radio"
               value="eatout"
@@ -169,6 +166,7 @@ class FilterBar extends React.Component {
               onChange={this.update("type")}
               checked={checked("type","eatout")}
               />
+            <label htmlFor="eatout" className="type">Eat Out</label>
 
           </div>
         </section>
@@ -228,6 +226,7 @@ class FilterBar extends React.Component {
   }
 
   render(){
+    console.log(this.props);
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}
