@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import RestaurantIndex from './restaurant_index';
-
+import AddressSearch from '../Landing_page/address_search';
 
 class FilterBar extends React.Component {
   // TODO: ADD IN AN ADDRESS BAR
   constructor(props){
     super(props);
-    console.log("PROOPPPS", this.props);
     this.state = {
       price: "$",
       type: this.props.type,
@@ -21,7 +20,22 @@ class FilterBar extends React.Component {
 
     this.handleToggle = this.handleToggle.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateAddress = this.updateAddress.bind(this);
+    this.updatePosition = this.updatePosition.bind(this);
   }
+
+  updateAddress(address) {
+    this.setState({
+      address: address
+      });
+  }
+
+  updatePosition(position) {
+    this.setState({
+      position: position
+      });
+  }
+
 
   // to handle submit,
   // handleSubmit(e) {
@@ -85,6 +99,10 @@ class FilterBar extends React.Component {
 
     return (
     <nav className="filter-bar col-sm-4">
+      <AddressSearch
+        updateAddress={this.updateAddress}
+        updatePosition={this.updatePosition}
+        address={this.state.address}/>
       <h1 className="title">Restaurant Picker</h1>
       <form className="filter-bar-form">
 
