@@ -15,6 +15,8 @@ class FilterBar extends React.Component {
     };
 
     //bindings
+
+    this.handlePrice = this.handlePrice.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -38,13 +40,16 @@ class FilterBar extends React.Component {
     return e => (this.setState({ [property]: e.target.value}));
   }
 
-  handleButtonClick(e){
-
+  handlePrice(e){
+    e.preventDefault();
+    return () => this.setState({ ["price"]: e.target.value});
   }
 
   // renderErrors(){
   //
   // }
+
+
 
   renderFilterBar(){
     return (
@@ -53,21 +58,61 @@ class FilterBar extends React.Component {
 
         <section className="price-section">
           <h2 className="filter-section-header">Price</h2>
+          <div className="switch-group">
 
-          <div className="switch-button-group">
-            <button onClick={this.handleButtonClick('price')} className="1">$</button>
-            <button onClick={this.handleButtonClick('price')} className="2-and-fewer">$$</button>
-            <button onClick={this.handleButtonClick('price')} className="3-and-fewer">$$$</button>
-            <button onClick={this.handleButtonClick('price')} className="4-and-fewer">$$$$</button>
+            <input
+              type="radio"
+              onChange={this.handlePrice}
+              value="$"
+              className="1"/>
+              $
+
+            <input
+              type="radio"
+              onChange={this.handlePrice}
+              value="$$"
+              className="2-and-fewer"/>
+              $$
+
+            <input
+              type="radio"
+              onChange={this.handlePrice}
+              value="$$$"
+              className="3-and-fewer"/>
+              $$$
+
+            <input
+              type="radio"
+              onChange={this.handlePrice}
+              value="$$$$"
+              className="4-and-fewer"/>
+              $$$$
+
           </div>
         </section>
 
         <section className="transaction-type-section">
           <h2 className="filter-section-header">I want</h2>
-          <div className="switch-button-group">
-            <button onClick={this.handleButtonClick('type')} className="transaction-type">Delivery</button>
-            <button onClick={this.handleButtonClick('type')} className="transaction-type">Takeout</button>
-            <button onClick={this.handleButtonClick('type')} className="transaction-type">Eat Out</button>
+          <div className="switch-group">
+
+            <input
+              type="radio"
+              // onClick={this.handleType()}
+              className="transaction-type"/>
+              Delivery
+
+            <input
+              type="radio"
+              // onClick={this.handleType()}
+              className="transaction-type"/>
+              Takeout
+
+            <input
+              type="radio"
+              // onClick={this.handleType()}
+              className="transaction-type"/>
+              Eat Out
+
           </div>
         </section>
 
