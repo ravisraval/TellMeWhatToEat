@@ -5,6 +5,7 @@ import Messages from './Messages';
 // import AutoSearch from './Landing_page/auto_complete_container';
 import LandingPage from './Landing_page/landing_page';
 // import FindRestaurants from './find_restaurants';
+import RightMapDisplay from './Main_Page/right_map';
 
 class Home extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends React.Component {
         <div>Tell Me What To Eat</div>
         <div>More eating, less deciding</div>
         <LandingPage/>
+        <RightMapDisplay />
       </div>
     );
   }
