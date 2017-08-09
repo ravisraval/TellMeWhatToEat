@@ -96,14 +96,14 @@ class FilterBar extends React.Component {
       this.state[property] === value ? true : false
       );
     };
-    // <AddressSearch
-    //   updateAddress={this.updateAddress}
-    //   updatePosition={this.updatePosition}
-    //   address={this.state.address}/>
+
 
     return (
     <nav className="filter-bar col-sm-4">
-
+      <AddressSearch
+        updateAddress={this.updateAddress}
+        updatePosition={this.updatePosition}
+        address={this.state.address}/>
       <h1 className="title">Restaurant Picker</h1>
       <form className="filter-bar-form">
 
