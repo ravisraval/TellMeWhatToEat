@@ -19,11 +19,6 @@ class RightMapDisplay extends React.Component {
       }, {
         id: 3, lat:37.790051, lng:-122.390192, displayPosition: 3
       }];
-      // {
-      //   id: 1,
-      //   lat: 37.791565,
-      //   lng: -122.392434
-      // };
       return restaurantsObj;
   }
 

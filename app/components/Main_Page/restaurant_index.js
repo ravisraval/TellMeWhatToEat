@@ -1,21 +1,33 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
+import { Route } from 'react-router';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantShow from './restaurant_show';
 import Modal from '../Modal';
+import { Link, withRouter } from 'react-router-dom';
 
 class RestaurantIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       fooderies: [],
-      numRestaurants: 3
+      numRestaurants: 3,
+      isModalOpen: false
     };
     this.getRestaurants = this.getRestaurants.bind(this);
+    this.openModal = this.openModal.bind(this);
+  }
+
+  openModal(restID) {
+    this.setState({ isModalOpen: true, restID: restID });
+  }
+
+  closeModal() {
+    this.setState({ isModalOpen: false });
   }
 
   componentDidMount() {
-    this.getRestaurants({lat: 37.558, lng: -127});
+    this.getRestaurants(this.props.position);
     //delete above line when implementing this.props.location = this.userLocation
   }
 
@@ -33,10 +45,11 @@ class RestaurantIndex extends React.Component {
       "query": 'Restaurants',
       "limit": '6'
     };
+
     foursquare.venues.getVenues(params)
       .then(res => {
         this.setState({ fooderies: res.response.venues }, () => {
-        });
+      });
       });
   }
 
@@ -44,7 +57,6 @@ class RestaurantIndex extends React.Component {
     //LOGIC FOR PICKING RESTAURANTS HERE
     if (this.state.fooderies.length === 0) {return null;}
     const { fooderies } = this.state;
-    console.log(fooderies);
     const ids = Object.keys(fooderies);
     let restaurantList = [];
     let randomRestaurant;
@@ -55,20 +67,23 @@ class RestaurantIndex extends React.Component {
         restaurantList.push(randomRestaurant);
       }
     }
-
+    const restaurantListRender = restaurantList.map(restaurant => (
+      <RestaurantIndexItem
+       key={restaurant.id}
+       restaurant={restaurant}
+       openModal={this.openModal}
+       closeModal={this.closeModal}/>
+     )
+   );
+    const { restID } = this.state;
     return(
       <div>
-      <Modal className="route-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-          <Route path="/restaurants/show" component={RestaurantShow}/>
-      </Modal>
+        <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
+        <RestaurantShow restID={restID}/>
+        </Modal>
       <h2>"I'm doing something!"</h2>
       <ul>
-        {restaurantList.map( restaurant => <RestaurantIndexItem
-           key={restaurant.id}
-           restaurant={restaurant}
-           openModal={this.openModal}
-           closeModal={this.closeModal}/>
-       )}
+        {restaurantListRender}
       </ul>
       </div>
     );

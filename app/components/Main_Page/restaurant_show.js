@@ -11,7 +11,7 @@ class RestaurantShow extends React.Component {
   }
 
   componentDidMount() {
-    this.getRestaurant("47f1994cf964a520904e1fe3");
+    this.getRestaurant(this.props.restID);
     //delete above line when implementing this.props.id = this.id
   }
 
@@ -26,7 +26,6 @@ class RestaurantShow extends React.Component {
     };
     foursquare.venues.getVenue(params)
       .then(res => {
-        console.log(res);
         this.setState({ restaurant: res.response.venue }, () => {
         });
       });
@@ -36,8 +35,8 @@ class RestaurantShow extends React.Component {
     const { restaurant } = this.state;
     return(
       <div>
-      <h2>"I'm doing show stuff!"</h2>
-      <h3>{restaurant.name}</h3>
+        <h2>"I'm doing show stuff!"</h2>
+        <h3>{restaurant.name}</h3>
       </div>
     );
   }
