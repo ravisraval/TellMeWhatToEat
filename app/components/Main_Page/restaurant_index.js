@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantShow from './restaurant_show';
+import RightMapDisplay from './right_map';
 import Modal from '../Modal';
-import { Link, withRouter } from 'react-router-dom';
 
 class RestaurantIndex extends React.Component {
   constructor(props){
@@ -12,23 +13,31 @@ class RestaurantIndex extends React.Component {
     this.state = {
       fooderies: [],
       numRestaurants: 3,
-      isModalOpen: false
+      isModalOpen: false,
+      restaurants: {}
     };
     this.getRestaurants = this.getRestaurants.bind(this);
     this.openModal = this.openModal.bind(this);
+    this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
   }
 
   openModal(restID) {
-    this.setState({ isModalOpen: true, restID: restID });
+    this.setState({ isModalOpen: true, restID: restID })
   }
 
   closeModal() {
-    this.setState({ isModalOpen: false });
+    this.setState({ isModalOpen: false })
   }
 
   componentDidMount() {
     this.getRestaurants(this.props.position);
-    //delete above line when implementing this.props.location = this.userLocation
+  }
+
+  componentWillReceiveProps() {
+    //logic for handling added filters
+    // this.setState({ restaurants: this.props.restaurants })
+    //etc for all filters
+
   }
 
   listeners(autoComplete) {
@@ -41,20 +50,21 @@ class RestaurantIndex extends React.Component {
     });
 
     const params = {
-      "ll": "37.7749,-122.4194",
+      "ll": "37.7749,-122.4194", //stand-in for actual location
       "query": 'Restaurants',
-      "limit": '6'
+      "limit": '50'
     };
 
     foursquare.venues.getVenues(params)
       .then(res => {
+        console.log(res.response.venues);
         this.setState({ fooderies: res.response.venues }, () => {
       });
       });
   }
 
   render() {
-    //LOGIC FOR PICKING RESTAURANTS HERE
+    //LOGIC FOR PICKING RESTAURANTS
     if (this.state.fooderies.length === 0) {return null;}
     const { fooderies } = this.state;
     const ids = Object.keys(fooderies);
@@ -67,24 +77,43 @@ class RestaurantIndex extends React.Component {
         restaurantList.push(randomRestaurant);
       }
     }
-    const restaurantListRender = restaurantList.map(restaurant => (
-      <RestaurantIndexItem
+    const restaurants = [];
+    const restaurantListRender = [];
+    restaurantList.forEach(restaurant => {
+      restaurantListRender.push(<RestaurantIndexItem
        key={restaurant.id}
        restaurant={restaurant}
        openModal={this.openModal}
-       closeModal={this.closeModal}/>
-     )
-   );
+       closeModal={this.closeModal}/>);
+      restaurants.push({
+        id: restaurant.id,
+        lat: restaurant.location.lat,
+        lng: restaurant.location.lng,
+        displayPosition: restaurants.length + 1
+      });
+
+
+
+    })
+
+    // const restaurantListRender = restaurantList.map(restaurant => (
+    //   <RestaurantIndexItem
+    //    key={restaurant.id}
+    //    restaurant={restaurant}
+    //    openModal={this.openModal}
+    //    closeModal={this.closeModal}/>
+    //  )
+    // );
     const { restID } = this.state;
     return(
       <div>
         <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-        <RestaurantShow restID={restID}/>
+          <RestaurantShow restID={restID}/>
         </Modal>
-      <h2>"I'm doing something!"</h2>
-      <ul>
-        {restaurantListRender}
-      </ul>
+        <ul>
+          {restaurantListRender}
+        </ul>
+        <RightMapDisplay restaurants={restaurants}/>
       </div>
     );
   }

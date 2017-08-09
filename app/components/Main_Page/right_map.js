@@ -6,21 +6,21 @@ import MarkerManager from '../../util/marker_manager';
 class RightMapDisplay extends React.Component {
   constructor(props) {
     super(props);
-    // this.restaurants = this.props.restaurants;
-    this.restaurants = this.testRestaurants();
+    this.restaurants = this.props.restaurants;
+    // this.restaurants = this.testRestaurants();
   }
 
-  testRestaurants() {
-    const restaurantsObj = [
-      {
-        id: 1, lat:37.791565, lng:-122.392434, displayPosition: 1
-      }, {
-        id: 2, lat:37.791305, lng:-122.393735, displayPosition: 2
-      }, {
-        id: 3, lat:37.790051, lng:-122.390192, displayPosition: 3
-      }];
-      return restaurantsObj;
-  }
+  // testRestaurants() {
+  //   const restaurantsObj = [
+  //     {
+  //       id: 1, lat:37.791565, lng:-122.392434, displayPosition: 1
+  //     }, {
+  //       id: 2, lat:37.791305, lng:-122.393735, displayPosition: 2
+  //     }, {
+  //       id: 3, lat:37.790051, lng:-122.390192, displayPosition: 3
+  //     }];
+  //     return restaurantsObj;
+  // }
 
   componentDidMount() {
     const defaultBounds = {

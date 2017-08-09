@@ -4,6 +4,7 @@ import AddressSearch from './address_search';
 import { Link, withRouter } from 'react-router-dom';
 
 
+
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
@@ -14,11 +15,13 @@ class LandingPage extends React.Component {
     };
     this.updateAddress = this.updateAddress.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    //make call to search page with props
+    // this.props.history.push('/restaurants');
+    //pass through location
   }
 
   updateAddress(address) {
@@ -52,7 +55,8 @@ class LandingPage extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // <Link to="/restaurants" position={this.state.position}>
+    // </Link>
     return (
       <div>
         {this.dineType()}
@@ -60,7 +64,9 @@ class LandingPage extends React.Component {
           updateAddress={this.updateAddress}
           updatePosition={this.updatePosition}
           address={this.state.address}/>
-          <input type="submit" value="Tell Me What to Eat!"></input>
+        <input type="submit"
+          value="Tell Me What to Eat!">
+        </input>
       </div>
     );
   }
