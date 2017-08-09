@@ -7,7 +7,7 @@ class FilterBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      price: null,
+      price: "$",
       type: "delivery",
       openNow: true,
       openAt: null,
@@ -28,17 +28,17 @@ class FilterBar extends React.Component {
   // }
 
 //update property for testing  (that can console log)
-  // update(property) {
-  //   const that = this;
-  //   return e => {
-  //     return that.setState({ [property]: e.target.value});
-  //   };
-  // }
-
-// update property, refactored
   update(property) {
-    return e => (this.setState({ [property]: e.target.value}));
+    const that = this;
+    return e => {
+      return that.setState({ [property]: e.target.value});
+    };
   }
+
+// // update property, refactored
+//   update(property) {
+//     return e => (this.setState({ [property]: e.target.value}));
+//   }
 
   handlePrice(e){
     e.preventDefault();
@@ -52,6 +52,13 @@ class FilterBar extends React.Component {
 
 
   renderFilterBar(){
+    console.log("current state", this.state);
+    const checked = (property, value) => {
+      return (
+      this.state[property] === value ? true : false
+      );
+    };
+
     return (
     <nav className="filter-bar">
       <form className="filter-bar-form">
@@ -60,37 +67,45 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">Price</h2>
           <div className="switch-group">
 
-          <label for="$">$</label>
+          <label htmlFor="$">$</label>
             <input
               type="radio"
-              onChange={this.handlePrice}
               value="$"
               id="$"
-              className="1"/>
+              className="1"
+              onChange={this.update("price")}
+              checked={checked("price","$")}
+              />
 
-            <label for="$$">$$</label>
+            <label htmlFor="$$">$$</label>
             <input
               type="radio"
-              onChange={this.handlePrice}
               value="$$"
               id="$$"
-              className="2-and-fewer"/>
+              className="2-and-fewer"
+              onChange={this.update("price")}
+              checked={checked("price","$$")}
+              />
 
-            <label for="$$$">$$$</label>
+            <label htmlFor="$$$">$$$</label>
             <input
               type="radio"
-              onChange={this.handlePrice}
               value="$$$"
               id="$$$"
-              className="3-and-fewer"/>
+              className="3-and-fewer"
+              onChange={this.update("price")}
+              checked={checked("price","$$$")}
+              />
 
-            <label for="$$$$">$$$$</label>
+            <label htmlFor="$$$$">$$$$</label>
             <input
               type="radio"
-              onChange={this.handlePrice}
               value="$$$$"
               id="$$$$"
-              className="4-and-fewer"/>
+              className="4-and-fewer"
+              onChange={this.update("price")}
+              checked={checked("price","$$$$")}
+              />
 
           </div>
         </section>
@@ -99,26 +114,35 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">I want</h2>
           <div className="switch-group">
 
-          <label for="delivery" className="type">Delivery</label>
+          <label htmlFor="delivery" className="type">Delivery</label>
             <input
               type="radio"
               value="delivery"
               id="delivery"
-              className="transaction-type"/>
+              className="transaction-type"
+              onChange={this.update("type")}
+              checked={checked("type","delivery")}
+              />
 
-            <label for="takeout" className="type">Takeout</label>
+            <label htmlFor="takeout" className="type">Takeout</label>
             <input
               type="radio"
               value="takeout"
               id="takeout"
-              className="transaction-type"/>
+              className="transaction-type"
+              onChange={this.update("type")}
+              checked={checked("type","takeout")}
+              />
 
-            <label for="eatout" className="type">Eat Out</label>
+            <label htmlFor="eatout" className="type">Eat Out</label>
             <input
               type="radio"
               value="eatout"
               id="eatout"
-              className="transaction-type"/>
+              className="transaction-type"
+              onChange={this.update("type")}
+              checked={checked("type","eatout")}
+              />
 
           </div>
         </section>
@@ -130,7 +154,7 @@ class FilterBar extends React.Component {
             <h2>Open Now</h2>
               <div className="switch">
                 <input id="cmn-toggle-4" className="cmn-toggle cmn-toggle-round-flat" type="checkbox"/>
-                <label for="cmn-toggle-4"></label>
+                <label htmlFor="cmn-toggle-4"></label>
               </div>
             </div>
 

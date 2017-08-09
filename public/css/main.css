@@ -5993,7 +5993,8 @@ textarea {
 .restaurants-page {
   display: flex;
   flex-direction: row;
-  height: 86.5vh; }
+  height: 86.5vh;
+  min-height: 500px; }
 
 .restaurant-index-and-map {
   display: flex;
