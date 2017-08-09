@@ -9,18 +9,20 @@ class FilterBar extends React.Component {
     super(props);
     this.state = {
       price:[1, 2, 3, 4],
-      type: this.props.type || "delivery",
-      address: this.props.address,
-      position: this.props.position,
+      type: this.props.location.state.type || "delivery",
+      address: this.props.location.state.address,
+      position: this.props.location.state.position,
       openNow: true,
       openAt: "",
       deliveryTime: 60,
+      deliveryTimeDisplay: 60,
     };
 
     //bindings
 
     this.handleToggle = this.handleToggle.bind(this);
     this.handlePrice = this.handlePrice.bind(this);
+    this.handleMouseDown = this.handleMouseDown.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
     this.updateAddress = this.updateAddress.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
@@ -87,6 +89,10 @@ class FilterBar extends React.Component {
     return array;
   }
 
+  handleMouseDown(e){
+    this.deliveryTimeDisplay = e.target.value;
+  }
+
   // renderErrors(){
   //
   // }
@@ -122,6 +128,12 @@ class FilterBar extends React.Component {
 
     const selected = (property, value) => (
       this.state[property] === value
+    );
+
+    const deliveryTimeDisplay = this.state.deliveryTime;
+
+    const handleMouseDown = e => (
+      deliveryTime = e.target.value
     );
 
     return (
@@ -248,15 +260,19 @@ class FilterBar extends React.Component {
         <section className="delivery-time-section">
           <h2 className="filter-section-header">Delivery Time</h2>
           {this.renderSliderBarHeader()}
-          <input
-            className="slider-bar"
-            type="range"
-            min="40"
-            max="80"
-            value={this.state.deliveryTime}
-            onChange={this.update('deliveryTime')}
-          />
-
+          <div className="slider-bar-div">
+            <span> 45 </span>
+            <input
+              className="slider-bar"
+              type="range"
+              min="40"
+              max="80"
+              value={deliveryTimeDisplay}
+              onChange={handleMouseDown}
+              onMouseUp={this.update("deliveryTime")}
+            />
+          <span> 80 </span>
+        </div>
         </section>
 
         <section className="question-section">
@@ -272,7 +288,6 @@ class FilterBar extends React.Component {
   }
 
   render(){
-    console.log(this.state);
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}
