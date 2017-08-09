@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AddressSearch from './address_search';
-import { Link } from 'react-router';
+import { Link, withRouter } from 'react-router';
 // import { Link, withRouter } from 'react-router-dom';
 
 
@@ -58,6 +58,7 @@ class LandingPage extends React.Component {
   render() {
     // <Link to="/restaurants" position={this.state.position}>
     // </Link>
+    const {type, position, address} = this.state;
     return (
       <div>
         <div className="lp-header-container">
@@ -76,9 +77,9 @@ class LandingPage extends React.Component {
           </div>
           <div className="lp-searchbar-button">
             <Link to='/restaurants'
-              type={this.state.dineType}
-              position={this.state.position}
-              address={this.state.address} >
+              type={type}
+              position={position}
+              address={address} >
             <input type="submit"
               value="Tell Me What to Eat!">
             </input>
@@ -90,4 +91,4 @@ class LandingPage extends React.Component {
   }
 
 }
-export default LandingPage;
+export default withRouter(LandingPage);

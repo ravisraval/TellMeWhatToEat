@@ -6,6 +6,7 @@ import RestaurantIndex from './restaurant_index';
 class FilterBar extends React.Component {
   constructor(props){
     super(props);
+    console.log("PROOPPPS", this.props);
     this.state = {
       price: "$",
       type: this.props.type,
@@ -15,7 +16,7 @@ class FilterBar extends React.Component {
       openAt: "",
       deliveryTime: 60,
     };
-
+    console.log(this.state);
     //bindings
 
     this.handleToggle = this.handleToggle.bind(this);
