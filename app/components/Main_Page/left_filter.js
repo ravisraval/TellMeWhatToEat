@@ -16,7 +16,7 @@ class FilterBar extends React.Component {
 
     //bindings
 
-    this.handlePrice = this.handlePrice.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -28,31 +28,47 @@ class FilterBar extends React.Component {
   // }
 
 //update property for testing  (that can console log)
+  // update(property) {
+  //   const that = this;
+  //   return e => {
+  //     return that.setState({ [property]: e.target.value});
+  //   };
+  // }
+
+// update property, refactored
   update(property) {
-    const that = this;
-    return e => {
-      return that.setState({ [property]: e.target.value});
-    };
+    return e => (this.setState({ [property]: e.target.value}));
   }
 
-// // update property, refactored
-//   update(property) {
-//     return e => (this.setState({ [property]: e.target.value}));
-//   }
-
-  handlePrice(e){
-    e.preventDefault();
-    return () => this.setState({ ["price"]: e.target.value});
+  handleToggle(e){
+    const toggledBool = this.state.openNow ? false : true;
+    this.setState({ ["openNow"]: toggledBool});
+    // if (this.state.openNow) this.state.openAt = null;
   }
 
   // renderErrors(){
   //
   // }
 
+  renderOpenAt(){
+    return (
+      <div className="open-later">
 
+        <span>Open At</span>
+        <input
+          className="open-at"
+          type="time"
+          value={this.state.openAt}
+          onChange={this.update('openAt')}
+        />
+        today
+      </div>
+    );
+  }
 
   renderFilterBar(){
     console.log("current state", this.state);
+
     const checked = (property, value) => {
       return (
       this.state[property] === value ? true : false
@@ -149,21 +165,48 @@ class FilterBar extends React.Component {
 
         <section className="open-now-section">
           <div className="open-now-or-later">
-
             <div className="open-now">
+
             <h2>Open Now</h2>
               <div className="switch">
-                <input id="cmn-toggle-4" className="cmn-toggle cmn-toggle-round-flat" type="checkbox"/>
-                <label htmlFor="cmn-toggle-4"></label>
+
+                <input
+                  id="toggle"
+                  className="toggle"
+                  type="checkbox"
+                  value={this.state.openNow}
+                  checked={this.state.openNow}
+                  onChange={this.handleToggle}
+                />
+
+                <label htmlFor="toggle"></label>
+
+              </div>
+
+            </div>
+
+            {this.state.openNow ? "" : this.renderOpenAt()}
+
+          </div>
+        </section>
+
+        <section className="delivery-time-section">
+          <div className="row">
+            <div className="small-10 medium-11 columns">
+              <div className="range-slider" data-slider data-options="display_selector: #sliderOutput3;">
+                <span className="range-slider-handle" role="slider" tabIndex="0"></span>
+                <span className="range-slider-active-segment"></span>
               </div>
             </div>
-
-            <div className="open-later">
-
+            <div className="small-2 medium-1 columns">
+              <span id="sliderOutput3"></span>
             </div>
-
-            <div><h2>Help Me Decide</h2><span>Question Component</span></div>
           </div>
+        </section>
+
+        <section className="question-section">
+          <h2>Help Me Decide</h2>
+          <span>Question Component</span>
         </section>
 
 

@@ -6065,19 +6065,19 @@ nav.navbar.navbar-default.navbar-static-top {
 .switch-group label:last-of-type {
   border-radius: 0 4px 4px 0; }
 
-.cmn-toggle {
+.toggle {
   position: absolute;
   margin-left: -9999px;
   visibility: hidden; }
 
-.cmn-toggle + label {
+.toggle + label {
   display: block;
   position: relative;
   cursor: pointer;
   outline: none;
   user-select: none; }
 
-input.cmn-toggle-round-flat + label {
+input.toggle + label {
   padding: 2px;
   width: 35px;
   height: 20px;
@@ -6085,13 +6085,13 @@ input.cmn-toggle-round-flat + label {
   border-radius: 60px;
   transition: background 0.4s; }
 
-input.cmn-toggle-round-flat + label:before,
-input.cmn-toggle-round-flat + label:after {
+input.toggle + label:before,
+input.toggle + label:after {
   display: block;
   position: absolute;
   content: ""; }
 
-input.cmn-toggle-round-flat + label:before {
+input.toggle + label:before {
   top: 2px;
   left: 2px;
   bottom: 2px;
@@ -6100,7 +6100,7 @@ input.cmn-toggle-round-flat + label:before {
   border-radius: 60px;
   transition: background 0.4s; }
 
-input.cmn-toggle-round-flat + label:after {
+input.toggle + label:after {
   top: 4px;
   left: 4px;
   bottom: 4px;
@@ -6109,9 +6109,9 @@ input.cmn-toggle-round-flat + label:after {
   border-radius: 52px;
   transition: margin 0.4s, background 0.4s; }
 
-input.cmn-toggle-round-flat:checked + label {
+input.toggle:checked + label {
   background-color: #8ce196; }
 
-input.cmn-toggle-round-flat:checked + label:after {
-  margin-left: 60px;
+input.toggle:checked + label:after {
+  margin-left: 15px;
   background-color: #8ce196; }
