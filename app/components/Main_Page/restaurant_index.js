@@ -16,6 +16,7 @@ class RestaurantIndex extends React.Component {
       isModalOpen: false,
       restaurants: {}
     };
+    console.log(this.props);
     this.getRestaurants = this.getRestaurants.bind(this);
     this.openModal = this.openModal.bind(this);
     this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
@@ -37,6 +38,7 @@ class RestaurantIndex extends React.Component {
     //logic for handling added filters
     // this.setState({ restaurants: this.props.restaurants })
     //etc for all filters
+    console.log(this.props);
 
   }
 
@@ -58,7 +60,6 @@ class RestaurantIndex extends React.Component {
 
     foursquare.venues.getVenues(params)
       .then(res => {
-        console.log(res.response.venues);
         this.setState({ fooderies: res.response.venues }, () => {
       });
       });

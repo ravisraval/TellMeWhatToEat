@@ -76,10 +76,12 @@ class LandingPage extends React.Component {
               address={this.state.address}/>
           </div>
           <div className="lp-searchbar-button">
-            <Link to='/restaurants'
-              type={type}
-              position={position}
-              address={address} >
+            <Link to={{ pathname: '/restaurants',
+              state: {
+                type: this.state.dineType,
+                position: this.state.position,
+                address: this.state.address
+            }}}>
             <input type="submit"
               value="Tell Me What to Eat!">
             </input>
