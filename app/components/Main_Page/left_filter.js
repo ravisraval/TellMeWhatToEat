@@ -8,7 +8,7 @@ class FilterBar extends React.Component {
     super(props);
     this.state = {
       price: null,
-      type: null,
+      type: "delivery",
       openNow: true,
       openAt: null,
       deliveryTime: null,
@@ -60,33 +60,37 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">Price</h2>
           <div className="switch-group">
 
+          <label for="$">$</label>
             <input
               type="radio"
               onChange={this.handlePrice}
               value="$"
+              id="$"
               className="1"/>
-              $
 
+            <label for="$$">$$</label>
             <input
               type="radio"
               onChange={this.handlePrice}
               value="$$"
+              id="$$"
               className="2-and-fewer"/>
-              $$
 
+            <label for="$$$">$$$</label>
             <input
               type="radio"
               onChange={this.handlePrice}
               value="$$$"
+              id="$$$"
               className="3-and-fewer"/>
-              $$$
 
+            <label for="$$$$">$$$$</label>
             <input
               type="radio"
               onChange={this.handlePrice}
               value="$$$$"
+              id="$$$$"
               className="4-and-fewer"/>
-              $$$$
 
           </div>
         </section>
@@ -95,23 +99,26 @@ class FilterBar extends React.Component {
           <h2 className="filter-section-header">I want</h2>
           <div className="switch-group">
 
+          <label for="delivery" className="type">Delivery</label>
             <input
               type="radio"
-              // onClick={this.handleType()}
+              value="delivery"
+              id="delivery"
               className="transaction-type"/>
-              Delivery
 
+            <label for="takeout" className="type">Takeout</label>
             <input
               type="radio"
-              // onClick={this.handleType()}
+              value="takeout"
+              id="takeout"
               className="transaction-type"/>
-              Takeout
 
+            <label for="eatout" className="type">Eat Out</label>
             <input
               type="radio"
-              // onClick={this.handleType()}
+              value="eatout"
+              id="eatout"
               className="transaction-type"/>
-              Eat Out
 
           </div>
         </section>
