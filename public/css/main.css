@@ -3662,6 +3662,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 56px;
+  margin-bottom: 21px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
     content: " ";
@@ -5996,7 +5997,12 @@ textarea {
 
 .restaurant-index-and-map {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%; }
+
+nav.navbar.navbar-default.navbar-static-top {
+  margin-bottom: 0 !important; }
 
 .filter-bar {
   border-right: 1px solid grey;
