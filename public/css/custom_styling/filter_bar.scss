@@ -153,10 +153,6 @@ p.later {
   width: 80px;
 }
 
-.switch-group label:hover {
-    cursor: pointer;
-    background-color: #A5DC86;
-}
 
 .switch-group input:checked + label {
   background-color: #A5DC86;
@@ -173,7 +169,10 @@ p.later {
 }
 
 
-
+.switch-group label:hover {
+    cursor: pointer;
+    background: #8ebf72 !important;
+}
 
 
 

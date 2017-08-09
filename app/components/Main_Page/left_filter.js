@@ -8,19 +8,20 @@ class FilterBar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      price: "$",
-      type: this.props.type,
+      priceInt: 4,
+      price:[1, 2, 3, 4],
+      type: this.props.type || "delivery",
       address: this.props.address,
       position: this.props.position,
       openNow: true,
       openAt: "",
       deliveryTime: 60,
     };
-    console.log(this.props.location.state);
 
     //bindings
 
     this.handleToggle = this.handleToggle.bind(this);
+    this.handlePrice = this.handlePrice.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -47,6 +48,29 @@ class FilterBar extends React.Component {
   handleToggle(e){
     const toggledBool = this.state.openNow ? false : true;
     this.setState({ openNow: toggledBool, openAt:""});
+  }
+
+  handlePrice(e){
+    const priceInt = parseInt(e.target.value);
+    const currentPrice = this.state.price;
+    let price = currentPrice;
+
+    if (currentPrice.includes(priceInt)) {
+      const i = currentPrice.indexOf(priceInt);
+      price.splice(i, 1);
+    } else {
+      price = currentPrice.concat(priceInt);
+    }
+
+    this.setState({ priceInt, price});
+  }
+
+  generatePriceArray(int){
+    const array = [];
+    for (let i = 1; i <= int; i++) {
+      array.push(i);
+    }
+    return array;
   }
 
   // renderErrors(){
@@ -79,10 +103,12 @@ class FilterBar extends React.Component {
 
   renderFilterBar(){
     const checked = (property, value) => {
-      return (
-      this.state[property] === value ? true : false
-      );
+      return this.state.price.includes(value);
     };
+
+    const selected = (property, value) => (
+      this.state[property] === value
+    );
 
     return (
     <nav className="filter-bar col-sm-4">
@@ -94,44 +120,44 @@ class FilterBar extends React.Component {
           <div className="switch-group">
 
             <input
-              type="radio"
-              value="$"
+              type="checkbox"
+              value={1}
               id="$"
               className="1"
-              onChange={this.update("price")}
-              checked={checked("price","$")}
+              onChange={this.handlePrice}
+              checked={checked("price",1)}
               />
-            <label htmlFor="$">$</label>
+            <label id="1" htmlFor="$">$</label>
 
             <input
-              type="radio"
-              value="$$"
+              type="checkbox"
+              value={2}
               id="$$"
-              className="2-and-fewer"
-              onChange={this.update("price")}
-              checked={checked("price","$$")}
+              className="1 2"
+              onChange={this.handlePrice}
+              checked={checked("price",2)}
               />
-            <label htmlFor="$$">$$</label>
+            <label id="2" htmlFor="$$">$$</label>
 
             <input
-              type="radio"
-              value="$$$"
+              type="checkbox"
+              value={3}
               id="$$$"
-              className="3-and-fewer"
-              onChange={this.update("price")}
-              checked={checked("price","$$$")}
+              className="1 2 3"
+              onChange={this.handlePrice}
+              checked={checked("price",3)}
               />
             <label htmlFor="$$$">$$$</label>
 
             <input
-              type="radio"
-              value="$$$$"
+              type="checkbox"
+              value={4}
               id="$$$$"
-              className="4-and-fewer"
-              onChange={this.update("price")}
-              checked={checked("price","$$$$")}
+              className="1 2 3 4"
+              onChange={this.handlePrice}
+              checked={checked("price",4)}
               />
-            <label htmlFor="$$$$">$$$$</label>
+            <label id="4" htmlFor="$$$$">$$$$</label>
 
           </div>
         </section>
@@ -146,7 +172,7 @@ class FilterBar extends React.Component {
               id="delivery"
               className="transaction-type"
               onChange={this.update("type")}
-              checked={checked("type","delivery")}
+              checked={selected("type","delivery")}
               />
             <label htmlFor="delivery" className="type">Delivery</label>
 
@@ -156,7 +182,7 @@ class FilterBar extends React.Component {
               id="takeout"
               className="transaction-type"
               onChange={this.update("type")}
-              checked={checked("type","takeout")}
+              checked={selected("type","takeout")}
               />
             <label htmlFor="takeout" className="type">Takeout</label>
 
@@ -166,7 +192,7 @@ class FilterBar extends React.Component {
               id="eatout"
               className="transaction-type"
               onChange={this.update("type")}
-              checked={checked("type","eatout")}
+              checked={selected("type","eatout")}
               />
             <label htmlFor="eatout" className="type">Eat Out</label>
 
@@ -228,7 +254,6 @@ class FilterBar extends React.Component {
   }
 
   render(){
-    console.log(this.props);
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}

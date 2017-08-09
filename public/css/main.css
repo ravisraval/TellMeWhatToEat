@@ -6130,10 +6130,6 @@ p.later {
 .switch-group label.type {
   width: 80px; }
 
-.switch-group label:hover {
-  cursor: pointer;
-  background-color: #A5DC86; }
-
 .switch-group input:checked + label {
   background-color: #A5DC86;
   -webkit-box-shadow: none;
@@ -6144,6 +6140,10 @@ p.later {
 
 .switch-group label:last-of-type {
   border-radius: 0 4px 4px 0; }
+
+.switch-group label:hover {
+  cursor: pointer;
+  background: #8ebf72 !important; }
 
 .toggle-section {
   display: flex;
