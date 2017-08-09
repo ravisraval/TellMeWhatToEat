@@ -52,7 +52,8 @@ class RestaurantIndex extends React.Component {
     const params = {
       "ll": "37.7749,-122.4194", //stand-in for actual location
       "query": 'Restaurants',
-      "limit": '50'
+      "limit": '40',
+      "radius": "4200"
     };
 
     foursquare.venues.getVenues(params)

@@ -31,8 +31,8 @@ class RightMapDisplay extends React.Component {
 
     const searchMap = this.refs.searchMap;
     const mapOptions = {
-      center: {lat: 37.773972,
-      lng: -122.431297},
+      center: {lat: 37.7719,
+      lng: -122.4194},
       zoom: 12,
       minZoom: 3
     };
