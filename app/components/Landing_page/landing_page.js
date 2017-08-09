@@ -60,19 +60,31 @@ class LandingPage extends React.Component {
     // </Link>
     return (
       <div>
-        {this.dineType()}
-        <AddressSearch
-          updateAddress={this.updateAddress}
-          updatePosition={this.updatePosition}
-          address={this.state.address}/>
-        <Link to='/restaurants'
-          type={this.state.dineType}
-          position={this.state.position}
-          address={this.state.address} >
-        <input type="submit"
-          value="Tell Me What to Eat!">
-        </input>
-        </Link>
+        <div className="lp-header-container">
+          <div className="lp-header">Tell Me What To Eat</div>
+          <div className="lp-sub-header">More eating, less deciding</div>
+        </div>
+        <div className="lp-searchbar-container">
+          <div className="lp-searchbar-dropdown">
+            {this.dineType()}
+          </div>
+          <div className="lp-searchbar-input">
+            <AddressSearch
+              updateAddress={this.updateAddress}
+              updatePosition={this.updatePosition}
+              address={this.state.address}/>
+          </div>
+          <div className="lp-searchbar-button">
+            <Link to='/restaurants'
+              type={this.state.dineType}
+              position={this.state.position}
+              address={this.state.address} >
+            <input type="submit"
+              value="Tell Me What to Eat!">
+            </input>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

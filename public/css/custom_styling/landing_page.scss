@@ -1,10 +1,70 @@
 .landing-page-container {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   border: 0 solid red;
 }
 
+.lp-header-container {
+  .lp-header {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+  }
+  .lp-sub-header {
+    font-size: 40px;
+    font-weight: lighter;
+    color: black;
+  }
+}
+
+.lp-searchbar-container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  font-size: 25px;
+
+  .lp-searchbar-dropdown {
+    select {
+      border: none;
+      background: none;
+      outline: none;
+    }
+  }
+
+  .lp-searchbar-input {
+    margin-left: 10px;
+    margin-right: 10px;
+    input {
+      padding-left: 10px;
+      border: none;
+      border-left: 1px solid lightgrey;
+      border-right: 1px solid lightgrey;
+      background: none;
+      outline: none;
+      width: 40vw;
+    }
+  }
+
+  .lp-searchbar-button {
+    input {
+      border: none;
+      background: none;
+      outline: none;
+      color: black;
+    }
+    input:hover {
+      color: grey;
+    }
+  }
+}
+
+
+
 #searchLocation {
-  font-size: 40px;
-  border: 3px solid red;
+  // font-size: 25px;
 }

@@ -70,13 +70,11 @@ class AddressSearch extends React.Component {
 
   render() {
     return (
-      <div>
         <input id='searchLocation'
         placeholder='Enter your address'
         value={this.address}
         onChange={this.update('address')}
         ></input>
-      </div>
     );
   }
 

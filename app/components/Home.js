@@ -8,8 +8,6 @@ class Home extends React.Component {
   render() {
     return (
       <div className="landing-page-container">
-        <div>Tell Me What To Eat</div>
-        <div>More eating, less deciding</div>
         <LandingPage/>
       </div>
     );
