@@ -11,7 +11,7 @@ class FilterBar extends React.Component {
       type: "delivery",
       openNow: true,
       openAt: "",
-      deliveryTime: "",
+      deliveryTime: 60,
     };
 
     //bindings
@@ -52,17 +52,25 @@ class FilterBar extends React.Component {
   renderOpenAt(){
     return (
       <div className="open-later">
-
-        <span>Open At</span>
-        <input
+      <p className="later">today at</p>
+         <input
           className="open-at"
           type="time"
           value={this.state.openAt}
           onChange={this.update('openAt')}
         />
-        today
+
       </div>
     );
+  }
+
+  renderSliderBarHeader(){
+    if (this.state.deliveryTime > 79) {
+      return (<h3 className="slider-bar-header"><br/>Any delivery time</h3>);
+    } else {
+      return (
+        <h3 className="slider-bar-header">{this.state.deliveryTime}m <br/> or less</h3>);
+    }
   }
 
   renderFilterBar(){
@@ -76,7 +84,7 @@ class FilterBar extends React.Component {
 
     return (
     <nav className="filter-bar col-sm-4">
-      <h1>Restaurant Picker</h1>
+      <h1 className="title">Restaurant Picker</h1>
       <form className="filter-bar-form">
 
         <section className="price-section">
@@ -164,12 +172,13 @@ class FilterBar extends React.Component {
         </section>
 
         <section className="open-now-section">
+        <h2 className="filter-section-header">Open</h2>
           <div className="open-now-or-later">
             <div className="open-now">
 
-            <h2>Open Now</h2>
-              <div className="switch">
+              <div className="toggle-section">
 
+                <p className={this.state.openNow ? "now checked" : "now"}>now</p>
                 <input
                   id="toggle"
                   className="toggle"
@@ -179,7 +188,7 @@ class FilterBar extends React.Component {
                   onChange={this.handleToggle}
                 />
 
-                <label htmlFor="toggle"></label>
+                <label htmlFor="toggle" className="toggle-display"></label>
 
               </div>
 
@@ -192,13 +201,16 @@ class FilterBar extends React.Component {
 
         <section className="delivery-time-section">
           <h2 className="filter-section-header">Delivery Time</h2>
-
+          {this.renderSliderBarHeader()}
           <input
+            className="slider-bar"
             type="range"
             min="40"
             max="80"
-
+            value={this.state.deliveryTime}
+            onChange={this.update('deliveryTime')}
           />
+
         </section>
 
         <section className="question-section">
