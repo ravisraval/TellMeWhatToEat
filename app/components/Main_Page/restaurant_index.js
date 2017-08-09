@@ -47,7 +47,6 @@ class RestaurantIndex extends React.Component {
       openAt: newProps.state.openAt,
       obtainType: newProps.state.type
     });
-    console.log(newProps);
     //etc for all filters
     this.getRestaurants(newProps.state.position)
 
