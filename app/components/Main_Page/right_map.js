@@ -48,8 +48,8 @@ class RightMapDisplay extends React.Component {
     if (nextProps.restaurants !== this.props.restaurants) {
       this.MarkerManager.updateMarkers(nextProps.restaurants.concat({
         id: 0,
-        lat:this.props.homePos.lat,
-        lng:this.props.homePos.lng,
+        lat:nextProps.homePos.lat,
+        lng:nextProps.homePos.lng,
         displayPosition: 0
       }));
     }

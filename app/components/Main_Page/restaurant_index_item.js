@@ -14,11 +14,12 @@ class RestaurantIndexItem extends React.Component {
     // this.props.history.push("/restaurants/show
   }
   render() {
+    console.log(restaurant);
     const { restaurant } = this.props;
     return (
       <li className="restaurant-index-item">
         <button onClick={this.handleClick}>
-          <span> { restaurant.id } </span>
+          <span> { restaurant.rating } </span>
           <span> { restaurant.name } </span>
         </button>
       </li>
