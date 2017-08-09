@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AddressSearch from './address_search';
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router';
+// import { Link, withRouter } from 'react-router-dom';
 
 
 
@@ -64,9 +65,14 @@ class LandingPage extends React.Component {
           updateAddress={this.updateAddress}
           updatePosition={this.updatePosition}
           address={this.state.address}/>
+        <Link to='/restaurants'
+          type={this.state.dineType}
+          position={this.state.position}
+          address={this.state.address} >
         <input type="submit"
           value="Tell Me What to Eat!">
         </input>
+        </Link>
       </div>
     );
   }

@@ -8,6 +8,9 @@ export default class MarkerManager {
   }
 
   updateMarkers(restaurants) {
+    if (restaurants === undefined) {
+      restaurants = {};
+    }
     const restaurantsObj = {};
 
     restaurants.forEach((restaurant) => {
