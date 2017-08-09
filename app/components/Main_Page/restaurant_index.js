@@ -14,11 +14,13 @@ class RestaurantIndex extends React.Component {
       receivedRestaurants: [],
       numRestaurants: 3,
       isModalOpen: false,
-      restaurants: {},
-      position: this.props.state.position
+      position: this.props.state.position,
+      price: this.props.state.price,
+      deliveryTime: this.props.state.deliveryTime || 60,
+      openNow: this.props.state.openNow,
+      openAt: this.props.state.openAt,
+      obtainType: this.props.state.type
     };
-    console.log("props");
-    console.log(this.props);
     this.getRestaurants = this.getRestaurants.bind(this);
     this.openModal = this.openModal.bind(this);
     this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
@@ -36,12 +38,18 @@ class RestaurantIndex extends React.Component {
     this.getRestaurants(this.state.position);
   }
 
-  componentWillReceiveProps() {
-    //logic for handling added filters
-    // this.setState({ restaurants: this.props.restaurants })
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      position: newProps.state.position,
+      price:newProps.state.price,
+      deliveryTime: newProps.state.deliveryTime,
+      openNow: newProps.state.openNow,
+      openAt: newProps.state.openAt,
+      obtainType: newProps.state.type
+    });
+    console.log(newProps);
     //etc for all filters
-    console.log(this.props);
-    this.getRestaurants(this.props.state.location)
+    this.getRestaurants(newProps.state.position)
 
   }
 
@@ -93,19 +101,8 @@ class RestaurantIndex extends React.Component {
         lng: restaurant.location.lng,
         displayPosition: restaurants.length + 1
       });
-
-
-
     })
 
-    // const restaurantListRender = restaurantList.map(restaurant => (
-    //   <RestaurantIndexItem
-    //    key={restaurant.id}
-    //    restaurant={restaurant}
-    //    openModal={this.openModal}
-    //    closeModal={this.closeModal}/>
-    //  )
-    // );
     const { restID, position } = this.state;
     return(
       <div className="restaurant-index-and-map">

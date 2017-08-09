@@ -23,8 +23,6 @@ class RightMapDisplay extends React.Component {
   // }
 
   componentDidMount() {
-    console.log("in rihgt mapa");
-    console.log(this.props);
     const defaultBounds = {
       northEast: {lat: 37.873972, lng: -122.331297},
       southWest: {lat: 37.673972, lng: -122.531297}
