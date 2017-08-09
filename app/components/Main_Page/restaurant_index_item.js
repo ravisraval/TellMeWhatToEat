@@ -11,7 +11,6 @@ class RestaurantIndexItem extends React.Component {
 
   handleClick() {
     this.props.openModal(this.props.restaurant.id);
-    console.log(this.props);
     // this.props.history.push("/restaurants/show
   }
   render() {
