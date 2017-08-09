@@ -7,6 +7,7 @@ class FilterBar extends React.Component {
   // TODO: ADD IN AN ADDRESS BAR
   constructor(props){
     super(props);
+    console.log("PROOPPPS", this.props);
     this.state = {
       price: "$",
       type: this.props.location.state.type,
@@ -16,7 +17,6 @@ class FilterBar extends React.Component {
       openAt: "",
       deliveryTime: 60,
     };
-
     //bindings
 
     this.handleToggle = this.handleToggle.bind(this);
