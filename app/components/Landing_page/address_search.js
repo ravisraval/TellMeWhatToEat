@@ -4,10 +4,11 @@ import ReactDOM from 'react-dom';
 class AddressSearch extends React.Component {
   constructor(props){
     super(props);
+    console.log("ADDRESS", this.props.address);
     this.state = {
       lng: null,
       lat: null,
-      address: ""
+      address: this.props.address ? this.props.address : ""
     };
     this.update = this.update.bind(this);
   }
@@ -63,6 +64,7 @@ class AddressSearch extends React.Component {
       const long = place.geometry.viewport["b"]["b"];
       const latt = place.geometry.viewport["f"]["b"];
       var pos = {lat: latt, lng: long};
+      this.setState({address: place.formatted_address});
       this.props.updatePosition(pos);
       this.props.updateAddress(place.formatted_address);
     });
@@ -72,7 +74,7 @@ class AddressSearch extends React.Component {
     return (
         <input id='searchLocation'
         placeholder='Enter your address'
-        value={this.address}
+        value={this.state.address}
         onChange={this.update('address')}
         ></input>
     );

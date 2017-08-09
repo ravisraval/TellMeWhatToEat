@@ -31,8 +31,8 @@ class RightMapDisplay extends React.Component {
 
     const searchMap = this.refs.searchMap;
     const mapOptions = {
-      center: {lat: 37.7719,
-      lng: -122.4194},
+      center: {lat: this.props.homePos.lat,
+      lng: this.props.homePos.lng},
       zoom: 12,
       minZoom: 3
     };
@@ -40,8 +40,12 @@ class RightMapDisplay extends React.Component {
     this.searchMap = new google.maps.Map(searchMap, mapOptions);
     const infowindow = new google.maps.InfoWindow();
     this.MarkerManager = new MarkerManager(this.searchMap, infowindow, this.handleMarkerClick.bind(this));
-    console.log(this.restaurants);
-    this.MarkerManager.updateMarkers(this.restaurants);
+    this.MarkerManager.updateMarkers(this.restaurants.concat({
+      id: 0,
+      lat:this.props.homePos.lat,
+      lng:this.props.homePos.lng,
+      displayPosition: 0
+    }));
     this.updateMap = () => {
       const response = this.searchMap.getBounds().toJSON();
       this.formattedBounds = {
@@ -54,8 +58,14 @@ class RightMapDisplay extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.restaurants !== this.props.restaurants) {
-      this.MarkerManager.updateMarkers(nextProps.restaurants);
+      this.MarkerManager.updateMarkers(nextProps.restaurants.concat({
+        id: 0,
+        lat:nextProps.homePos.lat,
+        lng:nextProps.homePos.lng,
+        displayPosition: 0
+      }));
     }
+
   }
 
   handleMarkerClick(restaurantId) {

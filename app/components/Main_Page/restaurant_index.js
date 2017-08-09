@@ -11,12 +11,16 @@ class RestaurantIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      fooderies: [],
+      receivedRestaurants: [],
       numRestaurants: 3,
       isModalOpen: false,
-      restaurants: {}
+      position: this.props.state.position,
+      price: this.props.state.price,
+      deliveryTime: this.props.state.deliveryTime || 60,
+      openNow: this.props.state.openNow,
+      openAt: this.props.state.openAt,
+      obtainType: this.props.state.type
     };
-    console.log(this.props);
     this.getRestaurants = this.getRestaurants.bind(this);
     this.openModal = this.openModal.bind(this);
     this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
@@ -31,49 +35,56 @@ class RestaurantIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.getRestaurants(this.props.position);
+    this.getRestaurants(this.state.position);
   }
 
-  componentWillReceiveProps() {
-    //logic for handling added filters
-    // this.setState({ restaurants: this.props.restaurants })
+  componentWillReceiveProps(newProps) {
+    this.setState({
+      position: newProps.state.position,
+      price:newProps.state.price,
+      deliveryTime: newProps.state.deliveryTime,
+      openNow: newProps.state.openNow,
+      openAt: newProps.state.openAt,
+      obtainType: newProps.state.type
+    });
     //etc for all filters
-    console.log(this.props);
+    this.getRestaurants(newProps.state.position)
 
   }
 
-  listeners(autoComplete) {
-  }
-
-  getRestaurants(userLocation) {
+  getRestaurants(location) {
     const foursquare = require('react-foursquare')({
       clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
       clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
     });
 
     const params = {
-      "ll": "37.7749,-122.4194", //stand-in for actual location
-      "query": 'Restaurants',
-      "limit": '40',
-      "radius": "4200"
+      "ll": `${location.lat},${location.lng}`,
+      // "query": 'food',
+      "categoryId": "4d4b7105d754a06374d81259",
+      "radius": "3000"
+      // "limit": '40',
     };
 
     foursquare.venues.getVenues(params)
       .then(res => {
-        this.setState({ fooderies: res.response.venues }, () => {
+        console.log(res.response);
+        this.setState({ receivedRestaurants: res.response.venues }, () => {
       });
       });
   }
 
   render() {
     //LOGIC FOR PICKING RESTAURANTS
-    if (this.state.fooderies.length === 0) {return null;}
-    const { fooderies } = this.state;
-    const ids = Object.keys(fooderies);
+    if (this.state.receivedRestaurants.length === 0) {return(
+      <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
+    );}
+    const { receivedRestaurants } = this.state;
+    const ids = Object.keys(receivedRestaurants);
     let restaurantList = [];
     let randomRestaurant;
     while (restaurantList.length < this.state.numRestaurants) {
-      randomRestaurant = fooderies[Math.floor(Math.random() * ids.length)];
+      randomRestaurant = receivedRestaurants[Math.floor(Math.random() * ids.length)];
       //fix for duplicates
       if (!restaurantList.includes(randomRestaurant)) {
         restaurantList.push(randomRestaurant);
@@ -93,20 +104,9 @@ class RestaurantIndex extends React.Component {
         lng: restaurant.location.lng,
         displayPosition: restaurants.length + 1
       });
-
-
-
     })
 
-    // const restaurantListRender = restaurantList.map(restaurant => (
-    //   <RestaurantIndexItem
-    //    key={restaurant.id}
-    //    restaurant={restaurant}
-    //    openModal={this.openModal}
-    //    closeModal={this.closeModal}/>
-    //  )
-    // );
-    const { restID } = this.state;
+    const { restID, position } = this.state;
     return(
       <div className="restaurant-index-and-map">
         <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
@@ -117,7 +117,7 @@ class RestaurantIndex extends React.Component {
             {restaurantListRender}
           </ul>
         </div>
-        <RightMapDisplay restaurants={restaurants}/>
+        <RightMapDisplay restaurants={restaurants} homePos={position}/>
       </div>
     );
   }
