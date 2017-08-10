@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//link this to restaurant show modal later
-// <img src={restaurant.image_url} alt={restaurant.name} />
 
 class RestaurantIndexItem extends React.Component {
   constructor(props){
@@ -11,6 +9,8 @@ class RestaurantIndexItem extends React.Component {
     };
     this.getRestaurant = this.getRestaurant.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleAnother = this.handleAnother.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
   }
 
   componentDidMount() {
@@ -38,6 +38,17 @@ class RestaurantIndexItem extends React.Component {
     this.props.openModal(this.props.restaurant.id);
   }
 
+  handleAdd() {
+    this.props.handleAdd(this.props.listOrder);
+  }
+
+  handleAnother() {
+    const newRestaurant = this.props.restaurants[
+      Math.floor(Math.random() * this.props.restaurants.length)];
+    this.getRestaurant(newRestaurant.id);
+
+  }
+
   render() {
     const { restaurant } = this.state;
     if (restaurant == {}) {
@@ -50,15 +61,16 @@ class RestaurantIndexItem extends React.Component {
     } else {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
-    // FOR PHOTO RENDERING : https://developer.foursquare.com/docs/responses/photo
+    // PHOTO RENDERING INFO : https://developer.foursquare.com/docs/responses/photo
     return (
       <li className="restaurant-index-item">
         <button onClick={this.handleClick}>
           <img src={photo}/>
-          <span> { restaurant.name } </span>
-          <span> FourSquare Rating: { restaurant.rating } </span>
-
         </button>
+        <span> { restaurant.name } </span>
+        <span> FourSquare Rating: { restaurant.rating } </span>
+        <button onClick={this.handleAdd}>Save to List</button>
+        <button onClick={this.handleAnother}>Gimme Another</button>
       </li>
     );
   }

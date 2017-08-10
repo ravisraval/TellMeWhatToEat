@@ -5,24 +5,31 @@ import AddressSearch from '../Landing_page/address_search';
 import Questions from '../Questions/question';
 
 class FilterBar extends React.Component {
-  // TODO: ADD IN AN ADDRESS BAR
   constructor(props){
     super(props);
-    console.log("filter bar");
-    console.log(this.state);
-    console.log(this.props);
-    this.state = {
-      price:[1, 2, 3, 4],
-      type: this.props.location.state.type || "delivery",
-      address: this.props.location.state.address,
-      position: this.props.location.state.position,
-      openNow: true,
-      openAt: "",
-      deliveryTime: 60,
-      deliveryTimeDisplay: 60,
-    };
-
-    //bindings
+    if (this.props.location.state && this.props.location.state.address) {
+      this.state = {
+        price:[1, 2, 3, 4],
+        type: this.props.location.state.type,
+        address: this.props.location.state.address,
+        position: this.props.location.state.position,
+        openNow: true,
+        openAt: "",
+        deliveryTime: 60,
+        deliveryTimeDisplay: 60,
+      };
+    } else {
+      this.state = {
+        price:[1, 2, 3, 4],
+        type: "delivery",
+        address: "2889 Mission St, San Francisco, CA 94110",
+        position: {lat: 37.7367436, lng: -122.4573766},
+        openNow: true,
+        openAt: "",
+        deliveryTime: 60,
+        deliveryTimeDisplay: 60,
+      }
+    }
 
     this.handleToggle = this.handleToggle.bind(this);
     this.handlePrice = this.handlePrice.bind(this);
@@ -43,7 +50,6 @@ class FilterBar extends React.Component {
       position: position
       });
   }
-
 
   // to handle submit,
   // handleSubmit(e) {
@@ -111,7 +117,6 @@ class FilterBar extends React.Component {
           value={this.state.openAt}
           onChange={this.update('openAt')}
         />
-
       </div>
     );
   }
@@ -285,8 +290,6 @@ class FilterBar extends React.Component {
           <span>Question Component</span>
         </section>
 
-
-
       </form>
     </nav>
     );
@@ -300,6 +303,6 @@ class FilterBar extends React.Component {
       </div>
     );
   }
-
 }
-    export default FilterBar;
+
+export default FilterBar;

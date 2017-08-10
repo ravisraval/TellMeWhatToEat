@@ -4,124 +4,146 @@ import { Link, withRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantShow from './restaurant_show';
+import SavedRestaurants from './saved_restaurants';
 import RightMapDisplay from './right_map';
 import Modal from '../Modal';
 
 class RestaurantIndex extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      receivedRestaurants: [],
-      numRestaurants: 3,
-      isModalOpen: false,
-      position: this.props.state.position,
-      price: this.props.state.price,
-      deliveryTime: this.props.state.deliveryTime || 60,
-      openNow: this.props.state.openNow,
-      openAt: this.props.state.openAt,
-      obtainType: this.props.state.type
-    };
-    this.getRestaurants = this.getRestaurants.bind(this);
-    this.openModal = this.openModal.bind(this);
-    this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
-  }
+constructor(props){
+  super(props);
+  this.state = {
+    receivedRestaurants: [],
+    numRestaurants: 3,
+    isModalOpen: false,
+    position: this.props.state.position,
+    price: this.props.state.price,
+    deliveryTime: this.props.state.deliveryTime || 60,
+    openNow: this.props.state.openNow,
+    openAt: this.props.state.openAt,
+    obtainType: this.props.state.type,
+    query: this.props.state.query || "food",
+    searchRadius: this.props.state.searchRadius || "4000"
+  };
+  this.reRender = true;
+  this.saveList = [];
+  this.getRestaurants = this.getRestaurants.bind(this);
+  this.openModal = this.openModal.bind(this);
+  this.handleAdd = this.handleAdd.bind(this);
+  this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
+}
 
-  openModal(restID) {
-    this.setState({ isModalOpen: true, restID: restID });
-  }
+openModal(restID) {
+  this.reRender = false;
+  this.setState({ isModalOpen: true, restID: restID });
+}
 
-  closeModal() {
-    this.setState({ isModalOpen: false });
-  }
+closeModal() {
+  this.reRender = false;
+  this.setState({ isModalOpen: false });
+}
 
-  componentDidMount() {
-    this.getRestaurants(this.state.position);
-  }
+componentDidMount() {
+  this.getRestaurants(this.state.position);
+}
 
-  componentWillReceiveProps(newProps) {
-    this.setState({
-      position: newProps.state.position,
-      price:newProps.state.price,
-      deliveryTime: newProps.state.deliveryTime,
-      openNow: newProps.state.openNow,
-      openAt: newProps.state.openAt,
-      obtainType: newProps.state.type
+componentWillReceiveProps(newProps) {
+  this.reRender = true;
+  this.setState({
+    position: newProps.state.position,
+    price:newProps.state.price,
+    deliveryTime: newProps.state.deliveryTime,
+    openNow: newProps.state.openNow,
+    openAt: newProps.state.openAt,
+    // obtainType: newProps.state.type,
+    // searchRadius: newProps.state.searchRadius,
+    // query: newProps.state.query
+  });
+  this.getRestaurants(newProps.state.position);
+}
+
+handleAdd(listOrder) {
+  console.log("adding");
+  if (!this.saveList.includes(this.restaurantList[listOrder])) {
+    this.saveList.push(this.restaurantList[listOrder]);
+  }
+  console.log(this.saveList);
+}
+
+getRestaurants(location) {
+  const foursquare = require('react-foursquare')({
+    clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
+    clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
+  });
+
+  const params = {
+    "ll": `${location.lat},${location.lng}`,
+    "query": this.state.query,
+    "categoryId": "4d4b7105d754a06374d81259",
+    "radius": this.state.searchRadius
+    // "limit": '40',
+  };
+
+  foursquare.venues.getVenues(params)
+    .then(res => {
+      this.setState({ receivedRestaurants: res.response.venues }, () => {
+      });
     });
-    //etc for all filters
-    this.getRestaurants(newProps.state.position);
+}
 
-  }
-
-  getRestaurants(location) {
-    const foursquare = require('react-foursquare')({
-      clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
-      clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
-    });
-
-    const params = {
-      "ll": `${location.lat},${location.lng}`,
-      "query": 'food',
-      "categoryId": "4d4b7105d754a06374d81259",
-      "radius": "3000"
-      // "limit": '40',
-    };
-
-    foursquare.venues.getVenues(params)
-      .then(res => {
-        console.log(res.response);
-        this.setState({ receivedRestaurants: res.response.venues }, () => {
-      });
-      });
-  }
-
-  render() {
-    //LOGIC FOR PICKING RESTAURANTS
-    //DONT PICK THE SAME RESTAURANT
-    if (this.state.receivedRestaurants.length === 0) {return(
-      <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
-    );}
-    const { receivedRestaurants } = this.state;
-    const ids = Object.keys(receivedRestaurants);
-    let restaurantList = [];
-    let randomRestaurant;
-    while (restaurantList.length < this.state.numRestaurants) {
-      randomRestaurant = receivedRestaurants[Math.floor(Math.random() * ids.length)];
-      //fix for duplicates
-      if (!restaurantList.includes(randomRestaurant)) {
-        restaurantList.push(randomRestaurant);
-      }
-    }
-    const restaurants = [];
-    const restaurantListRender = [];
-    restaurantList.forEach(restaurant => {
-      restaurantListRender.push(<RestaurantIndexItem
-       key={restaurant.id}
-       restaurant={restaurant}
-       openModal={this.openModal}
-       closeModal={this.closeModal}/>);
-      restaurants.push({
-        id: restaurant.id,
-        lat: restaurant.location.lat,
-        lng: restaurant.location.lng,
-        displayPosition: restaurants.length + 1
-      });
-    })
-
-    const { restID, position } = this.state;
-    return(
-      <div className="restaurant-index-and-map">
-        <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-          <RestaurantShow restID={restID}/>
-        </Modal>
-        <div className="restaurant-index col-sm-5">
-          <ul>
-            {restaurantListRender}
-          </ul>
-        </div>
-        <RightMapDisplay restaurants={restaurants} homePos={position}/>
-      </div>
+render() {
+  //LOGIC FOR PICKING RESTAURANTS
+  //DONT PICK THE SAME RESTAURANT
+  const { receivedRestaurants } = this.state;
+  if (this.state.receivedRestaurants.length === 0) {return(
+    <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
     );
   }
+  if (this.reRender) {
+    const ids = Object.keys(receivedRestaurants);
+    this.restaurantList = [];
+    let randomRestaurant;
+    while (this.restaurantList.length < this.state.numRestaurants) {
+      randomRestaurant = receivedRestaurants[Math.floor(Math.random() * ids.length)];
+      //fix for duplicates
+      if (!this.restaurantList.includes(randomRestaurant)) {
+        this.restaurantList.push(randomRestaurant);
+      }
+    }
+  }
+  const restaurants = [];
+  const restaurantListRender = [];
+  this.restaurantList.forEach(restaurant => {
+    restaurantListRender.push(<RestaurantIndexItem
+     key={restaurant.id}
+     listOrder={restaurants.length}
+     restaurant={restaurant}
+     openModal={this.openModal}
+     closeModal={this.closeModal}
+     handleAdd={this.handleAdd}
+     restaurants={this.state.receivedRestaurants}/>);
+    restaurants.push({
+      id: restaurant.id,
+      lat: restaurant.location.lat,
+      lng: restaurant.location.lng,
+      displayPosition: restaurants.length + 1
+    });
+  })
+  const { restID, position, saveList } = this.state;
+  return(
+    <div className="restaurant-index-and-map">
+      <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
+        <RestaurantShow restID={restID}/>
+      </Modal>
+      <div className="restaurant-index col-sm-5">
+        <ul>
+          {restaurantListRender}
+        </ul>
+      </div>
+      <SavedRestaurants list={saveList}/>
+      <RightMapDisplay restaurants={restaurants} homePos={position}/>
+    </div>
+  );
+}
 }
 
 export default RestaurantIndex;
