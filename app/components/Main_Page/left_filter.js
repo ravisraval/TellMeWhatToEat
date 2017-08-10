@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RestaurantIndex from './restaurant_index';
 import AddressSearch from '../Landing_page/address_search';
+import Questions from '../Questions/question';
 
 class FilterBar extends React.Component {
   // TODO: ADD IN AN ADDRESS BAR
@@ -141,6 +142,7 @@ class FilterBar extends React.Component {
 
     return (
     <nav className="filter-bar col-sm-4">
+      <Questions />
       <AddressSearch
         updateAddress={this.updateAddress}
         updatePosition={this.updatePosition}
