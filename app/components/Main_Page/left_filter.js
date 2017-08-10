@@ -4,12 +4,8 @@ import RestaurantIndex from './restaurant_index';
 import AddressSearch from '../Landing_page/address_search';
 
 class FilterBar extends React.Component {
-  // TODO: ADD IN AN ADDRESS BAR
   constructor(props){
     super(props);
-    console.log("filter bar");
-    console.log(this.state);
-    console.log(this.props);
     this.state = {
       price:[1, 2, 3, 4],
       type: this.props.location.state.type || "delivery",
@@ -18,7 +14,6 @@ class FilterBar extends React.Component {
       openNow: true,
       openAt: "",
       deliveryTime: 60,
-      deliveryTimeDisplay: 60,
     };
 
     //bindings
