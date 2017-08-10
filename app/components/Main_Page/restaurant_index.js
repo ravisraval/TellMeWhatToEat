@@ -48,7 +48,7 @@ class RestaurantIndex extends React.Component {
       obtainType: newProps.state.type
     });
     //etc for all filters
-    this.getRestaurants(newProps.state.position)
+    this.getRestaurants(newProps.state.position);
 
   }
 
@@ -60,7 +60,7 @@ class RestaurantIndex extends React.Component {
 
     const params = {
       "ll": `${location.lat},${location.lng}`,
-      // "query": 'food',
+      "query": 'food',
       "categoryId": "4d4b7105d754a06374d81259",
       "radius": "3000"
       // "limit": '40',
@@ -76,6 +76,7 @@ class RestaurantIndex extends React.Component {
 
   render() {
     //LOGIC FOR PICKING RESTAURANTS
+    //DONT PICK THE SAME RESTAURANT
     if (this.state.receivedRestaurants.length === 0) {return(
       <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
     );}

@@ -7,9 +7,12 @@ class FilterBar extends React.Component {
   // TODO: ADD IN AN ADDRESS BAR
   constructor(props){
     super(props);
+    console.log("filter bar");
+    console.log(this.state);
+    console.log(this.props);
     this.state = {
       price:[1, 2, 3, 4],
-      type: this.props.location.state.type,
+      type: this.props.location.state.type || "delivery",
       address: this.props.location.state.address,
       position: this.props.location.state.position,
       openNow: true,

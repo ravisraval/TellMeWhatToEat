@@ -40,15 +40,23 @@ class RestaurantIndexItem extends React.Component {
 
   render() {
     const { restaurant } = this.state;
-    console.log(restaurant);
-    const photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
+    if (restaurant == {}) {
+      console.log("no restaurant yet");
+      return(<div></div>);
+    }
+    let photo;
+    if (restaurant.bestPhoto) {
+      photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
+    } else {
+      photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
+    }
     // FOR PHOTO RENDERING : https://developer.foursquare.com/docs/responses/photo
     return (
       <li className="restaurant-index-item">
         <button onClick={this.handleClick}>
           <img src={photo}/>
           <span> { restaurant.name } </span>
-          <span> { restaurant.rating } </span>
+          <span> FourSquare Rating: { restaurant.rating } </span>
 
         </button>
       </li>
