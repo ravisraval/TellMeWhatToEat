@@ -32,11 +32,24 @@ class RestaurantShow extends React.Component {
   }
 
   render() {
+    if (restaurant === {}) {
+      return (<div></div>);
+    }
     const { restaurant } = this.state;
+    // <h2>"I'm doing show stuff!"</h2>
+    let photo;
+    if (restaurant.bestPhoto) {
+      photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
+    } else {
+      photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
+    }
     return(
       <div>
-        <h2>"I'm doing show stuff!"</h2>
+        <img src={photo}/>
         <h3>{restaurant.name}</h3>
+        <h3>{restaurant.hours ? restaurant.hours.status : null}</h3>
+        <a href="#"><h3>{restaurant.url}</h3></a>
+        <h3>{restaurant.contact ? restaurant.contact.formattedPhone : null}</h3>
       </div>
     );
   }
