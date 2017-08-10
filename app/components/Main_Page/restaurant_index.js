@@ -4,7 +4,6 @@ import { Link, withRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantShow from './restaurant_show';
-import SavedRestaurants from './saved_restaurants';
 import RightMapDisplay from './right_map';
 import Modal from '../Modal';
 
@@ -61,12 +60,10 @@ componentWillReceiveProps(newProps) {
   this.getRestaurants(newProps.state.position);
 }
 
-handleAdd(listOrder) {
-  console.log("adding");
-  if (!this.saveList.includes(this.restaurantList[listOrder])) {
-    this.saveList.push(this.restaurantList[listOrder]);
-  }
-  console.log(this.saveList);
+handleAdd(restaurant) {
+  // if (!this.saveList.includes(restaurant)) {
+  //   this.saveList.push(restaurant);
+  // }
 }
 
 getRestaurants(location) {
@@ -128,7 +125,7 @@ render() {
       displayPosition: restaurants.length + 1
     });
   })
-  const { restID, position, saveList } = this.state;
+  const { restID, position} = this.state;
   return(
     <div className="restaurant-index-and-map">
       <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
@@ -139,7 +136,6 @@ render() {
           {restaurantListRender}
         </ul>
       </div>
-      <SavedRestaurants list={saveList}/>
       <RightMapDisplay restaurants={restaurants} homePos={position}/>
     </div>
   );

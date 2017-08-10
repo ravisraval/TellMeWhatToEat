@@ -39,14 +39,13 @@ class RestaurantIndexItem extends React.Component {
   }
 
   handleAdd() {
-    this.props.handleAdd(this.props.listOrder);
+    this.props.handleAdd(this.state.restaurant);
   }
 
   handleAnother() {
     const newRestaurant = this.props.restaurants[
       Math.floor(Math.random() * this.props.restaurants.length)];
     this.getRestaurant(newRestaurant.id);
-
   }
 
   render() {
