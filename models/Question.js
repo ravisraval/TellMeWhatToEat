@@ -1,13 +1,13 @@
 var bookshelf = require('../config/bookshelf');
+require('./Answer');
 
 var Question = bookshelf.Model.extend({
   tableName: 'questions',
   hasTimestamps: true,
 
-  initialize: function() {
-    this.on('saving', this.hashPassword, this);
-  },
-
+  answers: function() {
+    return this.hasMany('Answer');
+  }
 
 });
 
