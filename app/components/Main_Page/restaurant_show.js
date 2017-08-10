@@ -48,7 +48,7 @@ class RestaurantShow extends React.Component {
         <img src={photo}/>
         <h3>{restaurant.name}</h3>
         <h3>{restaurant.hours ? restaurant.hours.status : null}</h3>
-        <a href="#"><h3>{restaurant.url}</h3></a>
+        <a href={restaurant.url}><h3>{restaurant.url}</h3></a>
         <h3>{restaurant.contact ? restaurant.contact.formattedPhone : null}</h3>
       </div>
     );
