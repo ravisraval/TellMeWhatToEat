@@ -17,6 +17,8 @@ class FilterBar extends React.Component {
         openAt: "",
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
+        searchRadius: 4000,
+        queryString: "food"
       };
     } else {
       this.state = {
@@ -28,7 +30,9 @@ class FilterBar extends React.Component {
         openAt: "",
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
-      }
+        searchRadius: 4000,
+        queryString: "food"
+      };
     }
 
     this.handleToggle = this.handleToggle.bind(this);
@@ -299,7 +303,7 @@ class FilterBar extends React.Component {
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}
-        <RestaurantIndex state={this.state}/>
+        <RestaurantIndex filterProps={this.state}/>
       </div>
     );
   }

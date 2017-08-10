@@ -15,14 +15,14 @@ constructor(props){
     receivedRestaurants: [],
     numRestaurants: 3,
     isModalOpen: false,
-    position: this.props.state.position,
-    price: this.props.state.price,
-    deliveryTime: this.props.state.deliveryTime || 60,
-    openNow: this.props.state.openNow,
-    openAt: this.props.state.openAt,
-    obtainType: this.props.state.type,
-    query: this.props.state.query || "food",
-    searchRadius: this.props.state.searchRadius || "4000"
+    position: this.props.filterProps.position,
+    price: this.props.filterProps.price,
+    deliveryTime: this.props.filterProps.deliveryTime || 60,
+    openNow: this.props.filterProps.openNow,
+    openAt: this.props.filterProps.openAt,
+    obtainType: this.props.filterProps.type,
+    query: this.props.filterProps.query,
+    searchRadius: this.props.filterProps.searchRadius || "4000"
   };
   this.reRender = true;
   this.saveList = [];
@@ -56,7 +56,7 @@ componentWillReceiveProps(newProps) {
     openAt: newProps.state.openAt,
     // obtainType: newProps.state.type,
     // searchRadius: newProps.state.searchRadius,
-    // query: newProps.state.query
+    query: newProps.filterProps.query
   });
   this.getRestaurants(newProps.state.position);
 }
