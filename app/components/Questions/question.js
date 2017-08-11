@@ -1,4 +1,12 @@
 import React from 'react';
+import {questions,
+        answers,
+        questionObjectBuilder,
+        questionArrayBuilder
+        } from "../../../docs/data/converters/questions/questions.js";
+
+let questionsObject = questionObjectBuilder(questions, answers);
+let questionsArray = questionArrayBuilder(questions, answers);
 
 class Questions extends React.Component {
   constructor(props){
@@ -12,7 +20,7 @@ class Questions extends React.Component {
     // this.questions = this.getAllQuestions();
     //placeholder for now
 
-    this.questions = this.sampleQuestions();
+    this.questions = questionArrayBuilder(questions, answers);
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
     // this.optionQuestionDisplay = this.optionQuestionDisplay.bind(this);
   }
@@ -159,6 +167,8 @@ class Questions extends React.Component {
     } else {
       questionDisplay = this.noMoreQuestions();
     }
+
+    console.log("questions", this.questions);
 
     return(
       <div>
