@@ -119,9 +119,9 @@ render() {
   const restaurantListRender = [];
   this.restaurantList.forEach(restaurant => {
     restaurantListRender.push(<RestaurantIndexItem
-     key={restaurant.id}
+     key={restaurant ? restaurant.id : ""}
      listOrder={restaurants.length}
-     restaurant={restaurant}
+     restaurant={restaurant ? restaurant : {}}
      openModal={this.openModal}
      closeModal={this.closeModal}
      handleAdd={this.handleAdd}
@@ -129,12 +129,12 @@ render() {
      replaceItem={this.replaceItem}
      restaurants={this.state.receivedRestaurants}/>);
     restaurants.push({
-      id: restaurant.id,
-      lat: restaurant.location.lat,
-      lng: restaurant.location.lng,
-      displayPosition: restaurants.length + 1
+      id: restaurant ? restaurant.id : "",
+      lat: restaurant ? restaurant.location.lat : "",
+      lng: restaurant ? restaurant.location.lng : "",
+      displayPosition: restaurant ? restaurants.length + 1 : ""
     });
-  })
+  });
   const { restID, position} = this.state;
   return(
     <div className="restaurant-index-and-map">
