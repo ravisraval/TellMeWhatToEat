@@ -1,7 +1,7 @@
 {
-  "name": "royal-pond",
+  "name": "TellMeWhatToEat",
   "version": "1.0.0",
-  "description": "My app description",
+  "description": "It's in the title.",
   "scripts": {
     "build": "webpack --display-error-details",
     "deploy": "npm test && git push heroku master",
