@@ -61,6 +61,9 @@ class LandingPage extends React.Component {
     const {type, position, address} = this.state;
     return (
       <div>
+        <ul class="cb-slideshow">
+        	<li><span>Image 01</span></li>
+        </ul>
         <div className="lp-header-container">
           <div className="lp-header">Tell Me What To Eat</div>
           <div className="lp-sub-header">More eating, less deciding</div>

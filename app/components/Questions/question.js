@@ -14,9 +14,6 @@ class Questions extends React.Component {
       questionIdx: 0
     };
 
-    //incorporate this when backend setup
-    // this.questions = this.getAllQuestions();
-    //placeholder for now
 
     this.questions = questionArrayBuilder(questions, answers);
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
