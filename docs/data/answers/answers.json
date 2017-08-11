@@ -1,185 +1,429 @@
 [
- {
-  "id,question_id,text,q_string_add_on,category_ids": "1,1,Hot,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "2,1,Cold,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "3,101,Sandwiches,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "4,101,Salad,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "5,101,Sushi,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "6,102,Soup,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "7,2,European/American,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "8,2,Asian,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "9,201,Latin American,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "10,201,European,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "11,201,American,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "12,20101,Mexican,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "13,20101,South American,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "14,2010101,Brazilian,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "15,20102,Mediterranean,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "16,2010201,Greek,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "17,20103,French,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "18,20103,Italian,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "19,20104,Burgers,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "20,20104,Wings,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "21,202,Chineese,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "22,202,Japanese,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "23,20201,Ramen,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "24,20201,Sushi,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "25,20203,Thai,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "26,3,Meal,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "27,3,Snack,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "28,301,Dim-sum,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "29,302,Tapas,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "30,4,Sweet,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "31,4,Savory,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "32,5,Spicy,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "33,6,Noodles,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "34,7,Vegetarian,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "35,8,Healthy,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "36,8,Comfort,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "37,9,Meat,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "38,9,Carbs,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "39,9,Veggies,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "40,901,Chicken,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "41,901,Red Meat,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "42,901,Fish,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "43,902,Pasta,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "44,902,Noodles,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "45,902,Rice Bowl,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "46,10,Breakfast/Brunch,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "47,10,Lunch,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "48,10,Dinner,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "49,11,Kosher,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "50,11,Halal,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "51,12,Mexican,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "52,13,Pizza,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": "53,14,Quick,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,\r"
- },
- {
-  "id,question_id,text,q_string_add_on,category_ids": ",,,,"
- }
+  {
+    "id": 1,
+    "question_id": 1,
+    "text": "Hot",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 2,
+    "question_id": 1,
+    "text": "Cold",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 3,
+    "question_id": 101,
+    "text": "Sandwiches",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 4,
+    "question_id": 101,
+    "text": "Salad",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 5,
+    "question_id": 101,
+    "text": "Sushi",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 6,
+    "question_id": 102,
+    "text": "Soup",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 7,
+    "question_id": 2,
+    "text": "European/American",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 8,
+    "question_id": 2,
+    "text": "Asian",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 9,
+    "question_id": 201,
+    "text": "Latin American",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 10,
+    "question_id": 201,
+    "text": "European",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 11,
+    "question_id": 201,
+    "text": "American",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 12,
+    "question_id": 20101,
+    "text": "Mexican",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 13,
+    "question_id": 20101,
+    "text": "South American",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 14,
+    "question_id": 2010101,
+    "text": "Brazilian",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 15,
+    "question_id": 20102,
+    "text": "Mediterranean",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 16,
+    "question_id": 2010201,
+    "text": "Greek",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 17,
+    "question_id": 20103,
+    "text": "French",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 18,
+    "question_id": 20103,
+    "text": "Italian",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 19,
+    "question_id": 20104,
+    "text": "Burgers",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 20,
+    "question_id": 20104,
+    "text": "Wings",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 21,
+    "question_id": 202,
+    "text": "Chineese",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 22,
+    "question_id": 202,
+    "text": "Japanese",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 23,
+    "question_id": 20201,
+    "text": "Ramen",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 24,
+    "question_id": 20201,
+    "text": "Sushi",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 25,
+    "question_id": 20203,
+    "text": "Thai",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 26,
+    "question_id": 3,
+    "text": "Meal",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 27,
+    "question_id": 3,
+    "text": "Snack",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 28,
+    "question_id": 301,
+    "text": "Dim-sum",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 29,
+    "question_id": 302,
+    "text": "Tapas",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 30,
+    "question_id": 4,
+    "text": "Sweet",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 31,
+    "question_id": 4,
+    "text": "Savory",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 32,
+    "question_id": 5,
+    "text": "Spicy",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 33,
+    "question_id": 6,
+    "text": "Noodles",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 34,
+    "question_id": 7,
+    "text": "Vegetarian",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 35,
+    "question_id": 8,
+    "text": "Healthy",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 36,
+    "question_id": 8,
+    "text": "Comfort",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 37,
+    "question_id": 9,
+    "text": "Meat",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 38,
+    "question_id": 9,
+    "text": "Carbs",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 39,
+    "question_id": 9,
+    "text": "Veggies",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 40,
+    "question_id": 901,
+    "text": "Chicken",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 41,
+    "question_id": 901,
+    "text": "Red Meat",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 42,
+    "question_id": 901,
+    "text": "Fish",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 43,
+    "question_id": 902,
+    "text": "Pasta",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 44,
+    "question_id": 902,
+    "text": "Noodles",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 45,
+    "question_id": 902,
+    "text": "Rice Bowl",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 46,
+    "question_id": 10,
+    "text": "Breakfast/Brunch",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 47,
+    "question_id": 10,
+    "text": "Lunch",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 48,
+    "question_id": 10,
+    "text": "Dinner",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 49,
+    "question_id": 11,
+    "text": "Kosher",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 50,
+    "question_id": 11,
+    "text": "Halal",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 51,
+    "question_id": 12,
+    "text": "Mexican",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 52,
+    "question_id": 13,
+    "text": "Pizza",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": 53,
+    "question_id": 14,
+    "text": "Quick",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  },
+  {
+    "id": "",
+    "question_id": "",
+    "text": "",
+    "q_string_add_on": "",
+    "category_ids": ""
+  }
 ]
