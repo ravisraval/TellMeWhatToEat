@@ -9,7 +9,7 @@ class FilterBar extends React.Component {
     super(props);
     if (this.props.location.state && this.props.location.state.address) {
       this.state = {
-        price:[1, 2, 3, 4],
+        price:[],
         type: this.props.location.state.type,
         address: this.props.location.state.address,
         position: this.props.location.state.position,
@@ -22,7 +22,7 @@ class FilterBar extends React.Component {
       };
     } else {
       this.state = {
-        price:[1, 2, 3, 4],
+        price:[],
         type: "delivery",
         address: "2889 Mission St, San Francisco, CA 94110",
         position: {lat: 37.7367436, lng: -122.4573766},
@@ -131,11 +131,11 @@ class FilterBar extends React.Component {
   }
 
   renderSliderBarHeader(){
-    if (this.state.deliveryTime > 79) {
+    if (this.state.deliveryTimeDisplay > 79) {
       return (<h3 className="slider-bar-header"><br/>Any delivery time</h3>);
     } else {
       return (
-        <h3 className="slider-bar-header">{this.state.deliveryTime}m <br/> or less</h3>);
+        <h3 className="slider-bar-header">{this.state.deliveryTimeDisplay}m <br/> or less</h3>);
     }
   }
 
@@ -148,11 +148,11 @@ class FilterBar extends React.Component {
       this.state[property] === value
     );
 
-    const deliveryTimeDisplay = this.state.deliveryTime;
-
-    const handleMouseDown = e => (
-      deliveryTime = e.target.value
-    );
+    // let deliveryTime = this.state.deliveryTime;
+    //
+    // const handleMouseDown = e => (
+    //   deliveryTime = e.target.value
+    // );
 
 
 
@@ -288,8 +288,8 @@ class FilterBar extends React.Component {
               type="range"
               min="40"
               max="80"
-              value={deliveryTimeDisplay}
-              onChange={handleMouseDown}
+              value={this.state.deliveryTimeDisplay}
+              onChange={this.handleMouseDown}
               onMouseUp={this.update("deliveryTime")}
             />
           <span> 80 </span>
