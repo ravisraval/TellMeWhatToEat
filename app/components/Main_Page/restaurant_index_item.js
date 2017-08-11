@@ -34,7 +34,7 @@ class RestaurantIndexItem extends React.Component {
   }
 
   handleClick() {
-    this.props.openModal(this.props.restaurant.id);
+    this.props.openModal(this.state.restaurant.id);
   }
 
   handleAdd() {
@@ -45,6 +45,7 @@ class RestaurantIndexItem extends React.Component {
     const newRestaurant = this.props.restaurants[
       Math.floor(Math.random() * this.props.restaurants.length)];
     this.getRestaurant(newRestaurant.id);
+    this.props.replaceItem(newRestaurant, this.props.listOrder);
   }
 
   render() {

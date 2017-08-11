@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 import RestaurantIndexItem from './restaurant_index_item';
 import RestaurantShow from './restaurant_show';
+import SavedRestaurants from './saved_restaurants';
 import RightMapDisplay from './right_map';
 import Modal from '../Modal';
 
@@ -62,13 +63,15 @@ componentWillReceiveProps(newProps) {
 }
 
 handleAdd(restaurant) {
-  // if (!this.saveList.includes(restaurant)) {
-  //   this.saveList.push(restaurant);
-  // }
+  if (!this.saveList.includes(restaurant)) {
+    this.saveList.push(restaurant);
+  }
 }
 
-replaceItem(number) {
-
+replaceItem(newRestaurant, array_pos) {
+  this.reRender = false;
+  this.restaurantList[array_pos] = newRestaurant;
+  this.forceUpdate();
 }
 
 getRestaurants(location) {
@@ -88,8 +91,7 @@ getRestaurants(location) {
   foursquare.venues.getVenues(params)
     .then(res => {
       console.log("recieved restaurants", res);
-      this.setState({ receivedRestaurants: res.response.venues }, () => {
-      });
+      this.setState({ receivedRestaurants: res.response.venues });
     });
 }
 
@@ -124,6 +126,7 @@ render() {
      closeModal={this.closeModal}
      handleAdd={this.handleAdd}
      handleAnother={this.replaceItem}
+     replaceItem={this.replaceItem}
      restaurants={this.state.receivedRestaurants}/>);
     restaurants.push({
       id: restaurant.id,
@@ -143,7 +146,9 @@ render() {
           {restaurantListRender}
         </ul>
       </div>
+      <SavedRestaurants list={this.saveList}/>
       <RightMapDisplay restaurants={restaurants} homePos={position}/>
+
     </div>
   );
 }
