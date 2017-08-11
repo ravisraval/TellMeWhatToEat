@@ -1,0 +1,95 @@
+[
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "1,Hot or Cold,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "101,\"Sandwiches, Salad, or Sushi?\",options,,1,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "102,Soup?,bool,,1,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "2,\"European/American, Asian, Other?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "201,\"Latin American,  European,  American?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "20101,\"Mexican, South American, Other?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "2010101,Brazilian?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "20102,Mediterranean?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "2010201,Greek?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "20103,French or Italian?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "20104,Burgers or Wings?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "202,\"Chinese, Japanese, other?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "20201,Ramen or Sushi?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "20203,Thai?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "3,Meal or Snack?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "301,Dim-sum?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "302,Tapas?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "4,Sweet or Savory?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "5,Spicy?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "6,Noodles?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "7,Vegetarian-friendly?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "8,Healthy or Comfort?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "9,\"Meat, Carbs, or Veggies?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "901,\"Chicken, Red Meat, Fish\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "902,\"Pasta, Noodles, or Rice-bowl? \",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "10,\"Breakfast/brunch, Lunch, Dinner?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "1001,Breakfast or Brunch?,options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "11,\"Kosher, Halal, No Preference?\",options,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "12,Mexican?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "13,Pizza?,bool,,,,\r"
+ },
+ {
+  "id,body,type,tier,pre_req_id,pre_req_answer_id,suggestedquestions?": "14,Quick?,bool,,,,"
+ }
+]

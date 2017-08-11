@@ -1,0 +1,1025 @@
+[
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Food,NAME:,2,,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Afghan Restaurant, 503288ae91d4c4b30a586d67 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "African Restaurant, 4bf58dd8d48988d1c8941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ethiopian Restaurant, 4bf58dd8d48988d10a941735 ,4,African Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "American Restaurant, 4bf58dd8d48988d14e941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "New American Restaurant, 4bf58dd8d48988d157941735 ,4,American Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Asian Restaurant, 4bf58dd8d48988d142941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Burmese Restaurant, 56aa371be4b08b9a8d573568 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cambodian Restaurant, 52e81612bcbc57f1066b7a03 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Chinese Restaurant, 4bf58dd8d48988d145941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Anhui Restaurant, 52af3a5e3cf9994f4e043bea ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Beijing Restaurant, 52af3a723cf9994f4e043bec ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, JP, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cantonese Restaurant, 52af3a7c3cf9994f4e043bed ,5,Chinese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cha Chaan Teng, 58daa1558bbb0b01f18ec1d3 ,5,Chinese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Chinese Aristocrat Restaurant, 52af3a673cf9994f4e043beb ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Chinese Breakfast Place, 52af3a903cf9994f4e043bee ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dim Sum Restaurant, 4bf58dd8d48988d1f5931735 ,5,Chinese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dongbei Restaurant, 52af3a9f3cf9994f4e043bef ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Fujian Restaurant, 52af3aaa3cf9994f4e043bf0 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Guizhou Restaurant, 52af3ab53cf9994f4e043bf1 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hainan Restaurant, 52af3abe3cf9994f4e043bf2 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hakka Restaurant, 52af3ac83cf9994f4e043bf3 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Henan Restaurant, 52af3ad23cf9994f4e043bf4 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hong Kong Restaurant, 52af3add3cf9994f4e043bf5 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Huaiyang Restaurant, 52af3af23cf9994f4e043bf7 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hubei Restaurant, 52af3ae63cf9994f4e043bf6 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hunan Restaurant, 52af3afc3cf9994f4e043bf8 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Imperial Restaurant, 52af3b053cf9994f4e043bf9 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Jiangsu Restaurant, 52af3b213cf9994f4e043bfa ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Jiangxi Restaurant, 52af3b293cf9994f4e043bfb ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Macanese Restaurant, 52af3b343cf9994f4e043bfc ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Manchu Restaurant, 52af3b3b3cf9994f4e043bfd ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Peking Duck Restaurant, 52af3b463cf9994f4e043bfe ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Shaanxi Restaurant, 52af3b633cf9994f4e043c01 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Shandong Restaurant, 52af3b513cf9994f4e043bff ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Shanghai Restaurant, 52af3b593cf9994f4e043c00 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, JP, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Shanxi Restaurant, 52af3b6e3cf9994f4e043c02 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Szechuan Restaurant, 52af3b773cf9994f4e043c03 ,5,Chinese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Taiwanese Restaurant, 52af3b813cf9994f4e043c04 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: AU, CA, CN, HK, JP, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tianjin Restaurant, 52af3b893cf9994f4e043c05 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Xinjiang Restaurant, 52af3b913cf9994f4e043c06 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CA, CN, HK, MO, MY, SG, TW, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Yunnan Restaurant, 52af3b9a3cf9994f4e043c07 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Zhejiang Restaurant, 52af3ba23cf9994f4e043c08 ,5,Chinese Restaurant,Asian Restaurant,Food,\"Suggested Countries: CN, HK, MO, MY, SG, TW\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Filipino Restaurant, 4eb1bd1c3b7b55596b4a748f ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Himalayan Restaurant, 52e81612bcbc57f1066b79fb ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hotpot Restaurant, 52af0bd33cf9994f4e043bdd ,4,Asian Restaurant,Food,,\"Suggested Countries: CA, CN, HK, JP, KR, MO, MY, SG, TH, TW, US, VN\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Indonesian Restaurant, 4deefc054765f83613cdba6f ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Acehnese Restaurant, 52960eda3cf9994f4e043ac9 ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Balinese Restaurant, 52960eda3cf9994f4e043acb ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Betawinese Restaurant, 52960eda3cf9994f4e043aca ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Indonesian Meatball Place, 52960eda3cf9994f4e043acc ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Javanese Restaurant, 52960eda3cf9994f4e043ac7 ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Manadonese Restaurant, 52960eda3cf9994f4e043ac8 ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Padangnese Restaurant, 52960eda3cf9994f4e043ac5 ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sundanese Restaurant, 52960eda3cf9994f4e043ac6 ,5,Indonesian Restaurant,Asian Restaurant,Food,Suggested Countries: ID\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Japanese Restaurant, 4bf58dd8d48988d111941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Donburi Restaurant, 55a59bace4b013909087cb0c ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Japanese Curry Restaurant, 55a59bace4b013909087cb30 ,5,Japanese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kaiseki Restaurant, 55a59bace4b013909087cb21 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kushikatsu Restaurant, 55a59bace4b013909087cb06 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Monjayaki Restaurant, 55a59bace4b013909087cb1b ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Nabe Restaurant, 55a59bace4b013909087cb1e ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Okonomiyaki Restaurant, 55a59bace4b013909087cb18 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ramen Restaurant, 55a59bace4b013909087cb24 ,5,Japanese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Shabu-Shabu Restaurant, 55a59bace4b013909087cb15 ,5,Japanese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Soba Restaurant, 55a59bace4b013909087cb27 ,5,Japanese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sukiyaki Restaurant, 55a59bace4b013909087cb12 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sushi Restaurant, 4bf58dd8d48988d1d2941735 ,5,Japanese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Takoyaki Place, 55a59bace4b013909087cb2d ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tempura Restaurant, 55a59a31e4b013909087cb00 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tonkatsu Restaurant, 55a59af1e4b013909087cb03 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Udon Restaurant, 55a59bace4b013909087cb2a ,5,Japanese Restaurant,Asian Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Unagi Restaurant, 55a59bace4b013909087cb0f ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Wagashi Place, 55a59bace4b013909087cb33 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Yakitori Restaurant, 55a59bace4b013909087cb09 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Yoshoku Restaurant, 55a59bace4b013909087cb36 ,5,Japanese Restaurant,Asian Restaurant,Food,Suggested Countries: JP\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Korean Restaurant, 4bf58dd8d48988d113941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bossam/Jokbal Restaurant, 56aa371be4b08b9a8d5734e4 ,5,Korean Restaurant,Asian Restaurant,Food,Suggested Countries: KR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bunsik Restaurant, 56aa371be4b08b9a8d5734f0 ,5,Korean Restaurant,Asian Restaurant,Food,Suggested Countries: KR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Gukbap Restaurant, 56aa371be4b08b9a8d5734e7 ,5,Korean Restaurant,Asian Restaurant,Food,Suggested Countries: KR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Janguh Restaurant, 56aa371be4b08b9a8d5734ed ,5,Korean Restaurant,Asian Restaurant,Food,Suggested Countries: KR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Samgyetang Restaurant, 56aa371be4b08b9a8d5734ea ,5,Korean Restaurant,Asian Restaurant,Food,Suggested Countries: KR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Malay Restaurant, 4bf58dd8d48988d156941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Mongolian Restaurant, 4eb1d5724b900d56c88a45fe ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Noodle House, 4bf58dd8d48988d1d1941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Satay Restaurant, 56aa371be4b08b9a8d57350e ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Thai Restaurant, 4bf58dd8d48988d149941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Som Tum Restaurant, 56aa371be4b08b9a8d573502 ,5,Thai Restaurant,Asian Restaurant,Food,Suggested Countries: TH\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tibetan Restaurant, 52af39fb3cf9994f4e043be9 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Vietnamese Restaurant, 4bf58dd8d48988d14a941735 ,4,Asian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Australian Restaurant, 4bf58dd8d48988d169941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Austrian Restaurant, 52e81612bcbc57f1066b7a01 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "BBQ Joint, 4bf58dd8d48988d1df931735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bagel Shop, 4bf58dd8d48988d179941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bakery, 4bf58dd8d48988d16a941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Belgian Restaurant, 52e81612bcbc57f1066b7a02 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bistro, 52e81612bcbc57f1066b79f1 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Breakfast Spot, 4bf58dd8d48988d143941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bubble Tea Shop, 52e81612bcbc57f1066b7a0c ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Buffet, 52e81612bcbc57f1066b79f4 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Burger Joint, 4bf58dd8d48988d16c941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cafeteria, 4bf58dd8d48988d128941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Caf�, 4bf58dd8d48988d16d941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cajun / Creole Restaurant, 4bf58dd8d48988d17a941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Caribbean Restaurant, 4bf58dd8d48988d144941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cuban Restaurant, 4bf58dd8d48988d154941735 ,4,Caribbean Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Caucasian Restaurant, 5293a7d53cf9994f4e043a45 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Coffee Shop, 4bf58dd8d48988d1e0931735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Comfort Food Restaurant, 52e81612bcbc57f1066b7a00 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Creperie, 52e81612bcbc57f1066b79f2 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Czech Restaurant, 52f2ae52bcbc57f1066b8b81 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Deli / Bodega, 4bf58dd8d48988d146941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dessert Shop, 4bf58dd8d48988d1d0941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cupcake Shop, 4bf58dd8d48988d1bc941735 ,4,Dessert Shop,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Frozen Yogurt Shop, 512e7cae91d4cbb4e5efe0af ,4,Dessert Shop,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ice Cream Shop, 4bf58dd8d48988d1c9941735 ,4,Dessert Shop,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pastry Shop, 5744ccdfe4b0c0459246b4e2 ,4,Dessert Shop,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pie Shop, 52e81612bcbc57f1066b7a0a ,4,Dessert Shop,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Diner, 4bf58dd8d48988d147941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Donut Shop, 4bf58dd8d48988d148941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dumpling Restaurant, 4bf58dd8d48988d108941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dutch Restaurant, 5744ccdfe4b0c0459246b4d0 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Eastern European Restaurant, 4bf58dd8d48988d109941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Belarusian Restaurant, 52e928d0bcbc57f1066b7e97 ,4,Eastern European Restaurant,Food,,\"Suggested Countries: AM, AZ, BY, GE, KY, KZ, MO, RU, TJ, TM, UA, UZ\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bosnian Restaurant, 58daa1558bbb0b01f18ec1ee ,4,Eastern European Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bulgarian Restaurant, 56aa371be4b08b9a8d5734f3 ,4,Eastern European Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Romanian Restaurant, 52960bac3cf9994f4e043ac4 ,4,Eastern European Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tatar Restaurant, 52e928d0bcbc57f1066b7e98 ,4,Eastern European Restaurant,Food,,\"Suggested Countries: AM, AZ, BY, GE, KY, KZ, MO, RU, TJ, TM, UA, UZ\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "English Restaurant, 52e81612bcbc57f1066b7a05 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Falafel Restaurant, 4bf58dd8d48988d10b941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Fast Food Restaurant, 4bf58dd8d48988d16e941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Fish &amp"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Fondue Restaurant, 52e81612bcbc57f1066b7a09 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Food Court, 4bf58dd8d48988d120951735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Food Stand, 56aa371be4b08b9a8d57350b ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Food Truck, 4bf58dd8d48988d1cb941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "French Restaurant, 4bf58dd8d48988d10c941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Alsatian Restaurant, 57558b36e4b065ecebd306b6 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Auvergne Restaurant, 57558b36e4b065ecebd306b8 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Basque Restaurant, 57558b36e4b065ecebd306bc ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Brasserie, 57558b36e4b065ecebd306b0 ,4,French Restaurant,Food,,\"Suggested Countries: BE, FR, NL\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Breton Restaurant, 57558b36e4b065ecebd306c5 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Burgundian Restaurant, 57558b36e4b065ecebd306c0 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Catalan Restaurant, 57558b36e4b065ecebd306cb ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ch'ti Restaurant, 57558b36e4b065ecebd306ce ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Corsican Restaurant, 57558b36e4b065ecebd306d1 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Estaminet, 57558b36e4b065ecebd306b4 ,4,French Restaurant,Food,,\"Suggested Countries: BE, FR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Labour Canteen, 57558b36e4b065ecebd306b2 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Lyonese Bouchon, 57558b35e4b065ecebd306ad ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Norman Restaurant, 57558b36e4b065ecebd306d4 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Proven�al Restaurant, 57558b36e4b065ecebd306d7 ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Savoyard Restaurant, 57558b36e4b065ecebd306da ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Southwestern French Restaurant, 57558b36e4b065ecebd306ba ,4,French Restaurant,Food,,Suggested Countries: FR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Fried Chicken Joint, 4d4ae6fc7a7b7dea34424761 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Friterie, 55d25775498e9f6a0816a37a ,3,Food,,,\"Suggested Countries: BE, IT, NL\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Gastropub, 4bf58dd8d48988d155941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "German Restaurant, 4bf58dd8d48988d10d941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Apple Wine Pub, 56aa371ce4b08b9a8d573583 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bavarian Restaurant, 56aa371ce4b08b9a8d573572 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bratwurst Joint, 56aa371ce4b08b9a8d57358e ,4,German Restaurant,Food,,\"Suggested Countries: AT, CH, DE\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Currywurst Joint, 56aa371ce4b08b9a8d57358b ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Franconian Restaurant, 56aa371ce4b08b9a8d573574 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "German Pop-Up Restaurant, 56aa371ce4b08b9a8d573592 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Palatine Restaurant, 56aa371ce4b08b9a8d573578 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Rhenisch Restaurant, 56aa371ce4b08b9a8d57357b ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Schnitzel Restaurant, 56aa371ce4b08b9a8d573587 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Silesian Restaurant, 56aa371ce4b08b9a8d57357f ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Swabian Restaurant, 56aa371ce4b08b9a8d573576 ,4,German Restaurant,Food,,Suggested Countries: DE\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Gluten-free Restaurant, 4c2cd86ed066bed06c3c5209 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Greek Restaurant, 4bf58dd8d48988d10e941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bougatsa Shop, 53d6c1b0e4b02351e88a83e8 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cretan Restaurant, 53d6c1b0e4b02351e88a83e2 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Fish Taverna, 53d6c1b0e4b02351e88a83d8 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Grilled Meat Restaurant, 53d6c1b0e4b02351e88a83d6 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kafenio, 53d6c1b0e4b02351e88a83e6 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Magirio, 53d6c1b0e4b02351e88a83e4 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Meze Restaurant, 53d6c1b0e4b02351e88a83da ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Modern Greek Restaurant, 53d6c1b0e4b02351e88a83d4 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ouzeri, 53d6c1b0e4b02351e88a83dc ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Patsa Restaurant, 53d6c1b0e4b02351e88a83e0 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Souvlaki Shop, 52e81612bcbc57f1066b79f3 ,4,Greek Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Taverna, 53d6c1b0e4b02351e88a83d2 ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, DE, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tsipouro Restaurant, 53d6c1b0e4b02351e88a83de ,4,Greek Restaurant,Food,,\"Suggested Countries: CY, GR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Halal Restaurant, 52e81612bcbc57f1066b79ff ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hawaiian Restaurant, 52e81612bcbc57f1066b79fe ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hot Dog Joint, 4bf58dd8d48988d16f941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hungarian Restaurant, 52e81612bcbc57f1066b79fa ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Indian Restaurant, 4bf58dd8d48988d10f941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Andhra Restaurant, 54135bf5e4b08f3d2429dfe5 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Awadhi Restaurant, 54135bf5e4b08f3d2429dff3 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Bengali Restaurant, 54135bf5e4b08f3d2429dff5 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Chaat Place, 54135bf5e4b08f3d2429dfe2 ,4,Indian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Chettinad Restaurant, 54135bf5e4b08f3d2429dff2 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dhaba, 54135bf5e4b08f3d2429dfe1 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dosa Place, 54135bf5e4b08f3d2429dfe3 ,4,Indian Restaurant,Food,,Suggested Countries: US\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Goan Restaurant, 54135bf5e4b08f3d2429dfe8 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Gujarati Restaurant, 54135bf5e4b08f3d2429dfe9 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Hyderabadi Restaurant, 54135bf5e4b08f3d2429dfe6 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Indian Chinese Restaurant, 54135bf5e4b08f3d2429dfdf ,4,Indian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Indian Sweet Shop, 54135bf5e4b08f3d2429dfe4 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Irani Cafe, 54135bf5e4b08f3d2429dfe7 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Jain Restaurant, 54135bf5e4b08f3d2429dfea ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Karnataka Restaurant, 54135bf5e4b08f3d2429dfeb ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kerala Restaurant, 54135bf5e4b08f3d2429dfed ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Maharashtrian Restaurant, 54135bf5e4b08f3d2429dfee ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Mughlai Restaurant, 54135bf5e4b08f3d2429dff4 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Multicuisine Indian Restaurant, 54135bf5e4b08f3d2429dfe0 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "North Indian Restaurant, 54135bf5e4b08f3d2429dfdd ,4,Indian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Northeast Indian Restaurant, 54135bf5e4b08f3d2429dff6 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Parsi Restaurant, 54135bf5e4b08f3d2429dfef ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Punjabi Restaurant, 54135bf5e4b08f3d2429dff0 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Rajasthani Restaurant, 54135bf5e4b08f3d2429dff1 ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "South Indian Restaurant, 54135bf5e4b08f3d2429dfde ,4,Indian Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Udupi Restaurant, 54135bf5e4b08f3d2429dfec ,4,Indian Restaurant,Food,,Suggested Countries: IN\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Irish Pub, 52e81612bcbc57f1066b7a06 ,3,Indian Restaurant,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Italian Restaurant, 4bf58dd8d48988d110941735 ,3,Indian Restaurant,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Abruzzo Restaurant, 55a5a1ebe4b013909087cbb6 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Agriturismo, 55a5a1ebe4b013909087cb7c ,4,Indian Restaurant,Food,,\"Suggested Countries: AT, CH, DE, IT\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Aosta Restaurant, 55a5a1ebe4b013909087cba7 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Basilicata Restaurant, 55a5a1ebe4b013909087cba1 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Calabria Restaurant, 55a5a1ebe4b013909087cba4 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Campanian Restaurant, 55a5a1ebe4b013909087cb95 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Emilia Restaurant, 55a5a1ebe4b013909087cb89 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Friuli Restaurant, 55a5a1ebe4b013909087cb9b ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ligurian Restaurant, 55a5a1ebe4b013909087cb98 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Lombard Restaurant, 55a5a1ebe4b013909087cbbf ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Malga, 55a5a1ebe4b013909087cb79 ,4,Indian Restaurant,Food,,\"Suggested Countries: AT, CH, DE, IT\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Marche Restaurant, 55a5a1ebe4b013909087cbb0 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Molise Restaurant, 55a5a1ebe4b013909087cbb3 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Piadineria, 55a5a1ebe4b013909087cb74 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Piedmontese Restaurant, 55a5a1ebe4b013909087cbaa ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Puglia Restaurant, 55a5a1ebe4b013909087cb83 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Romagna Restaurant, 55a5a1ebe4b013909087cb8c ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Roman Restaurant, 55a5a1ebe4b013909087cb92 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sardinian Restaurant, 55a5a1ebe4b013909087cb8f ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sicilian Restaurant, 55a5a1ebe4b013909087cb86 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "South Tyrolean Restaurant, 55a5a1ebe4b013909087cbb9 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Trattoria/Osteria, 55a5a1ebe4b013909087cb7f ,4,Indian Restaurant,Food,,\"Suggested Countries: DE, IT\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Trentino Restaurant, 55a5a1ebe4b013909087cbbc ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tuscan Restaurant, 55a5a1ebe4b013909087cb9e ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Umbrian Restaurant, 55a5a1ebe4b013909087cbc2 ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Veneto Restaurant, 55a5a1ebe4b013909087cbad ,4,Indian Restaurant,Food,,Suggested Countries: IT\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Jewish Restaurant, 52e81612bcbc57f1066b79fd ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kosher Restaurant, 52e81612bcbc57f1066b79fc ,4,Jewish Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Juice Bar, 4bf58dd8d48988d112941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kebab Restaurant, 5283c7b4e4b094cb91ec88d7 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Latin American Restaurant, 4bf58dd8d48988d1be941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Arepa Restaurant, 4bf58dd8d48988d152941735 ,4,Latin American Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Empanada Restaurant, 52939a8c3cf9994f4e043a35 ,4,Latin American Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Salvadoran Restaurant, 5745c7ac498e5d0483112fdb ,4,Latin American Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "South American Restaurant, 4bf58dd8d48988d1cd941735 ,4,Latin American Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Argentinian Restaurant, 4bf58dd8d48988d107941735 ,5,South American Restaurant,Latin American Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Brazilian Restaurant, 4bf58dd8d48988d16b941735 ,5,South American Restaurant,Latin American Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Acai House, 5294c7523cf9994f4e043a62 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Baiano Restaurant, 52939ae13cf9994f4e043a3b ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Central Brazilian Restaurant, 52939a9e3cf9994f4e043a36 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Churrascaria, 52939a643cf9994f4e043a33 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,\"Suggested Countries: BR, DE\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Empada House, 5294c55c3cf9994f4e043a61 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Goiano Restaurant, 52939af83cf9994f4e043a3d ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Mineiro Restaurant, 52939aed3cf9994f4e043a3c ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Northeastern Brazilian Restaurant, 52939aae3cf9994f4e043a37 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Northern Brazilian Restaurant, 52939ab93cf9994f4e043a38 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pastelaria, 5294cbda3cf9994f4e043a63 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Southeastern Brazilian Restaurant, 52939ac53cf9994f4e043a39 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Southern Brazilian Restaurant, 52939ad03cf9994f4e043a3a ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tapiocaria, 52939a7d3cf9994f4e043a34 ,6,Brazilian Restaurant,South American Restaurant,Latin American Restaurant,Suggested Countries: BR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Colombian Restaurant, 58daa1558bbb0b01f18ec1f4 ,5,South American Restaurant,Latin American Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Peruvian Restaurant, 4eb1bfa43b7b52c0e1adc2e8 ,5,South American Restaurant,Latin American Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Venezuelan Restaurant, 56aa371be4b08b9a8d573558 ,5,South American Restaurant,Latin American Restaurant,Food,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Mac &amp"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Mediterranean Restaurant, 4bf58dd8d48988d1c0941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Moroccan Restaurant, 4bf58dd8d48988d1c3941735 ,4,Mediterranean Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Mexican Restaurant, 4bf58dd8d48988d1c1941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Botanero, 58daa1558bbb0b01f18ec1d9 ,4,Mexican Restaurant,Food,,Suggested Countries: MX\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Burrito Place, 4bf58dd8d48988d153941735 ,4,Mexican Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Taco Place, 4bf58dd8d48988d151941735 ,4,Mexican Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tex-Mex Restaurant, 56aa371ae4b08b9a8d5734ba ,4,Mexican Restaurant,Food,,\"Suggested Countries: CA, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Yucatecan Restaurant, 5744ccdfe4b0c0459246b4d3 ,4,Mexican Restaurant,Food,,Suggested Countries: MX\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Middle Eastern Restaurant, 4bf58dd8d48988d115941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Israeli Restaurant, 56aa371be4b08b9a8d573529 ,4,Middle Eastern Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kurdish Restaurant, 5744ccdfe4b0c0459246b4ca ,4,Middle Eastern Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Lebanese Restaurant, 58daa1558bbb0b01f18ec1cd ,4,Middle Eastern Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Persian Restaurant, 52e81612bcbc57f1066b79f7 ,4,Middle Eastern Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ash and Haleem Place, 58daa1558bbb0b01f18ec1bc ,5,Persian Restaurant,Middle Eastern Restaurant,Food,Suggested Countries: IR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Dizi Place, 58daa1558bbb0b01f18ec1c0 ,5,Persian Restaurant,Middle Eastern Restaurant,Food,Suggested Countries: IR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Gilaki Restaurant, 58daa1558bbb0b01f18ec1c4 ,5,Persian Restaurant,Middle Eastern Restaurant,Food,Suggested Countries: IR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Jegaraki, 58daa1558bbb0b01f18ec1c7 ,5,Persian Restaurant,Middle Eastern Restaurant,Food,Suggested Countries: IR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tabbakhi, 5744ccdfe4b0c0459246b4a8 ,5,Persian Restaurant,Middle Eastern Restaurant,Food,Suggested Countries: IR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Modern European Restaurant, 52e81612bcbc57f1066b79f9 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Molecular Gastronomy Restaurant, 4bf58dd8d48988d1c2941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pakistani Restaurant, 52e81612bcbc57f1066b79f8 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pet Caf�, 56aa371be4b08b9a8d573508 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pizza Place, 4bf58dd8d48988d1ca941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Polish Restaurant, 52e81612bcbc57f1066b7a04 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Portuguese Restaurant, 4def73e84765ae376e57713a ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Poutine Place, 56aa371be4b08b9a8d5734c7 ,3,Food,,,\"Suggested Countries: CA, US\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Restaurant, 4bf58dd8d48988d1c4941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Russian Restaurant, 5293a7563cf9994f4e043a44 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Blini House, 52e928d0bcbc57f1066b7e9d ,4,Russian Restaurant,Food,,\"Suggested Countries: AM, AZ, BY, GE, KY, KZ, MO, RU, TJ, TM, UA, UZ\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pelmeni House, 52e928d0bcbc57f1066b7e9c ,4,Russian Restaurant,Food,,\"Suggested Countries: AM, AZ, BY, GE, KY, KZ, MO, RU, TJ, TM, UA, UZ\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Salad Place, 4bf58dd8d48988d1bd941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sandwich Place, 4bf58dd8d48988d1c5941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Scandinavian Restaurant, 4bf58dd8d48988d1c6941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Scottish Restaurant, 5744ccdde4b0c0459246b4a3 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Seafood Restaurant, 4bf58dd8d48988d1ce941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Slovak Restaurant, 56aa371be4b08b9a8d57355a ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Snack Place, 4bf58dd8d48988d1c7941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Soup Place, 4bf58dd8d48988d1dd931735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Southern / Soul Food Restaurant, 4bf58dd8d48988d14f941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Spanish Restaurant, 4bf58dd8d48988d150941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Paella Restaurant, 4bf58dd8d48988d14d941735 ,4,Spanish Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tapas Restaurant, 4bf58dd8d48988d1db931735 ,4,Spanish Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Sri Lankan Restaurant, 5413605de4b0ae91d18581a9 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Steakhouse, 4bf58dd8d48988d1cc941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Swiss Restaurant, 4bf58dd8d48988d158941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tea Room, 4bf58dd8d48988d1dc931735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Theme Restaurant, 56aa371be4b08b9a8d573538 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Truck Stop, 57558b36e4b065ecebd306dd ,3,Food,,,\"Suggested Countries: BE, FR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Turkish Restaurant, 4f04af1f2fb6e1c99f3db0bb ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Borek Place, 530faca9bcbc57f1066bc2f3 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Cigkofte Place, 530faca9bcbc57f1066bc2f4 ,4,Turkish Restaurant,Food,,\"Suggested Countries: AT, CY, DE, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Doner Restaurant, 5283c7b4e4b094cb91ec88d8 ,4,Turkish Restaurant,Food,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Gozleme Place, 5283c7b4e4b094cb91ec88d9 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kofte Place, 5283c7b4e4b094cb91ec88db ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, DE, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kokore� Restaurant, 5283c7b4e4b094cb91ec88d6 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kumpir Restaurant, 56aa371be4b08b9a8d573535 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, DE, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Kumru Restaurant, 56aa371be4b08b9a8d5734bd ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Manti Place, 5283c7b4e4b094cb91ec88d5 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Meyhane, 5283c7b4e4b094cb91ec88da ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pide Place, 530faca9bcbc57f1066bc2f2 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, DE, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Pilavc�, 58daa1558bbb0b01f18ec1df ,4,Turkish Restaurant,Food,,Suggested Countries: TR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "S�_�_ Place, 58daa1558bbb0b01f18ec1dc ,4,Turkish Restaurant,Food,,Suggested Countries: TR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Tantuni Restaurant, 56aa371be4b08b9a8d5734bf ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Turkish Coffeehouse, 56aa371be4b08b9a8d5734c1 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Turkish Home Cooking Restaurant, 5283c7b4e4b094cb91ec88d4 ,4,Turkish Restaurant,Food,,\"Suggested Countries: CY, IR, TR\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "��p _i_ Place, 58daa1558bbb0b01f18ec1e2 ,4,Turkish Restaurant,Food,,Suggested Countries: TR\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Ukrainian Restaurant, 52e928d0bcbc57f1066b7e96 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Varenyky restaurant, 52e928d0bcbc57f1066b7e9a ,4,Ukrainian Restaurant,Food,,\"Suggested Countries: AM, AZ, BY, GE, KY, KZ, MO, RU, TJ, TM, UA, UZ\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "West-Ukrainian Restaurant, 52e928d0bcbc57f1066b7e9b ,4,Ukrainian Restaurant,Food,,\"Suggested Countries: AM, AZ, BY, GE, KY, KZ, MO, RU, TJ, TM, UA, UZ\"\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Vegetarian / Vegan Restaurant, 4bf58dd8d48988d1d3941735 ,3,Food,,,#N/A\r"
+ },
+ {
+  "NAME,ID,NESTLEVEL,PARENT,GRANDPARENT,GREAT-GRANDPARENT,SUGGESTEDCOUNTRIES": "Wings Joint, 4bf58dd8d48988d14c941735 ,3,Food,,,#N/A"
+ }
+]
