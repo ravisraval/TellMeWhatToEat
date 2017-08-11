@@ -1,11 +1,9 @@
 import React from 'react';
 import {questions,
         answers,
-        questionObjectBuilder,
         questionArrayBuilder
         } from "../../../docs/data/converters/questions/questions.js";
 
-let questionsObject = questionObjectBuilder(questions, answers);
 let questionsArray = questionArrayBuilder(questions, answers);
 
 class Questions extends React.Component {
@@ -167,8 +165,6 @@ class Questions extends React.Component {
     } else {
       questionDisplay = this.noMoreQuestions();
     }
-
-    console.log("questions", this.questions);
 
     return(
       <div>
