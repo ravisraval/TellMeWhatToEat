@@ -10,7 +10,7 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dineType: "All",
+      dineType: "eatout",
       address: "",
       position: null,
     };
@@ -48,9 +48,9 @@ class LandingPage extends React.Component {
   dineType() {
     return (
       <select onChange={this.updateList('dineType')}>
-        <option value="all">Eat out</option>
-        <option value="Take-out">Take-out</option>
-        <option value="Delivery">Delivery</option>
+        <option value="eatout">Eat out</option>
+        <option value="takeout">Take-out</option>
+        <option value="delivery">Delivery</option>
       </select>
     );
   }

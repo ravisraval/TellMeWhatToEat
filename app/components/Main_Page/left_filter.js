@@ -141,6 +141,20 @@ class FilterBar extends React.Component {
     }
   }
 
+  renderAddressSearchBar() {
+    return(
+      <div>
+        Your Address:
+        <AddressSearch
+          updateAddress={this.updateAddress}
+          updatePosition={this.updatePosition}
+          address={this.state.address}/>
+      </div>
+
+    );
+  }
+
+
   renderFilterBar(){
     const checked = (property, value) => {
       return this.state.price.includes(value);
@@ -160,150 +174,145 @@ class FilterBar extends React.Component {
 
     return (
     <nav className="filter-bar col-sm-4">
-      <Questions updateQstring={this.updateQstring}/>
-      <AddressSearch
-        updateAddress={this.updateAddress}
-        updatePosition={this.updatePosition}
-        address={this.state.address}/>
+      <div>
+        {this.renderAddressSearchBar()}
+      </div>
       <h1 className="title">Restaurant Picker</h1>
-      <form className="filter-bar-form">
 
-        <section className="price-section">
-          <h2 className="filter-section-header">Price</h2>
-          <div className="switch-group">
+      <section className="price-section">
+        <h2 className="filter-section-header">Price</h2>
+        <div className="switch-group">
 
-            <input
-              type="checkbox"
-              value={1}
-              id="$"
-              className="1"
-              onChange={this.handlePrice}
-              checked={checked("price",1)}
+          <input
+            type="checkbox"
+            value={1}
+            id="$"
+            className="1"
+            onChange={this.handlePrice}
+            checked={checked("price",1)}
+            />
+          <label id="1" htmlFor="$">$</label>
+
+          <input
+            type="checkbox"
+            value={2}
+            id="$$"
+            className="1 2"
+            onChange={this.handlePrice}
+            checked={checked("price",2)}
+            />
+          <label id="2" htmlFor="$$">$$</label>
+
+          <input
+            type="checkbox"
+            value={3}
+            id="$$$"
+            className="1 2 3"
+            onChange={this.handlePrice}
+            checked={checked("price",3)}
+            />
+          <label htmlFor="$$$">$$$</label>
+
+          <input
+            type="checkbox"
+            value={4}
+            id="$$$$"
+            className="1 2 3 4"
+            onChange={this.handlePrice}
+            checked={checked("price",4)}
+            />
+          <label id="4" htmlFor="$$$$">$$$$</label>
+
+        </div>
+      </section>
+
+      <section className="transaction-type-section">
+        <h2 className="filter-section-header">I want ...</h2>
+        <div className="switch-group">
+
+          <input
+            type="radio"
+            value="delivery"
+            id="delivery"
+            className="transaction-type"
+            onChange={this.update("type")}
+            checked={selected("type","delivery")}
+            />
+          <label htmlFor="delivery" className="type">Delivery</label>
+
+          <input
+            type="radio"
+            value="takeout"
+            id="takeout"
+            className="transaction-type"
+            onChange={this.update("type")}
+            checked={selected("type","takeout")}
+            />
+          <label htmlFor="takeout" className="type">Takeout</label>
+
+          <input
+            type="radio"
+            value="eatout"
+            id="eatout"
+            className="transaction-type"
+            onChange={this.update("type")}
+            checked={selected("type","eatout")}
+            />
+          <label htmlFor="eatout" className="type">Eat Out</label>
+
+        </div>
+      </section>
+
+      <section className="open-now-section">
+      <h2 className="filter-section-header">Open</h2>
+        <div className="open-now-or-later">
+          <div className="open-now">
+
+            <div className="toggle-section">
+
+              <p className={this.state.openNow ? "now checked" : "now"}>now</p>
+              <input
+                id="toggle"
+                className="toggle"
+                type="checkbox"
+                value={this.state.openNow}
+                checked={this.state.openNow}
+                onChange={this.handleToggle}
               />
-            <label id="1" htmlFor="$">$</label>
 
-            <input
-              type="checkbox"
-              value={2}
-              id="$$"
-              className="1 2"
-              onChange={this.handlePrice}
-              checked={checked("price",2)}
-              />
-            <label id="2" htmlFor="$$">$$</label>
-
-            <input
-              type="checkbox"
-              value={3}
-              id="$$$"
-              className="1 2 3"
-              onChange={this.handlePrice}
-              checked={checked("price",3)}
-              />
-            <label htmlFor="$$$">$$$</label>
-
-            <input
-              type="checkbox"
-              value={4}
-              id="$$$$"
-              className="1 2 3 4"
-              onChange={this.handlePrice}
-              checked={checked("price",4)}
-              />
-            <label id="4" htmlFor="$$$$">$$$$</label>
-
-          </div>
-        </section>
-
-        <section className="transaction-type-section">
-          <h2 className="filter-section-header">I want ...</h2>
-          <div className="switch-group">
-
-            <input
-              type="radio"
-              value="delivery"
-              id="delivery"
-              className="transaction-type"
-              onChange={this.update("type")}
-              checked={selected("type","delivery")}
-              />
-            <label htmlFor="delivery" className="type">Delivery</label>
-
-            <input
-              type="radio"
-              value="takeout"
-              id="takeout"
-              className="transaction-type"
-              onChange={this.update("type")}
-              checked={selected("type","takeout")}
-              />
-            <label htmlFor="takeout" className="type">Takeout</label>
-
-            <input
-              type="radio"
-              value="eatout"
-              id="eatout"
-              className="transaction-type"
-              onChange={this.update("type")}
-              checked={selected("type","eatout")}
-              />
-            <label htmlFor="eatout" className="type">Eat Out</label>
-
-          </div>
-        </section>
-
-        <section className="open-now-section">
-        <h2 className="filter-section-header">Open</h2>
-          <div className="open-now-or-later">
-            <div className="open-now">
-
-              <div className="toggle-section">
-
-                <p className={this.state.openNow ? "now checked" : "now"}>now</p>
-                <input
-                  id="toggle"
-                  className="toggle"
-                  type="checkbox"
-                  value={this.state.openNow}
-                  checked={this.state.openNow}
-                  onChange={this.handleToggle}
-                />
-
-                <label htmlFor="toggle" className="toggle-display"></label>
-
-              </div>
+              <label htmlFor="toggle" className="toggle-display"></label>
 
             </div>
 
-            {this.state.openNow ? "" : this.renderOpenAt()}
-
           </div>
-        </section>
 
-        <section className="delivery-time-section">
-          <h2 className="filter-section-header">Delivery Time</h2>
-          {this.renderSliderBarHeader()}
-          <div className="slider-bar-div">
-            <span> 40 </span>
-            <input
-              className="slider-bar"
-              type="range"
-              min="40"
-              max="80"
-              value={this.state.deliveryTimeDisplay}
-              onChange={this.handleMouseDown}
-              onMouseUp={this.update("deliveryTime")}
-            />
-          <span> 80 </span>
+          {this.state.openNow ? "" : this.renderOpenAt()}
+
         </div>
-        </section>
+      </section>
 
-        <section className="question-section">
-          <h2 className="filter-section-header">Help Me Decide</h2>
-          <span>Question Component</span>
-        </section>
+      <section className="delivery-time-section">
+        <h2 className="filter-section-header">Delivery Time</h2>
+        {this.renderSliderBarHeader()}
+        <div className="slider-bar-div">
+          <span> 40 </span>
+          <input
+            className="slider-bar"
+            type="range"
+            min="40"
+            max="80"
+            value={this.state.deliveryTimeDisplay}
+            onChange={this.handleMouseDown}
+            onMouseUp={this.update("deliveryTime")}
+          />
+        <span> 80 </span>
+      </div>
+      </section>
+      <section className="question-section">
+        <h2 className="filter-section-header">Help Me Decide</h2>
+        <Questions updateQstring={this.updateQstring}/>
+      </section>
 
-      </form>
     </nav>
     );
   }
