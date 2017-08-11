@@ -16,9 +16,13 @@ class Questions extends React.Component {
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
     // this.optionQuestionDisplay = this.optionQuestionDisplay.bind(this);
   }
-  componentDidMount() {
-    console.log("STATTTEE", this.state);
-  }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (this.state.queryString !== nextState.queryString) {
+      this.props.updateQstring(this.state.queryString);
+      console.log("WEEEEEE INNN HEREEEE");
+    }
+}
 
   sampleQuestions() {
     return([

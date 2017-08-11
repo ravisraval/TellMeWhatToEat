@@ -48,16 +48,16 @@ componentDidMount() {
 componentWillReceiveProps(newProps) {
   this.reRender = true;
   this.setState({
-    position: newProps.state.position,
-    price:newProps.state.price,
-    deliveryTime: newProps.state.deliveryTime,
-    openNow: newProps.state.openNow,
-    openAt: newProps.state.openAt,
+    position: newProps.filterProps.position,
+    price:newProps.filterProps.price,
+    deliveryTime: newProps.filterProps.deliveryTime,
+    openNow: newProps.filterProps.openNow,
+    openAt: newProps.filterProps.openAt,
     // obtainType: newProps.state.type,
     // searchRadius: newProps.state.searchRadius,
     query: newProps.filterProps.query
   });
-  this.getRestaurants(newProps.state.position);
+  this.getRestaurants(newProps.filterProps.position);
 }
 
 handleAdd(restaurant) {
@@ -126,6 +126,7 @@ render() {
     });
   })
   const { restID, position} = this.state;
+  console.log(this.state.query);
   return(
     <div className="restaurant-index-and-map">
       <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
