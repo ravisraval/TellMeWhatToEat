@@ -6226,3 +6226,23 @@ input[type="range"] {
 
 ul {
   list-style: none; }
+
+.question {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; }
+
+.question-title {
+  font-size: 20px;
+  font-weight: lighter; }
+
+.question-answers {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  font-size: 30px; }
+  .question-answers input {
+    width: 75px;
+    height: 75px; }

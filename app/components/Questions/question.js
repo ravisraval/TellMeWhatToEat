@@ -26,7 +26,7 @@ class Questions extends React.Component {
   componentWillUpdate(nextProps, nextState) {
     if (this.state.queryString !== nextState.queryString) {
       this.props.updateQstring(nextState.queryString);
-      this.setState({queryString:""})
+      this.setState({queryString:""});
     }
 }
 
@@ -98,19 +98,21 @@ class Questions extends React.Component {
     const currentQuestion = this.questions[this.state.questionIdx];
     // const currentQuestion = this.questions;
     return(
-      <div>
-        <div>{currentQuestion.question_body}</div>
-        <div className="yes-button">
-          <input
-            type="submit"
-            value="yes"
-            onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
-        </div>
-        <div className="no-button">
-          <input
-            type="submit"
-            value="No"
-            onClick={this.updateIdx()}/>
+      <div className="question">
+        <div className="question-title">{currentQuestion.body}</div>
+        <div className="question-answers">
+          <div className="yes-button">
+            <input
+              type="submit"
+              value="yes"
+              onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
+          </div>
+          <div className="no-button">
+            <input
+              type="submit"
+              value="No"
+              onClick={this.updateIdx()}/>
+          </div>
         </div>
         <div className="skip-button">
           <input
@@ -125,18 +127,17 @@ class Questions extends React.Component {
   optionQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
       return(
-        <div>
-          <div>{currentQuestion.question_body}</div>
-          <ul>
+        <div className="question">
+          <div className="question-title">{currentQuestion.body}</div>
+          <div className="question-answers">
           {currentQuestion.answers.map( (answer, i) => (
-            <li>
               <input
+                key={i}
                 type="submit"
-                value={answer.answer_text}
+                value={answer.text}
                 onClick={this.updateQstring(answer.q_string_add_on)}/>
-            </li>
           ))}
-          </ul>
+        </div>
           <div className="skip-button">
             <input
               type="submit"
@@ -145,7 +146,6 @@ class Questions extends React.Component {
           </div>
         </div>
       );
-
   }
 
   noMoreQuestions() {
@@ -159,11 +159,9 @@ class Questions extends React.Component {
   render() {
     let questionDisplay;
 
-    console.log(this.questions);
-
     if (this.state.questionIdx  < this.questions.length) {
       const boolQ = this.boolQuestionDisplay();
-      const qType = this.questions[this.state.questionIdx].question_type;
+      const qType = this.questions[this.state.questionIdx].type;
       questionDisplay = qType === 'bool' ? boolQ : this.optionQuestionDisplay();
     } else {
       questionDisplay = this.noMoreQuestions();
@@ -171,9 +169,7 @@ class Questions extends React.Component {
 
     return(
       <div>
-        <div>
-          {questionDisplay}
-        </div>
+        {questionDisplay}
       </div>
     );
   }
