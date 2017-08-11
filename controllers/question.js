@@ -13,5 +13,8 @@ var Question = require('../models/Question');
    */
 
   exports.question_list = function(req, res) {
-    // in production
+    Question.fetch({withRelated: ['answers']})
+        .then(function(user) {
+            res.json(user);
+        });
   };
