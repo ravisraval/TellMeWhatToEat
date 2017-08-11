@@ -84,7 +84,7 @@ getRestaurants(location) {
     "ll": `${location.lat},${location.lng}`,
     "query": this.state.query,
     "categoryId": "4d4b7105d754a06374d81259",
-    "radius": this.state.searchRadius
+    "radius": this.state.searchRadius,
     // "limit": '40',
   };
 
