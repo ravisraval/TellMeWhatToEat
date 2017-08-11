@@ -158,6 +158,9 @@ class Questions extends React.Component {
 
   render() {
     let questionDisplay;
+
+    console.log(this.questions);
+
     if (this.state.questionIdx  < this.questions.length) {
       const boolQ = this.boolQuestionDisplay();
       const qType = this.questions[this.state.questionIdx].question_type;
