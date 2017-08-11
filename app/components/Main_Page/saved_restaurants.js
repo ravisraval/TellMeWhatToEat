@@ -27,7 +27,7 @@ class SavedRestaurants extends React.Component {
     const restaurantNames = [];
     console.log(this.state);
     this.state.savedRestaurants.forEach(restaurant => {
-      restaurantNames.push(<li><a href={restaurant.url}>{restaurant.name}</a></li>);
+      restaurantNames.push(<li><a href={`https://foursquare.com/v/${restaurant.id}?ref=5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX`} target="_blank">{restaurant.name}</a></li>);
     });
     console.log("restaurantNames");
     console.log(restaurantNames);

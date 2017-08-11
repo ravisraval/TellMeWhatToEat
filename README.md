@@ -73,3 +73,4 @@ The external API we will be using to collect these data are:
 *  Visualize user preferences on a user dashboard.
 *  Pixel-perfect mobile-responsive design.
 *  Mobile App
+*  Fetch menus
