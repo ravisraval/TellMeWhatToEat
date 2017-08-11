@@ -29,24 +29,23 @@ class RestaurantIndexItem extends React.Component {
     };
     foursquare.venues.getVenue(params)
       .then(res => {
-        this.setState({ restaurant: res.response.venue }, () => {
-        });
+        this.setState({ restaurant: res.response.venue });
       });
   }
 
   handleClick() {
-    this.props.openModal(this.props.restaurant.id);
+    this.props.openModal(this.state.restaurant.id);
   }
 
   handleAdd() {
-    this.props.handleAdd(this.props.listOrder);
+    this.props.handleAdd(this.state.restaurant);
   }
 
   handleAnother() {
     const newRestaurant = this.props.restaurants[
       Math.floor(Math.random() * this.props.restaurants.length)];
     this.getRestaurant(newRestaurant.id);
-
+    this.props.replaceItem(newRestaurant, this.props.listOrder);
   }
 
   render() {

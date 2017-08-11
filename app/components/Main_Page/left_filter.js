@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import RestaurantIndex from './restaurant_index';
 import AddressSearch from '../Landing_page/address_search';
+import Questions from '../Questions/question';
 
 class FilterBar extends React.Component {
   constructor(props){
@@ -16,6 +17,8 @@ class FilterBar extends React.Component {
         openAt: "",
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
+        searchRadius: 4000,
+        query: "food"
       };
     } else {
       this.state = {
@@ -27,7 +30,9 @@ class FilterBar extends React.Component {
         openAt: "",
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
-      }
+        searchRadius: 4000,
+        query: "food"
+      };
     }
 
     this.handleToggle = this.handleToggle.bind(this);
@@ -36,6 +41,7 @@ class FilterBar extends React.Component {
     // this.handleSubmit = this.handleSubmit.bind(this);
     this.updateAddress = this.updateAddress.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
+    this.updateQstring = this.updateQstring.bind(this);
   }
 
   updateAddress(address) {
@@ -88,6 +94,10 @@ class FilterBar extends React.Component {
     }
 
     this.setState({price});
+  }
+
+  updateQstring(newQuery) {
+    this.setState({query: this.state.query.concat(newQuery)});
   }
 
   generatePriceArray(int){
@@ -144,8 +154,11 @@ class FilterBar extends React.Component {
       deliveryTime = e.target.value
     );
 
+
+
     return (
     <nav className="filter-bar col-sm-4">
+      <Questions updateQstring={this.updateQstring}/>
       <AddressSearch
         updateAddress={this.updateAddress}
         updatePosition={this.updatePosition}
@@ -297,7 +310,7 @@ class FilterBar extends React.Component {
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}
-        <RestaurantIndex state={this.state}/>
+        <RestaurantIndex filterProps={this.state}/>
       </div>
     );
   }

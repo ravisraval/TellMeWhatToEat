@@ -15,19 +15,20 @@ constructor(props){
     receivedRestaurants: [],
     numRestaurants: 3,
     isModalOpen: false,
-    position: this.props.state.position,
-    price: this.props.state.price,
-    deliveryTime: this.props.state.deliveryTime || 60,
-    openNow: this.props.state.openNow,
-    openAt: this.props.state.openAt,
-    obtainType: this.props.state.type,
-    query: this.props.state.query || "food",
-    searchRadius: this.props.state.searchRadius || "4000"
+    position: this.props.filterProps.position,
+    price: this.props.filterProps.price,
+    deliveryTime: this.props.filterProps.deliveryTime || 60,
+    openNow: this.props.filterProps.openNow,
+    openAt: this.props.filterProps.openAt,
+    obtainType: this.props.filterProps.type,
+    query: this.props.filterProps.query,
+    searchRadius: this.props.filterProps.searchRadius || "4000"
   };
   this.reRender = true;
   this.saveList = [];
   this.getRestaurants = this.getRestaurants.bind(this);
   this.openModal = this.openModal.bind(this);
+  this.replaceItem = this.replaceItem.bind(this);
   this.handleAdd = this.handleAdd.bind(this);
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
 }
@@ -49,24 +50,28 @@ componentDidMount() {
 componentWillReceiveProps(newProps) {
   this.reRender = true;
   this.setState({
-    position: newProps.state.position,
-    price:newProps.state.price,
-    deliveryTime: newProps.state.deliveryTime,
-    openNow: newProps.state.openNow,
-    openAt: newProps.state.openAt,
-    // obtainType: newProps.state.type,
-    // searchRadius: newProps.state.searchRadius,
-    // query: newProps.state.query
+    position: newProps.filterProps.position,
+    price:newProps.filterProps.price,
+    deliveryTime: newProps.filterProps.deliveryTime,
+    openNow: newProps.filterProps.openNow,
+    openAt: newProps.filterProps.openAt,
+    obtainType: newProps.filterProps.type,
+    searchRadius: newProps.filterProps.searchRadius,
+    query: newProps.filterProps.query
   });
-  this.getRestaurants(newProps.state.position);
+  this.getRestaurants(newProps.filterProps.position);
 }
 
-handleAdd(listOrder) {
-  console.log("adding");
-  if (!this.saveList.includes(this.restaurantList[listOrder])) {
-    this.saveList.push(this.restaurantList[listOrder]);
+handleAdd(restaurant) {
+  if (!this.saveList.includes(restaurant)) {
+    this.saveList.push(restaurant);
   }
-  console.log(this.saveList);
+}
+
+replaceItem(newRestaurant, array_pos) {
+  this.reRender = false;
+  this.restaurantList[array_pos] = newRestaurant;
+  this.forceUpdate();
 }
 
 getRestaurants(location) {
@@ -85,26 +90,26 @@ getRestaurants(location) {
 
   foursquare.venues.getVenues(params)
     .then(res => {
-      this.setState({ receivedRestaurants: res.response.venues }, () => {
-      });
+      console.log("recieved restaurants", res);
+      this.setState({ receivedRestaurants: res.response.venues });
     });
 }
 
 render() {
   //LOGIC FOR PICKING RESTAURANTS
-  //DONT PICK THE SAME RESTAURANT
   const { receivedRestaurants } = this.state;
   if (this.state.receivedRestaurants.length === 0) {return(
     <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
     );
   }
-  if (this.reRender) {
+  if (this.reRender) {//get new restaurants, else use old ones
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
     while (this.restaurantList.length < this.state.numRestaurants) {
-      randomRestaurant = receivedRestaurants[Math.floor(Math.random() * ids.length)];
-      //fix for duplicates
+      let idx = Math.floor(Math.random() * ids.length)
+      randomRestaurant = receivedRestaurants[idx];
+      receivedRestaurants.splice(idx,1);
       if (!this.restaurantList.includes(randomRestaurant)) {
         this.restaurantList.push(randomRestaurant);
       }
@@ -120,6 +125,8 @@ render() {
      openModal={this.openModal}
      closeModal={this.closeModal}
      handleAdd={this.handleAdd}
+     handleAnother={this.replaceItem}
+     replaceItem={this.replaceItem}
      restaurants={this.state.receivedRestaurants}/>);
     restaurants.push({
       id: restaurant.id,
@@ -128,7 +135,7 @@ render() {
       displayPosition: restaurants.length + 1
     });
   })
-  const { restID, position, saveList } = this.state;
+  const { restID, position} = this.state;
   return(
     <div className="restaurant-index-and-map">
       <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
@@ -139,8 +146,9 @@ render() {
           {restaurantListRender}
         </ul>
       </div>
-      <SavedRestaurants list={saveList}/>
+      <SavedRestaurants list={this.saveList}/>
       <RightMapDisplay restaurants={restaurants} homePos={position}/>
+
     </div>
   );
 }

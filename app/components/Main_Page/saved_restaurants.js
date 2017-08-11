@@ -5,24 +5,32 @@ class SavedRestaurants extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      savedRestaurants: []
+      savedRestaurants: this.props.list
     };
     this.handleSaveList = this.handleSaveList.bind(this);
   }
 
+  componentDidMount() {
+    this.setState({ savedRestaurants: this.props.list});
+    this.forceUpdate();
+  }
   handleSaveList() {
 
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState({savedRestaurants: this.state.savedRestaurants.push(newProps)});
+    this.setState({ savedRestaurants: newProps.list});
   }
 
   render() {
+
     const restaurantNames = [];
+    console.log(this.state);
     this.state.savedRestaurants.forEach(restaurant => {
-      restaurantNames.push(`<li><a href="${restaurant.url}">${restaurant.name}</a></li>`);
+      restaurantNames.push(<li><a href={restaurant.url}>{restaurant.name}</a></li>);
     });
+    console.log("restaurantNames");
+    console.log(restaurantNames);
 
     return(
       <div>
