@@ -19,8 +19,8 @@ class Questions extends React.Component {
 
   componentWillUpdate(nextProps, nextState) {
     if (this.state.queryString !== nextState.queryString) {
-      this.props.updateQstring(this.state.queryString);
-      console.log("WEEEEEE INNN HEREEEE");
+      this.props.updateQstring(nextState.queryString);
+      this.setState({queryString:""})
     }
 }
 
@@ -90,7 +90,6 @@ class Questions extends React.Component {
 
   boolQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
-    console.log("HEREEEEE");
     // const currentQuestion = this.questions;
     return(
       <div>
@@ -119,9 +118,6 @@ class Questions extends React.Component {
 
   optionQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
-    console.log(currentQuestion);
-    console.log("ANSWERRRS", currentQuestion.answers);
-    console.log("INNNNNNN");
       return(
         <div>
           <div>{currentQuestion.question_body}</div>
@@ -163,8 +159,6 @@ class Questions extends React.Component {
     } else {
       questionDisplay = this.noMoreQuestions();
     }
-
-    console.log(this.state);
 
     return(
       <div>

@@ -29,8 +29,7 @@ class RestaurantIndexItem extends React.Component {
     };
     foursquare.venues.getVenue(params)
       .then(res => {
-        this.setState({ restaurant: res.response.venue }, () => {
-        });
+        this.setState({ restaurant: res.response.venue });
       });
   }
 
