@@ -27,6 +27,7 @@ constructor(props){
   this.saveList = [];
   this.getRestaurants = this.getRestaurants.bind(this);
   this.openModal = this.openModal.bind(this);
+  this.replaceItem = this.replaceItem.bind(this);
   this.handleAdd = this.handleAdd.bind(this);
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
 }
@@ -53,8 +54,8 @@ componentWillReceiveProps(newProps) {
     deliveryTime: newProps.filterProps.deliveryTime,
     openNow: newProps.filterProps.openNow,
     openAt: newProps.filterProps.openAt,
-    // obtainType: newProps.state.type,
-    // searchRadius: newProps.state.searchRadius,
+    obtainType: newProps.filterProps.type,
+    searchRadius: newProps.filterProps.searchRadius,
     query: newProps.filterProps.query
   });
   this.getRestaurants(newProps.filterProps.position);
@@ -64,6 +65,10 @@ handleAdd(restaurant) {
   // if (!this.saveList.includes(restaurant)) {
   //   this.saveList.push(restaurant);
   // }
+}
+
+replaceItem(number) {
+
 }
 
 getRestaurants(location) {
@@ -82,6 +87,7 @@ getRestaurants(location) {
 
   foursquare.venues.getVenues(params)
     .then(res => {
+      console.log("recieved restaurants", res);
       this.setState({ receivedRestaurants: res.response.venues }, () => {
       });
     });
@@ -89,19 +95,19 @@ getRestaurants(location) {
 
 render() {
   //LOGIC FOR PICKING RESTAURANTS
-  //DONT PICK THE SAME RESTAURANT
   const { receivedRestaurants } = this.state;
   if (this.state.receivedRestaurants.length === 0) {return(
     <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
     );
   }
-  if (this.reRender) {
+  if (this.reRender) {//get new restaurants, else use old ones
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
     while (this.restaurantList.length < this.state.numRestaurants) {
-      randomRestaurant = receivedRestaurants[Math.floor(Math.random() * ids.length)];
-      //fix for duplicates
+      let idx = Math.floor(Math.random() * ids.length)
+      randomRestaurant = receivedRestaurants[idx];
+      receivedRestaurants.splice(idx,1);
       if (!this.restaurantList.includes(randomRestaurant)) {
         this.restaurantList.push(randomRestaurant);
       }
@@ -117,6 +123,7 @@ render() {
      openModal={this.openModal}
      closeModal={this.closeModal}
      handleAdd={this.handleAdd}
+     handleAnother={this.replaceItem}
      restaurants={this.state.receivedRestaurants}/>);
     restaurants.push({
       id: restaurant.id,
@@ -126,7 +133,6 @@ render() {
     });
   })
   const { restID, position} = this.state;
-  console.log(this.state.query);
   return(
     <div className="restaurant-index-and-map">
       <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
