@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-
+// TODO: FIX RENDERING
 class SavedRestaurants extends React.Component {
   constructor(props){
     super(props);
@@ -19,18 +19,16 @@ class SavedRestaurants extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.setState({ savedRestaurants: newProps.list});
+    this.setState({ savedRestaurants: newProps.list},
+    () => this.forceUpdate());
   }
 
   render() {
 
     const restaurantNames = [];
-    console.log(this.state);
     this.state.savedRestaurants.forEach(restaurant => {
       restaurantNames.push(<li><a href={`https://foursquare.com/v/${restaurant.id}?ref=5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX`} target="_blank">{restaurant.name}</a></li>);
     });
-    console.log("restaurantNames");
-    console.log(restaurantNames);
 
     return(
       <div>

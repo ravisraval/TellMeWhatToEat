@@ -31,12 +31,14 @@ class Questions extends React.Component {
         question_type: "bool",
         question_body: "Vegetarian?",
         q_string_add_on: "vegetarian"
-      },{
+      },
+      {
         id: 2,
         question_type: "bool",
         question_body: "Spicy?",
         q_string_add_on: "spicy"
-      },{
+      },
+      {
         id: 3,
         question_type: "bool",
         question_body: "Trending?",
