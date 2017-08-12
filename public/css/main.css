@@ -1522,7 +1522,7 @@ pre {
       width: 970px; } }
   @media (min-width: 1200px) {
     .container {
-      width: 1170px; } }
+      width: 90%; } }
 
 .container-fluid {
   margin-right: auto;
@@ -3941,7 +3941,7 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.93);
   border-color: #e0e0e0; }
   .navbar-default .navbar-brand {
     color: #262626; }
@@ -5984,26 +5984,35 @@ textarea {
   align-items: center; }
 
 .landing-page-container {
-  background-image: url("http://res.cloudinary.com/syriebianco/image/upload/v1502554594/31178_slow_cooker_pork_ramen_3000_yzf35r.jpg");
+  background-image: url(http://res.cloudinary.com/syriebianco/image/upload/v1502555762/31178_slow_cooker_pork_ramen_3000_yzf35r.jpg);
   background-size: cover;
-  height: 400px; }
+  height: 580px;
+  width: 100%;
+  position: fixed;
+  top: 0; }
 
 .search-box-container {
+  margin-top: 50px;
   padding: 40px;
-  height: 80%;
+  height: 68%;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid white;
-  border-radius: 3px; }
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
 
-.lp-header-container .lp-header {
-  font-size: 35px;
-  font-weight: bold;
-  color: black; }
-
-.lp-header-container .lp-sub-header {
-  font-size: 40px;
-  font-weight: lighter;
-  color: black; }
+.lp-header-container {
+  margin-top: 10px; }
+  .lp-header-container .lp-header {
+    font-size: 55px;
+    font-weight: bold;
+    color: black; }
+  .lp-header-container .lp-sub-header {
+    font-size: 40px;
+    font-weight: lighter;
+    color: black;
+    margin-left: 32px; }
 
 .lp-searchbar-container {
   display: flex;
@@ -6014,7 +6023,7 @@ textarea {
   border: 1px solid lightgrey;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.8);
-  font-size: 25px; }
+  font-size: 20px; }
   .lp-searchbar-container :first-child {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px; }
@@ -6022,20 +6031,22 @@ textarea {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; }
   .lp-searchbar-container .lp-searchbar-dropdown {
-    padding: 2px;
-    padding-top: 3px; }
+    padding: 5px 10px;
+    padding-top: 8px; }
     .lp-searchbar-container .lp-searchbar-dropdown select {
+      color: grey;
       border: none;
       background: none;
       outline: none;
       height: 100%; }
     .lp-searchbar-container .lp-searchbar-dropdown select:hover {
       cursor: pointer;
-      background: white; }
+      background: white;
+      color: black; }
   .lp-searchbar-container .lp-searchbar-dropdown:hover {
     background: white; }
   .lp-searchbar-container .lp-searchbar-input input {
-    padding: 5px 10px;
+    padding: 10px;
     border: none;
     border-left: 1px solid lightgrey;
     border-right: 1px solid lightgrey;
@@ -6052,7 +6063,8 @@ textarea {
     border: none;
     background: none;
     outline: none;
-    color: grey; }
+    color: grey;
+    padding: 8px 13px; }
   .lp-searchbar-container .lp-searchbar-button input:hover {
     color: black;
     background-color: white; }
