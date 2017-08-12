@@ -109,7 +109,9 @@ class FilterBar extends React.Component {
   }
 
   handleMouseDown(e){
-    this.deliveryTimeDisplay = e.target.value;
+    this.setState({deliveryTimeDisplay: e.target.value});
+    e.stopPropagation();
+    e.preventDefault();
   }
 
   // renderErrors(){

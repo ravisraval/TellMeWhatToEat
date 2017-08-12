@@ -5979,10 +5979,21 @@ textarea {
   text-transform: uppercase; }
 
 .landing-page-container {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
-  border: 0 solid red; }
+  align-items: center; }
+
+.landing-page-container {
+  background-image: url("http://res.cloudinary.com/syriebianco/image/upload/v1502554594/31178_slow_cooker_pork_ramen_3000_yzf35r.jpg");
+  background-size: cover;
+  height: 400px; }
+
+.search-box-container {
+  padding: 40px;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid white;
+  border-radius: 3px; }
 
 .lp-header-container .lp-header {
   font-size: 35px;
@@ -5995,36 +6006,56 @@ textarea {
   color: black; }
 
 .lp-searchbar-container {
-  margin-top: 25px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
   font-size: 25px; }
-  .lp-searchbar-container .lp-searchbar-dropdown select {
-    border: none;
-    background: none;
-    outline: none; }
-  .lp-searchbar-container .lp-searchbar-input {
-    margin-left: 10px;
-    margin-right: 10px; }
-    .lp-searchbar-container .lp-searchbar-input input {
-      padding-left: 10px;
+  .lp-searchbar-container :first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  .lp-searchbar-container :last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  .lp-searchbar-container .lp-searchbar-dropdown {
+    padding: 2px;
+    padding-top: 3px; }
+    .lp-searchbar-container .lp-searchbar-dropdown select {
       border: none;
-      border-left: 1px solid lightgrey;
-      border-right: 1px solid lightgrey;
       background: none;
       outline: none;
-      width: 40vw; }
+      height: 100%; }
+    .lp-searchbar-container .lp-searchbar-dropdown select:hover {
+      cursor: pointer;
+      background: white; }
+  .lp-searchbar-container .lp-searchbar-dropdown:hover {
+    background: white; }
+  .lp-searchbar-container .lp-searchbar-input input {
+    padding: 5px 10px;
+    border: none;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    background: none;
+    outline: none;
+    width: 40vw;
+    height: 100%; }
+  .lp-searchbar-container .lp-searchbar-input input#searchLocation {
+    border-radius: 0px; }
+  .lp-searchbar-container .lp-searchbar-input input:focus {
+    background: rgba(255, 255, 255, 0.9);
+    color: black; }
   .lp-searchbar-container .lp-searchbar-button input {
     border: none;
     background: none;
     outline: none;
-    color: black; }
-  .lp-searchbar-container .lp-searchbar-button input:hover {
     color: grey; }
+  .lp-searchbar-container .lp-searchbar-button input:hover {
+    color: black;
+    background-color: white; }
 
 @media only screen and (max-width: 768px) {
   .restaurants-page {
@@ -6143,7 +6174,12 @@ p.later {
 
 .switch-group label:hover {
   cursor: pointer;
-  background: #8ebf72 !important; }
+  background: #cccccc; }
+
+.switch-group input:checked + label:hover {
+  background-color: #8ebf72;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 
 .toggle-section {
   display: flex;

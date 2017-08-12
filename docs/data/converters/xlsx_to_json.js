@@ -1,8 +1,9 @@
 const convertExcel = require('excel-as-json').processFile;
 
+convertExcel('./docs/data/categories/categories.xlsx', './docs/data/categories/categories.js');
+convertExcel('./docs/data/answers/answers.xlsx', './docs/data/answers/answers.js');
+convertExcel('./docs/data/questions/questions.xlsx', './docs/data/questions/questions.js');
 
-convertExcel('../data_breakdown.xlsx', './data.json');
 
-convertExcel('../categories/categories.xlsx', './categories/categories.json');
-convertExcel('../answers/answers.xlsx', './answers/answers.json');
-convertExcel('../questions/questions.xlsx', './questions/questions.json');
+
+// add export const to files

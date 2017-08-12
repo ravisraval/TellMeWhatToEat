@@ -1,4 +1,10 @@
+module.exports.questions =
 [
+  {
+    "id": 0,
+    "body": "Feeling Trendy?",
+    "type": "bool"
+  },
   {
     "id": 1,
     "body": "Hot or Cold",
