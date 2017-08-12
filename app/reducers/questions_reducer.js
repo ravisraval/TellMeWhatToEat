@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 
-import { RECEIVE_QUESTIONS } from '../actions/question_actions';
+import { RECEIVE_QUESTIONS } from '../actions/question_actions.js';
 
 const QuestionsReducer = (state = {}, action) => {
   Object.freeze(state);

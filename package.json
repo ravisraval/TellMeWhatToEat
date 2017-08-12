@@ -10,9 +10,12 @@
     "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
     "test:server": "mocha test/server --recursive --compilers js:babel-register",
+    "export:Q": "echo module.exports.questions = | cat - docs/data/questions/questions.js > temp && mv temp docs/data/questions/questions.js",
+    "export:A": "echo module.exports.answers = | cat - docs/data/answers/answers.js > temp && mv temp docs/data/answers/answers.js",
+    "export:C": "echo module.exports.categories = | cat - docs/data/categories/categories.js > temp && mv temp docs/data/categories/categories.js",
+    "excel": "node docs/data/converters/xlsx_to_json.js && npm run export:Q && npm run export:A && npm run export:C",
     "db:create": "knex npm install knex -g ",
-    "db:setup": "node docs/data/converters/xlsx_to_json.js && knex migrate:latest && knex seed:run",
-    "excel": "node docs/data/converters/xlsx_to_json.js"
+    "db:setup": "npm run excel && knex migrate:latest && knex seed:run"
   },
   "dependencies": {
     "async": "^1.5.2",

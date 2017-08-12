@@ -22,5 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // tests
   window.fetchQuestions = fetchQuestions;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
   console.log(fetchQuestions);
 });

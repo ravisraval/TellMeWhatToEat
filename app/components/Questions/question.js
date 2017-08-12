@@ -1,10 +1,6 @@
 import React from 'react';
-import {questions,
-        answers,
-        questionArrayBuilder
-        } from "../../../docs/data/questions/questions.js";
+import questionArray from "../../../docs/data/questions/questions_export.js";
 
-let questionsArray = questionArrayBuilder(questions, answers);
 
 class Questions extends React.Component {
   constructor(props){
@@ -15,7 +11,7 @@ class Questions extends React.Component {
     };
 
 
-    this.questions = questionArrayBuilder(questions, answers);
+    this.questions = questionArray;
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
     // this.optionQuestionDisplay = this.optionQuestionDisplay.bind(this);
   }

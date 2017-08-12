@@ -1,5 +1,3 @@
-const questions = require('../docs/data/questions/questions.json');
-
 exports.seed = function(knex, Promise) {
 
   // Begin promises by deleting ALL existing entries

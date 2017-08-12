@@ -6145,6 +6145,11 @@ p.later {
   cursor: pointer;
   background: #8ebf72 !important; }
 
+.switch-group input:checked + label:hover {
+  background-color: #cccccc;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
 .toggle-section {
   display: flex;
   margin: 3px 0;

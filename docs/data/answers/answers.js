@@ -1,3 +1,4 @@
+module.exports.answers =
 [
   {
     "id": 1,
