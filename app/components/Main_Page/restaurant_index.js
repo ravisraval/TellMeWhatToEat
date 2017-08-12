@@ -7,10 +7,7 @@ import RestaurantShow from './restaurant_show';
 import SavedRestaurants from './saved_restaurants';
 import RightMapDisplay from './right_map';
 import Modal from '../Modal';
-const foursquare = require('react-foursquare')({
-  clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
-  clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
-});
+
 class RestaurantIndex extends React.Component {
 constructor(props){
   super(props);
@@ -19,14 +16,12 @@ constructor(props){
     numRestaurants: 3,
     isModalOpen: false,
     position: this.props.filterProps.position,
-    // price: this.props.filterProps.price,
-    price: [2,3,4],
+    price: this.props.filterProps.price,
     deliveryTime: this.props.filterProps.deliveryTime || 60,
     openNow: this.props.filterProps.openNow,
     openAt: this.props.filterProps.openAt,
     obtainType: this.props.filterProps.type,
-    query: this.props.filterProps.query || "",
-    categoryId: this.props.filterProps.categoryId || "",
+    query: this.props.filterProps.query,
     searchRadius: this.props.filterProps.searchRadius || "4000"
   };
   this.reRender = true;
@@ -36,96 +31,70 @@ constructor(props){
   this.replaceItem = this.replaceItem.bind(this);
   this.handleAdd = this.handleAdd.bind(this);
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
-  // this.isRestWithinPriceRange = this.isRestWithinPriceRange.bind(this);
 }
+
 openModal(restID) {
   this.reRender = false;
   this.setState({ isModalOpen: true, restID: restID });
 }
+
 closeModal() {
   this.reRender = false;
   this.setState({ isModalOpen: false });
 }
+
 componentDidMount() {
   this.getRestaurants(this.state.position);
 }
+
 componentWillReceiveProps(newProps) {
   this.reRender = true;
   this.setState({
     position: newProps.filterProps.position,
-    // price:newProps.filterProps.price,
-    price: [4],
+    price:newProps.filterProps.price,
     deliveryTime: newProps.filterProps.deliveryTime,
     openNow: newProps.filterProps.openNow,
     openAt: newProps.filterProps.openAt,
     obtainType: newProps.filterProps.type,
     searchRadius: newProps.filterProps.searchRadius,
-    query: newProps.filterProps.query,
-    categoryId: newProps.filterProps.categoryId
+    query: newProps.filterProps.query
   });
   this.getRestaurants(newProps.filterProps.position);
 }
+
 handleAdd(restaurant) {
   if (!this.saveList.includes(restaurant)) {
     this.saveList.push(restaurant);
   }
 }
+
 replaceItem(newRestaurant, array_pos) {
   this.reRender = false;
   this.restaurantList[array_pos] = newRestaurant;
   this.forceUpdate();
 }
-// getRestaurants(location) {
-//   const params = {
-//     "ll": `${location.lat},${location.lng}`,
-//     "query": this.state.query,
-//     "categoryId": `4d4b7105d754a06374d81259${this.state.categoryId}`,
-//     "radius": this.state.searchRadius
-//     // "limit": '40',
-//   };
-//   const goodRests = [];
-//   const badRests = [];
-//   const promises = [];
-//
-//   const generatePromises = (venueArray) => {
-//     venueArray.forEach( venue => {
-//       promises.push(new Promise ( resolve => {
-//         return foursquare.venues.getVenue({venue_id: venue.id})
-//         .then( res => {
-//           if (res.response.venue.price &&
-//             that.state.price.includes(res.response.venue.price.tier)) {
-//             goodRests.push(venue);
-//             }
-//         });
-//       }));
-//     });
-//   };
-//
-//   const promise = Promise.all(generatePromises)
-//
-//   foursquare.venues.getVenues(params)
-//     .then(res => {
-//       generatePromises(res.response.venues);
-//       console.log(promises);
-//     }).all(promises).then(that.setState({receivedRestaurants: goodRests}));
-// }
 
-// isRestWithinPriceRange(restId) {
-//   foursquare.venues.getVenue({venue_id: restId})
-//     .then(res => {
-//       // console.log(res.response.venue);
-//       if (res.response.venue.price &&
-//           this.state.price.includes(res.response.venue.price.tier)) {
-//             // console.log("I think this price is good");
-//             // console.log("state.price", this.state.price);
-//             // console.log("venue.price", res.response.venue.price.tier);
-//             return true;
-//       } else {
-//         // console.log("I think this price is bad");
-//         return false;
-//       }
-//     });
-// }
+getRestaurants(location) {
+  const foursquare = require('react-foursquare')({
+    clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
+    clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
+  });
+
+  const params = {
+    "ll": `${location.lat},${location.lng}`,
+    "query": this.state.query,
+    "categoryId": "4d4b7105d754a06374d81259",
+    "radius": this.state.searchRadius
+    // "limit": '40',
+  };
+
+  foursquare.venues.getVenues(params)
+    .then(res => {
+      console.log("recieved restaurants", res);
+      this.setState({ receivedRestaurants: res.response.venues });
+    });
+}
+
 render() {
   //LOGIC FOR PICKING RESTAURANTS
   const { receivedRestaurants } = this.state;
@@ -150,9 +119,9 @@ render() {
   const restaurantListRender = [];
   this.restaurantList.forEach(restaurant => {
     restaurantListRender.push(<RestaurantIndexItem
-     key={restaurant.id}
+     key={restaurant ? restaurant.id : ""}
      listOrder={restaurants.length}
-     restaurant={restaurant}
+     restaurant={restaurant ? restaurant : {}}
      openModal={this.openModal}
      closeModal={this.closeModal}
      handleAdd={this.handleAdd}
@@ -160,12 +129,12 @@ render() {
      replaceItem={this.replaceItem}
      restaurants={this.state.receivedRestaurants}/>);
     restaurants.push({
-      id: restaurant.id,
-      lat: restaurant.location.lat,
-      lng: restaurant.location.lng,
-      displayPosition: restaurants.length + 1
+      id: restaurant ? restaurant.id : "",
+      lat: restaurant ? restaurant.location.lat : "",
+      lng: restaurant ? restaurant.location.lng : "",
+      displayPosition: restaurant ? restaurants.length + 1 : ""
     });
-  })
+  });
   const { restID, position} = this.state;
   return(
     <div className="restaurant-index-and-map">
@@ -179,8 +148,10 @@ render() {
       </div>
       <SavedRestaurants list={this.saveList}/>
       <RightMapDisplay restaurants={restaurants} homePos={position}/>
+
     </div>
   );
 }
 }
+
 export default RestaurantIndex;
