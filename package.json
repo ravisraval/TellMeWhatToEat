@@ -9,7 +9,9 @@
     "start": "node server.js",
     "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
-    "test:server": "mocha test/server --recursive --compilers js:babel-register"
+    "test:server": "mocha test/server --recursive --compilers js:babel-register",
+    "db:create": "knex npm install knex -g ",
+    "db:setup": "node docs/data/converters/xlsx_to_json.js && knex migrate:latest && knex seed:run"
   },
   "dependencies": {
     "async": "^1.5.2",

@@ -11,9 +11,9 @@ exports.seed = function(knex, Promise) {
     knex('questions').del(),
 
     // Insert new entries
-    knex('questions').insert({
-        "id": 1,
-        "body": "Hot or Cold",
+    knex('questions').returning("id").insert({
+        "id": 74,
+        "body": "test question",
         "type": "options",
         "tier": 1,
       })
