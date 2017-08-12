@@ -34,8 +34,25 @@ export default class MarkerManager {
 
   iconFromDisplayPos(restaurant) {
     //get three colors and base icon off of that
+  const goldStar = {
+          path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+          fillColor: 'yellow',
+          fillOpacity: 0.8,
+          scale: .1,
+          strokeColor: 'gold',
+          strokeWeight: 1
+        };
+
+    const homeIcon = {
+    url: 'http://res.cloudinary.com/dluh2fsyd/image/upload/v1502488794/if_Untitled-2-02_536304_ftxlwn.png', // url
+      scaledSize: new google.maps.Size(25, 25), // scaled size
+      origin: new google.maps.Point(0,0), // origin
+      anchor: new google.maps.Point(0, 0) // anchor
+    };
     let icon = "";
-    if (restaurant.displayPosition === 1) {
+    if (restaurant.displayPosition === 0) {
+      icon = homeIcon;
+    } else if (restaurant.displayPosition === 1) {
       icon = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
     } else if (restaurant.displayPosition === 2) {
       icon = 'http://maps.google.com/mapfiles/ms/icons/green-dot.png';

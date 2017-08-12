@@ -176,7 +176,10 @@ class FilterBar extends React.Component {
         {this.renderAddressSearchBar()}
       </div>
       <h1 className="title">Restaurant Picker</h1>
-
+        <section className="question-section">
+          <h2 className="filter-section-header">Help Me Decide</h2>
+          <Questions updateQstring={this.updateQstring}/>
+        </section>
       <section className="price-section">
         <h2 className="filter-section-header">Price</h2>
         <div className="switch-group">
@@ -306,10 +309,7 @@ class FilterBar extends React.Component {
         <span> 80 </span>
       </div>
       </section>
-      <section className="question-section">
-        <h2 className="filter-section-header">Help Me Decide</h2>
-        <Questions updateQstring={this.updateQstring}/>
-      </section>
+
 
     </nav>
     );
