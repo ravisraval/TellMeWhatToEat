@@ -15,7 +15,6 @@ class RestaurantIndexItem extends React.Component {
 
   componentDidMount() {
     this.getRestaurant(this.props.restaurant.id);
-    //delete above line when implementing this.props.id = this.id
   }
 
   getRestaurant(venueId) {
@@ -29,6 +28,7 @@ class RestaurantIndexItem extends React.Component {
     };
     foursquare.venues.getVenue(params)
       .then(res => {
+        console.log(res.response.venue);
         this.setState({ restaurant: res.response.venue });
       });
   }

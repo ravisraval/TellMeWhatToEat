@@ -6302,8 +6302,25 @@ ul {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  font-size: 30px; }
+  padding: 10px;
+  font-size: 15px; }
+  .question-answers .input-container {
+    width: 90px;
+    height: 90px; }
+  .question-answers .icon-show {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    cursor: pointer; }
+  .question-answers .icon-show:hover {
+    opacity: 0.5; }
   .question-answers input {
-    width: 75px;
-    height: 75px; }
+    width: 100%;
+    height: 100%;
+    color: black;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-radius: 45px; }
+  .question-answers input:hover {
+    opacity: 80%; }

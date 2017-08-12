@@ -9,7 +9,7 @@ class FilterBar extends React.Component {
     super(props);
     if (this.props.location.state && this.props.location.state.address) {
       this.state = {
-        price:[],
+        price:[1, 3, 4],
         type: this.props.location.state.type,
         address: this.props.location.state.address,
         position: this.props.location.state.position,
@@ -178,7 +178,10 @@ class FilterBar extends React.Component {
         {this.renderAddressSearchBar()}
       </div>
       <h1 className="title">Restaurant Picker</h1>
-
+        <section className="question-section">
+          <h2 className="filter-section-header">Help Me Decide</h2>
+          <Questions updateQstring={this.updateQstring}/>
+        </section>
       <section className="price-section">
         <h2 className="filter-section-header">Price</h2>
         <div className="switch-group">
@@ -308,10 +311,7 @@ class FilterBar extends React.Component {
         <span> 80 </span>
       </div>
       </section>
-      <section className="question-section">
-        <h2 className="filter-section-header">Help Me Decide</h2>
-        <Questions updateQstring={this.updateQstring}/>
-      </section>
+
 
     </nav>
     );

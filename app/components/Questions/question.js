@@ -30,12 +30,14 @@ class Questions extends React.Component {
         question_type: "bool",
         question_body: "Vegetarian?",
         q_string_add_on: "vegetarian"
-      },{
+      },
+      {
         id: 2,
         question_type: "bool",
         question_body: "Spicy?",
         q_string_add_on: "spicy"
-      },{
+      },
+      {
         id: 3,
         question_type: "bool",
         question_body: "Trending?",
@@ -117,18 +119,41 @@ class Questions extends React.Component {
     );
   }
 
+  iconPic(answer, i) {
+    console.log(answer);
+    const iconPic = {
+      height: "100%",
+      width: "100%",
+      backgroundImage: `url(${answer.img_url})`
+    };
+    const textNeed = answer.img_url === "" ? answer.text : "";
+    return(
+      <div className="icon-show"
+        style={iconPic}>
+        <input
+          key={i}
+          type="submit"
+          value={textNeed}
+          onClick={this.updateQstring(answer.q_string_add_on)}>
+        </input>
+      </div>
+    );
+}
+
+
   optionQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
+    console.log("ANSWERRRR", currentQuestion.answers);
       return(
         <div className="question">
           <div className="question-title">{currentQuestion.body}</div>
           <div className="question-answers">
           {currentQuestion.answers.map( (answer, i) => (
-              <input
-                key={i}
-                type="submit"
-                value={answer.text}
-                onClick={this.updateQstring(answer.q_string_add_on)}/>
+            <div className="input-container">
+              {this.iconPic(answer, i)}
+
+            </div>
+
           ))}
         </div>
           <div className="skip-button">
