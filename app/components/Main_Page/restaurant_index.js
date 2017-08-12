@@ -142,6 +142,7 @@ render() {
         <RestaurantShow restID={restID}/>
       </Modal>
       <div className="restaurant-index col-sm-5">
+        <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
         <ul>
           {restaurantListRender}
         </ul>
@@ -166,70 +167,7 @@ export default RestaurantIndex;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React from 'react';
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import ReactDOM from 'react-dom';
 // import { Link, withRouter } from 'react-router-dom';
 // import { Route } from 'react-router';
