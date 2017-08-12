@@ -11,7 +11,8 @@
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
     "test:server": "mocha test/server --recursive --compilers js:babel-register",
     "db:create": "knex npm install knex -g ",
-    "db:setup": "node docs/data/converters/xlsx_to_json.js && knex migrate:latest && knex seed:run"
+    "db:setup": "node docs/data/converters/xlsx_to_json.js && knex migrate:latest && knex seed:run",
+    "excel-as-json": "node docs/data/converters/xlsx_to_json.js"
   },
   "dependencies": {
     "async": "^1.5.2",
