@@ -29,6 +29,7 @@ var User = require('./models/User');
 
 // Controllers
 var userController = require('./controllers/user');
+var questionController = require('./controllers/question');
 var contactController = require('./controllers/contact');
 
 // React and Server-Side Rendering
@@ -93,7 +94,7 @@ app.post('/auth/facebook', userController.authFacebook);
 app.get('/auth/facebook/callback', userController.authFacebookCallback);
 app.post('/auth/google', userController.authGoogle);
 app.get('/auth/google/callback', userController.authGoogleCallback);
-
+app.get('/questions', questionController.question_list);
 // React server rendering
 app.use(function(req, res) {
   var initialState = {

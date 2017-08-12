@@ -1,4 +1,6 @@
 import React from 'react';
+import questionArray from "../../../docs/data/questions/questions_export.js";
+
 
 class Questions extends React.Component {
   constructor(props){
@@ -8,11 +10,8 @@ class Questions extends React.Component {
       questionIdx: 0
     };
 
-    //incorporate this when backend setup
-    // this.questions = this.getAllQuestions();
-    //placeholder for now
 
-    this.questions = this.sampleQuestions();
+    this.questions = questionArray;
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
     // this.optionQuestionDisplay = this.optionQuestionDisplay.bind(this);
   }
@@ -20,7 +19,7 @@ class Questions extends React.Component {
   componentWillUpdate(nextProps, nextState) {
     if (this.state.queryString !== nextState.queryString) {
       this.props.updateQstring(nextState.queryString);
-      this.setState({queryString:""})
+      this.setState({queryString:""});
     }
 }
 
@@ -94,19 +93,21 @@ class Questions extends React.Component {
     const currentQuestion = this.questions[this.state.questionIdx];
     // const currentQuestion = this.questions;
     return(
-      <div>
-        <div>{currentQuestion.question_body}</div>
-        <div className="yes-button">
-          <input
-            type="submit"
-            value="yes"
-            onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
-        </div>
-        <div className="no-button">
-          <input
-            type="submit"
-            value="No"
-            onClick={this.updateIdx()}/>
+      <div className="question">
+        <div className="question-title">{currentQuestion.body}</div>
+        <div className="question-answers">
+          <div className="yes-button">
+            <input
+              type="submit"
+              value="yes"
+              onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
+          </div>
+          <div className="no-button">
+            <input
+              type="submit"
+              value="No"
+              onClick={this.updateIdx()}/>
+          </div>
         </div>
         <div className="skip-button">
           <input
@@ -118,21 +119,43 @@ class Questions extends React.Component {
     );
   }
 
+  iconPic(answer, i) {
+    console.log(answer);
+    const iconPic = {
+      height: "100%",
+      width: "100%",
+      backgroundImage: `url(${answer.img_url})`
+    };
+    const textNeed = answer.img_url === "" ? answer.text : "";
+    return(
+      <div className="icon-show"
+        style={iconPic}>
+        <input
+          key={i}
+          type="submit"
+          value={textNeed}
+          onClick={this.updateQstring(answer.q_string_add_on)}>
+        </input>
+      </div>
+    );
+}
+
+
   optionQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
+    console.log("ANSWERRRR", currentQuestion.answers);
       return(
-        <div>
-          <div>{currentQuestion.question_body}</div>
-          <ul>
+        <div className="question">
+          <div className="question-title">{currentQuestion.body}</div>
+          <div className="question-answers">
           {currentQuestion.answers.map( (answer, i) => (
-            <li>
-              <input
-                type="submit"
-                value={answer.answer_text}
-                onClick={this.updateQstring(answer.q_string_add_on)}/>
-            </li>
+            <div className="input-container">
+              {this.iconPic(answer, i)}
+
+            </div>
+
           ))}
-          </ul>
+        </div>
           <div className="skip-button">
             <input
               type="submit"
@@ -141,7 +164,6 @@ class Questions extends React.Component {
           </div>
         </div>
       );
-
   }
 
   noMoreQuestions() {
@@ -154,9 +176,10 @@ class Questions extends React.Component {
 
   render() {
     let questionDisplay;
+
     if (this.state.questionIdx  < this.questions.length) {
       const boolQ = this.boolQuestionDisplay();
-      const qType = this.questions[this.state.questionIdx].question_type;
+      const qType = this.questions[this.state.questionIdx].type;
       questionDisplay = qType === 'bool' ? boolQ : this.optionQuestionDisplay();
     } else {
       questionDisplay = this.noMoreQuestions();
@@ -164,9 +187,7 @@ class Questions extends React.Component {
 
     return(
       <div>
-        <div>
-          {questionDisplay}
-        </div>
+        {questionDisplay}
       </div>
     );
   }

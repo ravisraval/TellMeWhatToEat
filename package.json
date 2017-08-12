@@ -9,7 +9,13 @@
     "start": "node server.js",
     "test": "npm run test:client && npm run test:server",
     "test:client": "mocha test/client --recursive --compilers js:babel-register",
-    "test:server": "mocha test/server --recursive --compilers js:babel-register"
+    "test:server": "mocha test/server --recursive --compilers js:babel-register",
+    "export:Q": "echo module.exports.questions = | cat - docs/data/questions/questions.js > temp && mv temp docs/data/questions/questions.js",
+    "export:A": "echo module.exports.answers = | cat - docs/data/answers/answers.js > temp && mv temp docs/data/answers/answers.js",
+    "export:C": "echo module.exports.categories = | cat - docs/data/categories/categories.js > temp && mv temp docs/data/categories/categories.js",
+    "excel": "node docs/data/converters/xlsx_to_json.js && npm run export:Q && npm run export:A && npm run export:C",
+    "db:create": "knex npm install knex -g ",
+    "db:setup": "npm run excel && knex migrate:latest && knex seed:run"
   },
   "dependencies": {
     "async": "^1.5.2",
@@ -23,7 +29,9 @@
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.15.1",
     "bookshelf": "^0.9.2",
+    "cloudinary-react": "^1.0.4",
     "compression": "^1.6.2",
+    "convert-csv-to-json": "0.0.11",
     "cookie-parser": "^1.4.1",
     "dotenv": "^2.0.0",
     "express": "^4.15.4",
@@ -63,6 +71,7 @@
     "babel-register": "^6.8.0",
     "chai": "^3.5.0",
     "enzyme": "^2.3.0",
+    "excel-as-json": "^2.0.1",
     "fetch-mock": "3.0.2",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "~15.1.0",

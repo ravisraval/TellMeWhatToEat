@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AddressSearch from './address_search';
 import { Link, withRouter } from 'react-router';
+import { Image } from 'cloudinary-react';
 // import { Link, withRouter } from 'react-router-dom';
 
 
@@ -10,7 +11,7 @@ class LandingPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dineType: "All",
+      dineType: "eatout",
       address: "",
       position: null,
     };
@@ -48,9 +49,9 @@ class LandingPage extends React.Component {
   dineType() {
     return (
       <select onChange={this.updateList('dineType')}>
-        <option value="all">Eat out</option>
-        <option value="Take-out">Take-out</option>
-        <option value="Delivery">Delivery</option>
+        <option value="eatout">Eat out</option>
+        <option value="takeout">Take-out</option>
+        <option value="delivery">Delivery</option>
       </select>
     );
   }
@@ -60,21 +61,25 @@ class LandingPage extends React.Component {
     // </Link>
     const {type, position, address} = this.state;
     return (
-      <div>
+      <div className="search-box-container">
+
         <div className="lp-header-container">
           <div className="lp-header">Tell Me What To Eat</div>
           <div className="lp-sub-header">More eating, less deciding</div>
         </div>
+
         <div className="lp-searchbar-container">
           <div className="lp-searchbar-dropdown">
             {this.dineType()}
           </div>
+
           <div className="lp-searchbar-input">
             <AddressSearch
               updateAddress={this.updateAddress}
               updatePosition={this.updatePosition}
               address={this.state.address}/>
           </div>
+
           <div className="lp-searchbar-button">
             <Link to={{ pathname: '/restaurants',
               state: {
@@ -87,6 +92,7 @@ class LandingPage extends React.Component {
             </input>
             </Link>
           </div>
+
         </div>
       </div>
     );

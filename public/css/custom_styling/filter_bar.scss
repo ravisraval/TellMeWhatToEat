@@ -171,7 +171,12 @@ p.later {
 
 .switch-group label:hover {
     cursor: pointer;
-    background: #8ebf72 !important;
+    background: #cccccc;
+}
+.switch-group input:checked + label:hover {
+  background-color: #8ebf72;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 
