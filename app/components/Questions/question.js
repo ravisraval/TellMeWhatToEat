@@ -2,7 +2,7 @@ import React from 'react';
 import {questions,
         answers,
         questionArrayBuilder
-        } from "../../../docs/data/converters/questions/questions.js";
+        } from "../../../docs/data/questions/questions.js";
 
 let questionsArray = questionArrayBuilder(questions, answers);
 

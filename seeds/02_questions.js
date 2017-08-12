@@ -1,4 +1,4 @@
-const questions = require('../docs/data/converters/questions/questions.json');
+const questions = require('../docs/data/questions/questions.json');
 
 exports.seed = function(knex, Promise) {
 

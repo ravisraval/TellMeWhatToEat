@@ -7,12 +7,10 @@ import RestaurantShow from './restaurant_show';
 import SavedRestaurants from './saved_restaurants';
 import RightMapDisplay from './right_map';
 import Modal from '../Modal';
-
 const foursquare = require('react-foursquare')({
   clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
   clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
 });
-
 class RestaurantIndex extends React.Component {
 constructor(props){
   super(props);
@@ -40,21 +38,17 @@ constructor(props){
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
   // this.isRestWithinPriceRange = this.isRestWithinPriceRange.bind(this);
 }
-
 openModal(restID) {
   this.reRender = false;
   this.setState({ isModalOpen: true, restID: restID });
 }
-
 closeModal() {
   this.reRender = false;
   this.setState({ isModalOpen: false });
 }
-
 componentDidMount() {
   this.getRestaurants(this.state.position);
 }
-
 componentWillReceiveProps(newProps) {
   this.reRender = true;
   this.setState({
@@ -71,59 +65,50 @@ componentWillReceiveProps(newProps) {
   });
   this.getRestaurants(newProps.filterProps.position);
 }
-
 handleAdd(restaurant) {
   if (!this.saveList.includes(restaurant)) {
     this.saveList.push(restaurant);
   }
 }
-
 replaceItem(newRestaurant, array_pos) {
   this.reRender = false;
   this.restaurantList[array_pos] = newRestaurant;
   this.forceUpdate();
 }
-
-getRestaurants(location) {
-  const that = this;
-  console.log(location.lat);
-  console.log(location.lng);
-  console.log(this.state.query);
-  console.log(this.state.categoryId);
-  console.log(this.state.searchRadius);
-  const params = {
-    "ll": `${location.lat},${location.lng}`,
-    "query": this.state.query,
-    "categoryId": `4d4b7105d754a06374d81259`,
-    "radius": this.state.searchRadius
-    // "limit": '40',
-  };
-
-  const goodRests = [];
-  const badRests = [];
-  const promises = [];
-
-  const generatePromises = (venueArray) => {
-    venueArray.forEach( venue => {
-      promises.push(new Promise ( resolve => {
-        foursquare.venues.getVenue({venue_id: venue.id})
-        .then( res => {
-          if (res.response.venue.price &&
-            that.state.price.includes(res.response.venue.price.tier)) {
-            goodRests.push(venue);
-            }
-        });
-      }));
-    });
-  };
-
-  foursquare.venues.getVenues(params)
-    .then(res => {
-      generatePromises(res.response.venues);
-      console.log(promises);
-    }).all(promises).then(that.setState({receivedRestaurants: goodRests}));
-}
-      //filter $$, obtainType, openNow
+// getRestaurants(location) {
+//   const params = {
+//     "ll": `${location.lat},${location.lng}`,
+//     "query": this.state.query,
+//     "categoryId": `4d4b7105d754a06374d81259${this.state.categoryId}`,
+//     "radius": this.state.searchRadius
+//     // "limit": '40',
+//   };
+//   const goodRests = [];
+//   const badRests = [];
+//   const promises = [];
+//
+//   const generatePromises = (venueArray) => {
+//     venueArray.forEach( venue => {
+//       promises.push(new Promise ( resolve => {
+//         return foursquare.venues.getVenue({venue_id: venue.id})
+//         .then( res => {
+//           if (res.response.venue.price &&
+//             that.state.price.includes(res.response.venue.price.tier)) {
+//             goodRests.push(venue);
+//             }
+//         });
+//       }));
+//     });
+//   };
+//
+//   const promise = Promise.all(generatePromises)
+//
+//   foursquare.venues.getVenues(params)
+//     .then(res => {
+//       generatePromises(res.response.venues);
+//       console.log(promises);
+//     }).all(promises).then(that.setState({receivedRestaurants: goodRests}));
+// }
 
 // isRestWithinPriceRange(restId) {
 //   foursquare.venues.getVenue({venue_id: restId})
@@ -143,8 +128,6 @@ getRestaurants(location) {
 // }
 render() {
   //LOGIC FOR PICKING RESTAURANTS
-  console.log(this.state);
-
   const { receivedRestaurants } = this.state;
   if (this.state.receivedRestaurants.length === 0) {return(
     <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>

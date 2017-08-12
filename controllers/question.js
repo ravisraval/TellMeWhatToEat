@@ -12,9 +12,12 @@ var Question = require('../models/Question');
    * return index of questions
    */
 
-  exports.question_list = function(req, res) {
+  exports.question_list = (req, res) => {
     Question.fetch({withRelated: ['answers']})
-        .then(function(user) {
-            res.json(user);
+        .then( question => {
+          res.json(question);
+        })
+        .catch( error => {
+          res.json(error);
         });
   };
