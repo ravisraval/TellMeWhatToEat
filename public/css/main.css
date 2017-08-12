@@ -1522,7 +1522,7 @@ pre {
       width: 970px; } }
   @media (min-width: 1200px) {
     .container {
-      width: 90%; } }
+      width: 1170px; } }
 
 .container-fluid {
   margin-right: auto;
@@ -3770,9 +3770,12 @@ tbody.collapse.in {
   padding: 17.5px 15px;
   font-size: 18px;
   line-height: 21px;
-  height: 56px; }
+  height: 56px;
+  color: #5ea6bc;
+  font-weight: bold; }
   .navbar-brand:hover, .navbar-brand:focus {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #5ea6bc; }
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
@@ -5859,7 +5862,7 @@ footer {
       height: 30px; }
 
 .navbar-default .navbar-nav > li.active > a {
-  border-bottom-color: #3f51b5; }
+  border-bottom-color: #5ea6bc; }
 
 .panel {
   border: solid 1px rgba(160, 160, 160, 0.3);
@@ -5978,6 +5981,13 @@ textarea {
   letter-spacing: 0.2em;
   text-transform: uppercase; }
 
+.container {
+  width: 87% !important; }
+
+.navbar-brand {
+  color: #0babba !important;
+  font-size: 20px !important; }
+
 .landing-page-container {
   display: flex;
   justify-content: center;
@@ -6057,6 +6067,9 @@ textarea {
   .lp-searchbar-container .lp-searchbar-input input#searchLocation {
     border-radius: 0px; }
   .lp-searchbar-container .lp-searchbar-input input:focus {
+    background: rgba(255, 255, 255, 0.9);
+    color: black; }
+  .lp-searchbar-container .lp-searchbar-input input:hover {
     background: rgba(255, 255, 255, 0.9);
     color: black; }
   .lp-searchbar-container .lp-searchbar-button input {

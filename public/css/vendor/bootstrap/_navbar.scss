@@ -166,10 +166,13 @@
   font-size: $font-size-large;
   line-height: $line-height-computed;
   height: $navbar-height;
+  color: #5ea6bc;
+  font-weight: bold;
 
   &:hover,
   &:focus {
     text-decoration: none;
+    color: #5ea6bc;
   }
 
   > img {

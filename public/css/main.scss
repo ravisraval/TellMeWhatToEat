@@ -94,7 +94,7 @@ footer {
 }
 
 .navbar-default .navbar-nav > li.active > a {
-  border-bottom-color: #3f51b5;
+  border-bottom-color: #5ea6bc;
 }
 
 // Panels
@@ -257,6 +257,18 @@ textarea {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+// overwriting
+
+.container {
+  width: 87% !important;
+}
+
+.navbar-brand {
+  color: #0babba !important;
+  font-size: 20px !important;
+}
+
 @import "./custom_styling/landing_page.scss";
 @import "./custom_styling/filter_bar.scss";
 @import "./custom_styling/questions.scss";
