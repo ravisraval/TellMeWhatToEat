@@ -14,7 +14,7 @@ export default function configureStore(initialState) {
       typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
     )
   );
-   
+
   if (module.hot) {
     // Enable hot module replacement for reducers
     module.hot.accept('../reducers', () => {
