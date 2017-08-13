@@ -62,10 +62,18 @@ componentWillReceiveProps(newProps) {
   this.getRestaurants(newProps.filterProps.position);
 }
 
-handleAdd(restaurant) {
+handleAdd(restaurant, restaurantIndexItem) {
   if (!this.saveList.includes(restaurant)) {
     this.saveList.push(restaurant);
+  } else {
+    let idx = this.saveList.indexOf(restaurant);
+    this.saveList.splice(idx,1);
   }
+
+  this.savedRestaurants.list = this.saveList;
+  this.savedRestaurants.forceUpdate();
+  restaurantIndexItem.setSavedToList(this.saveList.includes(restaurant));
+  restaurantIndexItem.forceUpdate();
 }
 
 replaceItem(newRestaurant, array_pos) {
@@ -106,7 +114,7 @@ render() {
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
-    while (this.restaurantList.length < this.state.numRestaurants) {
+    while (this.restaurantList.length < this.state.numRestaurants) { // joe: this or use all if response rest count <= 3
       let idx = Math.floor(Math.random() * ids.length)
       randomRestaurant = receivedRestaurants[idx];
       receivedRestaurants.splice(idx,1);
@@ -127,7 +135,9 @@ render() {
      handleAdd={this.handleAdd}
      handleAnother={this.replaceItem}
      replaceItem={this.replaceItem}
-     restaurants={this.state.receivedRestaurants}/>);
+     restaurants={this.state.receivedRestaurants}
+     isSavedToList={this.saveList.includes(restaurant)}
+   />);
     restaurants.push({
       id: restaurant ? restaurant.id : "",
       lat: restaurant ? restaurant.location.lat : "",
@@ -147,7 +157,7 @@ render() {
           {restaurantListRender}
         </ul>
       </div>
-      <SavedRestaurants list={this.saveList}/>
+      <SavedRestaurants list={this.saveList} onRef={ref => (this.savedRestaurants = ref)}/>
       <RightMapDisplay restaurants={restaurants} homePos={position}/>
 
     </div>

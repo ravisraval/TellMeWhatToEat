@@ -42,6 +42,12 @@ class RestaurantShow extends React.Component {
     } else {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
+
+    let price;
+    if (restaurant.price) {
+      price = `Price: ${"$".repeat(restaurant.price.tier)}`;
+    }
+    console.log(restaurant);
     return(
       <div>
         <img src={photo}/>
@@ -49,6 +55,7 @@ class RestaurantShow extends React.Component {
         <h3>{restaurant.hours ? restaurant.hours.status : null}</h3>
         <a href={restaurant.url}><h3>{restaurant.url}</h3></a>
         <h3>{restaurant.contact ? restaurant.contact.formattedPhone : null}</h3>
+        <h3>{restaurant.price ? price : null}</h3>
       </div>
     );
   }
