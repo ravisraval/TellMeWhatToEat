@@ -80,7 +80,7 @@ class RestaurantIndexItem extends React.Component {
           <img src={photo ? photo : ""}/>
         </button>
         <span> { restaurant ? restaurant.name : ""} </span>
-        <span> FourSquare Rating: { restaurant ? restaurant.rating : "" } </span>
+        <span> FourSquare Rating: { restaurant.rating ? restaurant.rating : "Unavailable" } </span>
         {saveButton}
         <button onClick={this.handleAnother}>Gimme Another</button>
       </li>

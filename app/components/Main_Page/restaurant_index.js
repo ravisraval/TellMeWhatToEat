@@ -166,7 +166,12 @@ render() {
         </ul>
       </div>
 
-      <SavedRestaurants list={this.saveList} onRef={ref => (this.savedRestaurants = ref)}/>
+      <SavedRestaurants
+        list={this.saveList}
+        onRef={ref => (this.savedRestaurants = ref)}
+        openModal={this.openModal}
+        closeModal={this.closeModal}
+      />
 
       <RightMapDisplay
         openModal={this.openModal}

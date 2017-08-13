@@ -60,7 +60,7 @@ class RightMapDisplay extends React.Component {
   }
 
   handleMarkerClick(restaurantId) {
-    //Have Modal Here
+    //Have Modal Here - Ravi: no problem I did
     this.props.openModal(restaurantId);
   }
 
