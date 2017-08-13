@@ -115,7 +115,7 @@ render() {
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
-    while (this.restaurantList.length < receivedRestaurants|| this.restaurantList.length < this.state.numRestaurants) {
+    while (this.restaurantList.length < receivedRestaurants.length || this.restaurantList.length < this.state.numRestaurants) {
       let idx = Math.floor(Math.random() * ids.length)
       randomRestaurant = receivedRestaurants[idx];
       receivedRestaurants.splice(idx,1);
