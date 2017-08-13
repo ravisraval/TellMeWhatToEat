@@ -98,24 +98,6 @@ class FilterBar extends React.Component {
     e.preventDefault();
   }
 
-  // renderErrors(){
-  //
-  // }
-
-  renderOpenAt(){
-    return (
-      <div className="open-later">
-      <p className="later">today at</p>
-         <input
-          className="open-at"
-          type="time"
-          value={this.state.openAt}
-          onChange={this.update('openAt')}
-        />
-      </div>
-    );
-  }
-
   renderSliderBarHeader(){
     if (this.state.deliveryTimeDisplay > 79) {
       return (<h3 className="slider-bar-header"><br/>Any delivery time</h3>);
@@ -273,7 +255,19 @@ class FilterBar extends React.Component {
 
           </div>
 
-          {this.state.openNow ? "" : this.renderOpenAt()}
+
+          <div
+            ref={elem => {this.openLater = elem}}
+            className={this.state.openNow ? "no open-later" : "yes open-later"}>
+          <p>today at</p>
+             <input
+              className="open-at"
+              type="time"
+              value={this.state.openAt}
+              onChange={this.update('openAt')}
+              disabled={this.state.openNow}
+            />
+          </div>
 
         </div>
       </section>
