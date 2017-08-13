@@ -18,7 +18,7 @@ class FilterBar extends React.Component {
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
         searchRadius: 4000,
-        query: "food",
+        query: "",
         categoryId: "4d4b7105d754a06374d81259"
       };
     } else {
@@ -32,7 +32,7 @@ class FilterBar extends React.Component {
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
         searchRadius: 4000,
-        query: "food",
+        query: "",
         categoryId: "4d4b7105d754a06374d81259"
       };
     }
