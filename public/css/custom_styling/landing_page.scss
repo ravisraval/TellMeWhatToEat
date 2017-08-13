@@ -8,12 +8,26 @@
 .landing-page-container {
   background-image: url(http://res.cloudinary.com/syriebianco/image/upload/v1502555762/31178_slow_cooker_pork_ramen_3000_yzf35r.jpg);
   background-size: cover;
-  height: 580px;
+  min-height: 475px;
+  min-width: 768; // change for breakpoints
+  height: 60vh;
   width: 100%;
-  position: fixed;
-  top: 0;
+  position: relative;
+  top: -57px; // negative nav-bar height
 
 
+}
+
+.top-rated {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  top: -57px;  // negative nav-bar height
+}
+
+.top-rated-list {
+  display: flex;
 }
 
 // search-box-container
@@ -124,7 +138,7 @@
       color: black;
     }
   }
-  
+
 
   .lp-searchbar-button {
     input {

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AddressSearch from './address_search';
 import { Link, withRouter } from 'react-router';
-import Trending from './Trending';
 // import { Link, withRouter } from 'react-router-dom';
 
 class LandingPage extends React.Component {
@@ -89,11 +88,6 @@ class LandingPage extends React.Component {
           </div>
         </div>
 
-        <div className="trending">
-          <Trending />
-
-
-        </div>
       </div>
     );
   }

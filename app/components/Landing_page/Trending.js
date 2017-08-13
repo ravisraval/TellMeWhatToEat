@@ -98,9 +98,9 @@ render() {
   });
 
   return(
-    <div>
-      <h2> Top Rated Restaurants Near You</h2>
-      <ul>
+    <div className="top-rated">
+      <h2 className="top-rated-header"> Top Rated Restaurants Near You</h2>
+      <ul className="top-rated-list">
         {restaurantListRender}
       </ul>
     </div>

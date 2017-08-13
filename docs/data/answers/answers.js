@@ -61,7 +61,7 @@ module.exports.answers =
     "question_id": 2,
     "text": "American",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_ids": " 4bf58dd8d48988d14e941735 ",
     "img_url": ""
   },
   {
@@ -261,7 +261,7 @@ module.exports.answers =
     "question_id": 5,
     "text": "Spicy",
     "q_string_add_on": "spicy",
-    "category_ids": "",
+    "category_ids": "spicy",
     "img_url": ""
   },
   {
@@ -437,14 +437,6 @@ module.exports.answers =
     "question_id": 15,
     "text": "Poke",
     "q_string_add_on": "poke",
-    "category_ids": "",
-    "img_url": ""
-  },
-  {
-    "id": "",
-    "question_id": "",
-    "text": "",
-    "q_string_add_on": "",
     "category_ids": "",
     "img_url": ""
   },
