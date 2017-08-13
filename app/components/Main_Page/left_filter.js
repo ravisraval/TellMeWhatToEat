@@ -18,7 +18,8 @@ class FilterBar extends React.Component {
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
         searchRadius: 4000,
-        query: "food"
+        query: "",
+        categoryId: "4d4b7105d754a06374d81259"
       };
     } else {
       this.state = {
@@ -31,7 +32,8 @@ class FilterBar extends React.Component {
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
         searchRadius: 4000,
-        query: "food"
+        query: "",
+        categoryId: "4d4b7105d754a06374d81259"
       };
     }
 
@@ -42,6 +44,7 @@ class FilterBar extends React.Component {
     this.updateAddress = this.updateAddress.bind(this);
     this.updatePosition = this.updatePosition.bind(this);
     this.updateQstring = this.updateQstring.bind(this);
+    this.updateCatId = this.updateCatId.bind(this);
   }
 
   updateAddress(address) {
@@ -82,6 +85,14 @@ class FilterBar extends React.Component {
 
   updateQstring(newQuery) {
     this.setState({query: this.state.query.concat(newQuery)});
+  }
+
+  updateCatId(newCatId) {
+    // this.setState({categoryId: this.state.categoryId.concat(newCatId)});
+    console.log("CATTT", newCatId);
+    if (newCatId) {
+      this.setState({categoryId: newCatId});
+    }
   }
 
   generatePriceArray(int){
@@ -146,7 +157,7 @@ class FilterBar extends React.Component {
       <h1 className="title">Restaurant Picker</h1>
         <section className="question-section">
           <h2 className="filter-section-header">Help Me Decide</h2>
-          <Questions updateQstring={this.updateQstring}/>
+          <Questions updateQstring={this.updateQstring} updateCatId={this.updateCatId}/>
         </section>
       <section className="price-section">
         <h2 className="filter-section-header">Price</h2>
@@ -296,6 +307,7 @@ class FilterBar extends React.Component {
   }
 
   render(){
+    console.log("LEFT FILTER STATE", this.state);
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}

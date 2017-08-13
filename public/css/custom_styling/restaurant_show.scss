@@ -25,14 +25,27 @@
   }
 }
 
-
+.landing-page-container {
+  width: 100vw;
+}
 .modal-header {
   width: 374px;
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: normal;
+  color: #0babba;
+  border-bottom: 1px solid lightgrey;
+}
+
+.modal-header:hover {
+  opacity: .3;
 }
 
 .modal-field {
   font-weight: lighter;
   font-size: 20px;
   margin: 10px;
+}
+
+a {
+
 }

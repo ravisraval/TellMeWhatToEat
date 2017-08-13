@@ -34,14 +34,14 @@ export default class MarkerManager {
 
   iconFromDisplayPos(restaurant) {
     //get three colors and base icon off of that
-  const goldStar = {
-          path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
-          fillColor: 'yellow',
-          fillOpacity: 0.8,
-          scale: .1,
-          strokeColor: 'gold',
-          strokeWeight: 1
-        };
+    const goldStar = {
+      path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+      fillColor: 'yellow',
+      fillOpacity: 0.8,
+      scale: .1,
+      strokeColor: 'gold',
+      strokeWeight: 1
+    };
 
     const homeIcon = {
     url: 'http://res.cloudinary.com/dluh2fsyd/image/upload/v1502488794/if_Untitled-2-02_536304_ftxlwn.png', // url
@@ -68,7 +68,7 @@ export default class MarkerManager {
       position: pos,
       map: this.map,
       icon: this.iconFromDisplayPos(restaurant),
-      animation: google.maps.Animation.DROP,
+      // animation: google.maps.Animation.DROP,
       restaurantId: restaurant.id
     });
     this.markers[marker.restaurantId] = marker;
@@ -94,7 +94,7 @@ export default class MarkerManager {
 
     marker.addListener('mouseover', function () {
       infowindow.close();
-      // infowindow.setContent(contentString);
+      infowindow.setContent(`${restaurant.name}`);
       infowindow.open(marker.map, marker);
     });
 

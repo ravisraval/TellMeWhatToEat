@@ -35,7 +35,6 @@ class RestaurantShow extends React.Component {
       return (<div></div>);
     }
     const { restaurant } = this.state;
-    // <h2>"I'm doing show stuff!"</h2>
     let photo;
     if (restaurant.bestPhoto) {
       photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
@@ -53,7 +52,8 @@ class RestaurantShow extends React.Component {
         <img src={photo}/>
         <h3>{restaurant.name}</h3>
         <h3 className="modal-field">{restaurant.hours ? restaurant.hours.status : "Restaurant hours unavailable"}</h3>
-        <a href={restaurant.url}><h3 className="modal-header">{restaurant.url}</h3></a>
+        <a href={restaurant.url} target="_blank"><h3 className="modal-header">{restaurant.url}</h3></a>
+        <h3>FourSquare Rating: {restaurant.rating}</h3>
         <h3 className="modal-info">{restaurant.contact ? restaurant.contact.formattedPhone : ""}</h3>
         <h3>{restaurant.price ? `Price: ${"$".repeat(restaurant.price.tier)}` : "Price information unavailable"}</h3>
         <h3>{restaurant.location ? restaurant.location.formattedAddress.join("\n ") : "Address unavailable"}</h3>
