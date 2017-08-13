@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class RestaurantIndexItem extends React.Component {
+
   constructor(props){
     super(props);
     this.state = {
@@ -11,10 +12,16 @@ class RestaurantIndexItem extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleAnother = this.handleAnother.bind(this);
     this.handleAdd = this.handleAdd.bind(this);
+    this.isSavedToList;
   }
 
   componentDidMount() {
+    this.setSavedToList(this.props.isSavedToList);
     this.getRestaurant(this.props.restaurant.id);
+  }
+
+  setSavedToList(savedToList) {
+    this.isSavedToList = savedToList;
   }
 
   getRestaurant(venueId) {
@@ -28,7 +35,6 @@ class RestaurantIndexItem extends React.Component {
     };
     foursquare.venues.getVenue(params)
       .then(res => {
-        console.log(res.response.venue);
         this.setState({ restaurant: res.response.venue });
       });
   }
@@ -38,7 +44,7 @@ class RestaurantIndexItem extends React.Component {
   }
 
   handleAdd() {
-    this.props.handleAdd(this.state.restaurant);
+    this.props.handleAdd(this.state.restaurant, this);
   }
 
   handleAnother() {
@@ -51,14 +57,21 @@ class RestaurantIndexItem extends React.Component {
   render() {
     const { restaurant } = this.state;
     if (restaurant == {}) {
-      console.log("no restaurant yet");
       return(<div></div>);
     }
+
     let photo;
     if (restaurant ? restaurant.bestPhoto : false) {
       photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
     } else {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
+    }
+
+    let saveButton;
+    if (this.isSavedToList) {
+      saveButton = <button onClick={this.handleAdd}>Delete from List</button>;
+    } else {
+      saveButton = <button onClick={this.handleAdd}>Save to List</button>;
     }
     // PHOTO RENDERING INFO : https://developer.foursquare.com/docs/responses/photo
     return (
@@ -68,7 +81,7 @@ class RestaurantIndexItem extends React.Component {
         </button>
         <span> { restaurant ? restaurant.name : ""} </span>
         <span> FourSquare Rating: { restaurant ? restaurant.rating : "" } </span>
-        <button onClick={this.handleAdd}>Save to List</button>
+        {saveButton}
         <button onClick={this.handleAnother}>Gimme Another</button>
       </li>
     );

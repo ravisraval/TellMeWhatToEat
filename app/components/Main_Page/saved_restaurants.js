@@ -12,8 +12,12 @@ class SavedRestaurants extends React.Component {
 
   componentDidMount() {
     this.setState({ savedRestaurants: this.props.list});
-    this.forceUpdate();
+    this.props.onRef(this);
   }
+  componentWillUnmount() {
+    this.props.onRef(undefined);
+  }
+
   handleSaveList() {
 
   }
