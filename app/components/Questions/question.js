@@ -21,50 +21,6 @@ class Questions extends React.Component {
       this.props.updateQstring(nextState.queryString);
       this.setState({queryString:""});
     }
-}
-
-  sampleQuestions() {
-    return([
-      {
-        id: 1,
-        question_type: "bool",
-        question_body: "Vegetarian?",
-        q_string_add_on: "vegetarian"
-      },
-      {
-        id: 2,
-        question_type: "bool",
-        question_body: "Spicy?",
-        q_string_add_on: "spicy"
-      },
-      {
-        id: 3,
-        question_type: "bool",
-        question_body: "Trending?",
-        q_string_add_on: "trending"
-      },
-      {
-        id: 1,
-        question_type: "option",
-        question_body: "Choose one...",
-        answers: [
-          {
-            answer_id: 0,
-            answer_text: "Hot",
-            q_string_add_on: "hot food",
-            img_url: "http://img1",
-            q_id: 1
-          },
-          {
-            answer_id: 1,
-            answer_text: "Cold",
-            q_string_add_on: "sushi icecream sandwiches salads",
-            img_url: "http://img2",
-            q_id: 1
-          }
-        ]
-      }
-    ]);
   }
 
   getAllQuestions() {
@@ -89,6 +45,36 @@ class Questions extends React.Component {
    };
   }
 
+  boolIconPic(currentQuestion, upOrDown) {
+    const thumbsUpUrl = "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502566896/Thumbs-Up-Circle-300px_c2gary.png";
+    const thumbsDownUrl = "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502566896/Thumbs-Down-Circle-300px_n26eb6.png";
+    const displayIcon = upOrDown === "up" ? thumbsUpUrl : thumbsDownUrl;
+    const iconPic = {
+      height: "100%",
+      width: "100%",
+      backgroundImage: `url(${displayIcon})`
+    };
+    if (upOrDown === "up") {
+      return(
+        <div className="icon-show"
+          style={iconPic}>
+          <input
+            type="button"
+            onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
+        </div>
+      );
+    } else {
+      return(
+        <div className="icon-show"
+          style={iconPic}>
+          <input
+            type="button"
+            onClick={this.updateIdx()}/>
+        </div>
+      );
+    }
+  }
+
   boolQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
     // const currentQuestion = this.questions;
@@ -96,22 +82,16 @@ class Questions extends React.Component {
       <div className="question">
         <div className="question-title">{currentQuestion.body}</div>
         <div className="question-answers">
-          <div className="yes-button">
-            <input
-              type="submit"
-              value="yes"
-              onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
+          <div className="input-container">
+            {this.boolIconPic(currentQuestion, "up")}
           </div>
-          <div className="no-button">
-            <input
-              type="submit"
-              value="No"
-              onClick={this.updateIdx()}/>
+          <div className="input-container">
+            {this.boolIconPic(currentQuestion, "down")}
           </div>
         </div>
         <div className="skip-button">
           <input
-            type="submit"
+            type="button"
             value="Skip"
             onClick={this.updateIdx()}/>
         </div>
@@ -132,7 +112,7 @@ class Questions extends React.Component {
         style={iconPic}>
         <input
           key={i}
-          type="submit"
+          type="button"
           value={textNeed}
           onClick={this.updateQstring(answer.q_string_add_on)}>
         </input>
@@ -158,7 +138,7 @@ class Questions extends React.Component {
         </div>
           <div className="skip-button">
             <input
-              type="submit"
+              type="button"
               value="Skip"
               onClick={this.updateIdx()}/>
           </div>
