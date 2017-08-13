@@ -43,12 +43,11 @@ class RestaurantShow extends React.Component {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
     return(
-      <div>
-        <img src={photo}/>
-        <h3>{restaurant.name}</h3>
-        <h3>{restaurant.hours ? restaurant.hours.status : null}</h3>
-        <a href={restaurant.url}><h3>{restaurant.url}</h3></a>
-        <h3>{restaurant.contact ? restaurant.contact.formattedPhone : null}</h3>
+      <div className="modal-container">
+      <img src={photo}/>
+      <a href={restaurant.url}><h3 className="modal-header">{restaurant.name}</h3></a>
+      <h3 className="modal-field">{restaurant.hours ? restaurant.hours.status : "Restaurant hours not available"}</h3>
+      <h3 className="modal-info">{restaurant.contact ? restaurant.contact.formattedPhone : ""}</h3>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AddressSearch from './address_search';
 import { Link, withRouter } from 'react-router';
-import { Image } from 'cloudinary-react';
+// import { Image } from 'cloudinary-react';
 // import { Link, withRouter } from 'react-router-dom';
 
 
