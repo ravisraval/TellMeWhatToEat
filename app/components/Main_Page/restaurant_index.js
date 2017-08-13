@@ -27,11 +27,11 @@ constructor(props){
   };
   this.reRender = true;
   this.saveList = [];
-  this.getRestaurants = this.getRestaurants.bind(this);
   this.openModal = this.openModal.bind(this);
   this.replaceItem = this.replaceItem.bind(this);
   this.handleAdd = this.handleAdd.bind(this);
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
+  this.getRestaurants = this.getRestaurants.bind(this);
 }
 
 openModal(restID) {
@@ -60,8 +60,11 @@ componentWillReceiveProps(newProps) {
     searchRadius: newProps.filterProps.searchRadius,
     query: newProps.filterProps.query,
     categoryId: newProps.filterProps.categoryId
-  });
-  this.getRestaurants(newProps.filterProps.position);
+  }, ()=> this.getRestaurants());
+
+    // this.getRestaurants(newProps.filterProps.location);
+
+
 }
 
 handleAdd(restaurant, restaurantIndexItem) {
@@ -91,7 +94,7 @@ getRestaurants(location) {
   });
 
   const params = {
-    "ll": `${location.lat},${location.lng}`,
+    "ll": `${this.state.position.lat},${this.state.position.lng}`,
     "query": this.state.query,
     "categoryId": this.state.categoryId,
     "radius": '1500',
@@ -115,7 +118,7 @@ render() {
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
-    while (this.restaurantList.length < receivedRestaurants|| this.restaurantList.length < this.state.numRestaurants) {
+    while (this.restaurantList.length < receivedRestaurants.length && this.restaurantList.length < this.state.numRestaurants) {
       let idx = Math.floor(Math.random() * ids.length)
       randomRestaurant = receivedRestaurants[idx];
       receivedRestaurants.splice(idx,1);

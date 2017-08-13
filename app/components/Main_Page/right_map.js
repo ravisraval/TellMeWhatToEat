@@ -21,11 +21,14 @@ class RightMapDisplay extends React.Component {
       center: {lat: this.props.homePos.lat,
       lng: this.props.homePos.lng},
       zoom: 12,
-      minZoom: 3
+      minZoom: 3,
+      mapTypeControl: false,
+      fullscreenControl: true,
+
     };
 
     this.searchMap = new google.maps.Map(searchMap, mapOptions);
-    const infowindow = new google.maps.InfoWindow();
+    const infowindow = new google.maps.InfoWindow({disableAutoPan: true});
     this.MarkerManager = new MarkerManager(this.searchMap, infowindow, this.handleMarkerClick.bind(this));
     this.MarkerManager.updateMarkers(this.restaurants.concat({
       id: 0,

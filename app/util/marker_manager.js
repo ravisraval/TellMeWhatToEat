@@ -73,6 +73,8 @@ export default class MarkerManager {
     });
     this.markers[marker.restaurantId] = marker;
 
+    // map.fitBounds(new google.maps.LatLngBounds())
+
     marker.addListener('click', function () {
       handleClick(restaurant.id);
     });
