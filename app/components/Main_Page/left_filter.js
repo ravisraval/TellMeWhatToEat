@@ -25,7 +25,7 @@ class FilterBar extends React.Component {
       this.state = {
         price:[],
         type: "delivery",
-        address: "2889 Mission St, San Francisco, CA 94110",
+        address: "",
         position: {lat: 37.7367436, lng: -122.4573766},
         openNow: true,
         openAt: "",
