@@ -169,20 +169,23 @@ render() {
         </ul>
       </div>
 
-      <SavedRestaurants
-        list={this.saveList}
-        onRef={ref => (this.savedRestaurants = ref)}
-        openModal={this.openModal}
-        closeModal={this.closeModal}
-      />
+      <section className="right-bar">
 
-      <RightMapDisplay
-        openModal={this.openModal}
-        closeModal={this.closeModal}
-        restaurants={restaurants}
-        homePos={position}
-      />
+        <RightMapDisplay
+          openModal={this.openModal}
+          closeModal={this.closeModal}
+          restaurants={restaurants}
+          homePos={position}
+        />
 
+        <SavedRestaurants
+          list={this.saveList}
+          onRef={ref => (this.savedRestaurants = ref)}
+          openModal={this.openModal}
+          closeModal={this.closeModal}
+        />
+
+      </section>
     </div>
   );
 }
