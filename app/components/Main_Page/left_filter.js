@@ -19,7 +19,7 @@ class FilterBar extends React.Component {
         deliveryTimeDisplay: 60,
         searchRadius: 4000,
         query: "food",
-        categoryId: ""
+        categoryId: "4d4b7105d754a06374d81259"
       };
     } else {
       this.state = {
@@ -33,7 +33,7 @@ class FilterBar extends React.Component {
         deliveryTimeDisplay: 60,
         searchRadius: 4000,
         query: "food",
-        categoryId: ""
+        categoryId: "4d4b7105d754a06374d81259"
       };
     }
 
@@ -88,7 +88,11 @@ class FilterBar extends React.Component {
   }
 
   updateCatId(newCatId) {
-    this.setState({categoryId: this.state.categoryId.concat(newCatId)});
+    // this.setState({categoryId: this.state.categoryId.concat(newCatId)});
+    console.log("CATTT", newCatId);
+    if (newCatId) {
+      this.setState({categoryId: newCatId});
+    }
   }
 
   generatePriceArray(int){

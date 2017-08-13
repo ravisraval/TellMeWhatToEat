@@ -53,7 +53,9 @@ class Questions extends React.Component {
   updateCatId(val) {
     return e => {
       this.setState({
-        categoryId: this.state.categoryId.concat("," + val),
+        // categoryId: this.state.categoryId.concat("," + val),
+        // questionIdx: this.state.questionIdx + 1
+        categoryId: this.state.categoryId.concat(val),
         questionIdx: this.state.questionIdx + 1
       });
    };
