@@ -23,10 +23,9 @@ class RightMapDisplay extends React.Component {
       zoom: 12,
       minZoom: 3,
       mapTypeControl: false,
-      fullscreenControl: true,
 
     };
-
+    this.bounds = new google.maps.LatLngBounds();
     this.searchMap = new google.maps.Map(searchMap, mapOptions);
     const infowindow = new google.maps.InfoWindow({disableAutoPan: true});
     this.MarkerManager = new MarkerManager(this.searchMap, infowindow, this.handleMarkerClick.bind(this));
@@ -35,7 +34,7 @@ class RightMapDisplay extends React.Component {
       lat: this.props.homePos.lat,
       lng: this.props.homePos.lng,
       displayPosition: 0
-    }));
+    }), this.bounds);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -56,8 +55,9 @@ class RightMapDisplay extends React.Component {
         minZoom: 3
       };
       // const searchMap = this.refs.searchMap;
+      this.bounds = new google.maps.LatLngBounds();
       this.searchMap.setCenter({lat: this.props.homePos.lat, lng: this.props.homePos.lng});
-      this.MarkerManager.updateMarkers(restaurantsWithHome);
+      this.MarkerManager.updateMarkers(restaurantsWithHome, this.bounds);
     }
 
   }

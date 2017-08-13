@@ -7,7 +7,7 @@ export default class MarkerManager {
     this.handleClick = handleClick;
   }
 
-  updateMarkers(restaurants) {
+  updateMarkers(restaurants, bounds) {
     if (restaurants === undefined) {
       restaurants = {};
     }
@@ -15,7 +15,13 @@ export default class MarkerManager {
 
     restaurants.forEach((restaurant) => {
       restaurantsObj[restaurant.id] = restaurant;
+      let currentRestaurantPosition = new google.maps.LatLng(
+        restaurant.lat, restaurant.lng
+      );
+      bounds.extend(currentRestaurantPosition);
     });
+
+    this.map.fitBounds(bounds);
 
     restaurants
       .filter(restaurant => !this.markers[restaurant.id])
@@ -76,7 +82,9 @@ export default class MarkerManager {
     // map.fitBounds(new google.maps.LatLngBounds())
 
     marker.addListener('click', function () {
-      handleClick(restaurant.id);
+      if (restaurant.id !== 0) {
+        handleClick(restaurant.id);
+      }
     });
 
     infowindow.addListener('click', function () {
@@ -96,8 +104,10 @@ export default class MarkerManager {
 
     marker.addListener('mouseover', function () {
       infowindow.close();
-      infowindow.setContent(`${restaurant.name}`);
-      infowindow.open(marker.map, marker);
+      if (marker.restaurantId !== 0) {
+        infowindow.setContent(`${restaurant.name}`);
+        infowindow.open(marker.map, marker);
+      }
     });
 
     marker.addListener('mouseout', function () {

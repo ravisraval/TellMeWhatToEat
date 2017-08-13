@@ -63,8 +63,6 @@ componentWillReceiveProps(newProps) {
   }, ()=> this.getRestaurants());
 
     // this.getRestaurants(newProps.filterProps.location);
-
-
 }
 
 handleAdd(restaurant, restaurantIndexItem) {
@@ -97,7 +95,7 @@ getRestaurants(location) {
     "ll": `${this.state.position.lat},${this.state.position.lng}`,
     "query": this.state.query,
     "categoryId": this.state.categoryId,
-    "radius": '1500',
+    "radius": '2500',
     "limit": '50'
   };
 
@@ -153,8 +151,8 @@ render() {
     });
 
   });
-  const { restID, position} = this.state;
-
+  const { restID, position } = this.state;
+  console.log("position", position);
   return(
     <div className="restaurant-index-and-map">
 
@@ -192,14 +190,6 @@ render() {
 }
 
 export default RestaurantIndex;
-
-
-
-
-
-
-
-
 
 
 
