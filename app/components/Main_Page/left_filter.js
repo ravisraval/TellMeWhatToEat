@@ -17,7 +17,7 @@ class FilterBar extends React.Component {
         openAt: "",
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
-        searchRadius: 4000,
+        searchRadius: 2000,
         query: "",
         categoryId: "4d4b7105d754a06374d81259"
       };
@@ -31,7 +31,7 @@ class FilterBar extends React.Component {
         openAt: "",
         deliveryTime: 60,
         deliveryTimeDisplay: 60,
-        searchRadius: 4000,
+        searchRadius: 2000,
         query: "",
         categoryId: "4d4b7105d754a06374d81259"
       };

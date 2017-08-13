@@ -16,8 +16,13 @@ class RestaurantIndexItem extends React.Component {
   }
 
   componentDidMount() {
+    this.props.onRef(this);
     this.setSavedToList(this.props.isSavedToList);
     this.getRestaurant(this.props.restaurant.id);
+  }
+
+  componentWillUnmount() {
+    this.props.onRef(undefined);
   }
 
   setSavedToList(savedToList) {

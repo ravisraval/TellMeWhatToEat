@@ -26,16 +26,34 @@ class SavedRestaurants extends React.Component {
     this.props.openModal(restId);
   }
 
+  handleDelete(restaurant) {
+    this.props.handleSavedDelete(restaurant);
+
+    //delete this restaurant from restaurantindex.saveList
+    //figure out which restaurantIndexItem this corresponds to
+    //call restaurantindex.handleAdd
+  }
+
   componentWillReceiveProps(newProps) {
     this.setState({ savedRestaurants: newProps.list},
     () => this.forceUpdate());
   }
 
   render() {
-
     const restaurantNames = [];
     this.state.savedRestaurants.forEach(restaurant => {
-      restaurantNames.push(<li className="saved-restaurant-item"><button onClick={() => this.handleClick(restaurant.id)}>{restaurant.name}</button></li>);
+      restaurantNames.push(
+        <li className="saved-restaurant-item">
+
+          <button className="saved-restaurant-name" onClick={() => this.handleClick(restaurant.id)}>
+            {restaurant.name}
+          </button>
+
+          <button className="saved-restaurant-delete" onClick={() => this.handleDelete(restaurant)}>
+            x
+          </button>
+
+        </li>);
     });
 
     // <button onClick={this.handleSaveList}>Remember this list</button>
