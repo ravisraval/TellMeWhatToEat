@@ -9,7 +9,7 @@ class FilterBar extends React.Component {
     super(props);
     if (this.props.location.state && this.props.location.state.address) {
       this.state = {
-        price:[],
+        price:[1, 3, 4],
         type: this.props.location.state.type,
         address: this.props.location.state.address,
         position: this.props.location.state.position,
