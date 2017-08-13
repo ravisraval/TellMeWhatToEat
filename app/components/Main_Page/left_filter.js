@@ -56,22 +56,6 @@ class FilterBar extends React.Component {
       });
   }
 
-  // to handle submit,
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.createPreferences(this.state)
-  //   .then(data => this.props.history.push(**what goes here**));
-  // }
-
-//update property for testing  (that can console log)
-  // update(property) {
-  //   const that = this;
-  //   return e => {
-  //     return that.setState({ [property]: e.target.value});
-  //   };
-  // }
-
-// update property, refactored
   update(property) {
     return e => (this.setState({ [property]: e.target.value}));
   }

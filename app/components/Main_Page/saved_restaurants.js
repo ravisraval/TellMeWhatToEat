@@ -17,13 +17,12 @@ class SavedRestaurants extends React.Component {
   componentWillUnmount() {
     this.props.onRef(undefined);
   }
-  
+
   handleSaveList() {
 
   }
 
   componentWillReceiveProps(newProps) {
-    console.log("getting new props");
     this.setState({ savedRestaurants: newProps.list},
     () => this.forceUpdate());
   }

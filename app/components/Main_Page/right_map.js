@@ -61,6 +61,7 @@ class RightMapDisplay extends React.Component {
 
   handleMarkerClick(restaurantId) {
     //Have Modal Here
+    this.props.openModal(restaurantId);
   }
 
   render() {

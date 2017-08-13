@@ -69,20 +69,16 @@ render() {
   receivedRestaurants.forEach(item => {
     this.restaurantsByRating[item.venue.rating] = item.venue.id;
   });
-  console.log("restRati", this.restaurantsByRating);
   this.restaurantList = [];
   let ratings = Object.keys(this.restaurantsByRating).sort().reverse();
-  console.log("ratings", ratings);
   let i = 0;
 
   while (this.restaurantList.length < this.state.numRestaurants) {
-    console.log(this.restaurantList);
     this.restaurantList.push(
       this.restaurantsByRating[ratings[i]]
     );
     i++;
   }
-  console.log("restList", this.restaurantList);
 
   const restaurants = [];
   const restaurantListRender = [];

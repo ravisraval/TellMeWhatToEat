@@ -16,11 +16,12 @@ constructor(props){
     numRestaurants: 3,
     isModalOpen: false,
     position: this.props.filterProps.position,
-    price: this.props.filterProps.price,
-    deliveryTime: this.props.filterProps.deliveryTime || 60,
-    openNow: this.props.filterProps.openNow,
-    openAt: this.props.filterProps.openAt,
-    obtainType: this.props.filterProps.type,
+    // price: this.props.filterProps.price,
+    // deliveryTime: this.props.filterProps.deliveryTime || 60,
+    // openNow: this.props.filterProps.openNow,
+    // openAt: this.props.filterProps.openAt,
+    // obtainType: this.props.filterProps.type,
+    categoryId: this.props.filterProps.categoryId,
     query: this.props.filterProps.query,
     searchRadius: this.props.filterProps.searchRadius || "4000"
   };
@@ -51,13 +52,14 @@ componentWillReceiveProps(newProps) {
   this.reRender = true;
   this.setState({
     position: newProps.filterProps.position,
-    price:newProps.filterProps.price,
-    deliveryTime: newProps.filterProps.deliveryTime,
-    openNow: newProps.filterProps.openNow,
-    openAt: newProps.filterProps.openAt,
-    obtainType: newProps.filterProps.type,
+    // price:newProps.filterProps.price,
+    // deliveryTime: newProps.filterProps.deliveryTime,
+    // openNow: newProps.filterProps.openNow,
+    // openAt: newProps.filterProps.openAt,
+    // obtainType: newProps.filterProps.type,
     searchRadius: newProps.filterProps.searchRadius,
-    query: newProps.filterProps.query
+    query: newProps.filterProps.query,
+    categoryId: newProps.filterProps.categoryId
   });
   this.getRestaurants(newProps.filterProps.position);
 }
@@ -91,14 +93,13 @@ getRestaurants(location) {
   const params = {
     "ll": `${location.lat},${location.lng}`,
     "query": this.state.query,
-    "categoryId": "4d4b7105d754a06374d81259",
-    "radius": this.state.searchRadius
-    // "limit": '40',
+    "categoryId": this.state.categoryId,
+    "radius": this.state.searchRadius,
+    "limit": '50'
   };
 
   foursquare.venues.getVenues(params)
     .then(res => {
-      console.log("recieved restaurants", res);
       this.setState({ receivedRestaurants: res.response.venues });
     });
 }
@@ -106,7 +107,7 @@ getRestaurants(location) {
 render() {
   //LOGIC FOR PICKING RESTAURANTS
   const { receivedRestaurants } = this.state;
-  if (this.state.receivedRestaurants.length === 0) {return(
+  if (receivedRestaurants.length === 0) {return(
     <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
     );
   }
@@ -114,7 +115,7 @@ render() {
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
-    while (this.restaurantList.length < this.state.numRestaurants) { // joe: this or use all if response rest count <= 3
+    while (this.restaurantList.length < receivedRestaurants|| this.restaurantList.length < this.state.numRestaurants) {
       let idx = Math.floor(Math.random() * ids.length)
       randomRestaurant = receivedRestaurants[idx];
       receivedRestaurants.splice(idx,1);
@@ -126,6 +127,7 @@ render() {
   const restaurants = [];
   const restaurantListRender = [];
   this.restaurantList.forEach(restaurant => {
+
     restaurantListRender.push(<RestaurantIndexItem
      key={restaurant ? restaurant.id : ""}
      listOrder={restaurants.length}
@@ -138,27 +140,40 @@ render() {
      restaurants={this.state.receivedRestaurants}
      isSavedToList={this.saveList.includes(restaurant)}
    />);
+
     restaurants.push({
       id: restaurant ? restaurant.id : "",
       lat: restaurant ? restaurant.location.lat : "",
       lng: restaurant ? restaurant.location.lng : "",
-      displayPosition: restaurant ? restaurants.length + 1 : ""
+      displayPosition: restaurant ? restaurants.length + 1 : "",
+      name: restaurant ? restaurant.name : ""
     });
+
   });
   const { restID, position} = this.state;
+
   return(
     <div className="restaurant-index-and-map">
+
       <Modal className="restaurant-modal" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
         <RestaurantShow restID={restID}/>
       </Modal>
+
       <div className="restaurant-index col-sm-5">
         <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
         <ul>
           {restaurantListRender}
         </ul>
       </div>
+
       <SavedRestaurants list={this.saveList} onRef={ref => (this.savedRestaurants = ref)}/>
-      <RightMapDisplay restaurants={restaurants} homePos={position}/>
+
+      <RightMapDisplay
+        openModal={this.openModal}
+        closeModal={this.closeModal}
+        restaurants={restaurants}
+        homePos={position}
+      />
 
     </div>
   );
