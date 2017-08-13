@@ -56,22 +56,6 @@ class FilterBar extends React.Component {
       });
   }
 
-  // to handle submit,
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   this.props.createPreferences(this.state)
-  //   .then(data => this.props.history.push(**what goes here**));
-  // }
-
-//update property for testing  (that can console log)
-  // update(property) {
-  //   const that = this;
-  //   return e => {
-  //     return that.setState({ [property]: e.target.value});
-  //   };
-  // }
-
-// update property, refactored
   update(property) {
     return e => (this.setState({ [property]: e.target.value}));
   }
@@ -112,24 +96,6 @@ class FilterBar extends React.Component {
     this.setState({deliveryTimeDisplay: e.target.value});
     e.stopPropagation();
     e.preventDefault();
-  }
-
-  // renderErrors(){
-  //
-  // }
-
-  renderOpenAt(){
-    return (
-      <div className="open-later">
-      <p className="later">today at</p>
-         <input
-          className="open-at"
-          type="time"
-          value={this.state.openAt}
-          onChange={this.update('openAt')}
-        />
-      </div>
-    );
   }
 
   renderSliderBarHeader(){
@@ -289,7 +255,19 @@ class FilterBar extends React.Component {
 
           </div>
 
-          {this.state.openNow ? "" : this.renderOpenAt()}
+
+          <div
+            ref={elem => {this.openLater = elem}}
+            className={this.state.openNow ? "no open-later" : "yes open-later"}>
+          <p>today at</p>
+             <input
+              className="open-at"
+              type="time"
+              value={this.state.openAt}
+              onChange={this.update('openAt')}
+              disabled={this.state.openNow}
+            />
+          </div>
 
         </div>
       </section>
