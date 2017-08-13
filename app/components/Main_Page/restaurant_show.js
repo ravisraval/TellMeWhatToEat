@@ -43,10 +43,10 @@ class RestaurantShow extends React.Component {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
 
-    let price;
-    if (restaurant.price) {
-      price = `Price: ${"$".repeat(restaurant.price.tier)}`;
-    }
+    // let address;
+    // if (restaurant.location) {
+    //   address = `${restaurant.location.address}</h3><h3>${restaurant.location.city}`;
+    // }
     console.log(restaurant);
     return(
       <div className="modal-container">
@@ -55,7 +55,8 @@ class RestaurantShow extends React.Component {
         <h3 className="modal-field">{restaurant.hours ? restaurant.hours.status : "Restaurant hours unavailable"}</h3>
         <a href={restaurant.url}><h3 className="modal-header">{restaurant.url}</h3></a>
         <h3 className="modal-info">{restaurant.contact ? restaurant.contact.formattedPhone : ""}</h3>
-        <h3>{restaurant.price ? price : "Price information unavailable"}</h3>
+        <h3>{restaurant.price ? `Price: ${"$".repeat(restaurant.price.tier)}` : "Price information unavailable"}</h3>
+        <h3>{restaurant.location ? restaurant.location.formattedAddress.join("\n ") : "Address unavailable"}</h3>
       </div>
     );
   }
