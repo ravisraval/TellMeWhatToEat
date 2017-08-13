@@ -14,8 +14,9 @@ class Home extends React.Component {
           <LandingPage/>
         </div>
 
-          <Trending />
-
+        <div className="top-rated-container">
+          <Trending/>
+          </div>
       </div>
     );
   }

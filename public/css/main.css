@@ -6006,15 +6006,6 @@ a:hover {
   position: relative;
   top: -57px; }
 
-.top-rated {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: -57px; }
-
-.top-rated-list {
-  display: flex; }
-
 .search-box-container {
   margin-top: 50px;
   padding: 40px;
@@ -6095,6 +6086,22 @@ a:hover {
   .lp-searchbar-container .lp-searchbar-button input:hover {
     color: black;
     background-color: white; }
+
+.top-rated-container {
+  position: relative;
+  top: -57px; }
+
+.top-rated {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative; }
+
+.top-rated-header {
+  margin: 10px; }
+
+.top-rated-list {
+  display: flex; }
 
 @media only screen and (max-width: 768px) {
   .restaurants-page {
