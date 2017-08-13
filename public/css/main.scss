@@ -269,6 +269,11 @@ textarea {
   font-size: 20px !important;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
+
 @import "./custom_styling/landing_page.scss";
 @import "./custom_styling/filter_bar.scss";
 @import "./custom_styling/questions.scss";

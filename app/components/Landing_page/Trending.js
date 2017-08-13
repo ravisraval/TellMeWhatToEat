@@ -98,7 +98,7 @@ render() {
   });
 
   return(
-    <div>
+    <div className="trending">
       <h2> Top Rated Restaurants Near You</h2>
       <ul>
         {restaurantListRender}

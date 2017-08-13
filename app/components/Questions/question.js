@@ -7,7 +7,8 @@ class Questions extends React.Component {
     super(props);
     this.state = {
       queryString: "",
-      questionIdx: 0
+      questionIdx: 0,
+      categoryId: ""
     };
 
 
@@ -20,6 +21,10 @@ class Questions extends React.Component {
     if (this.state.queryString !== nextState.queryString) {
       this.props.updateQstring(nextState.queryString);
       this.setState({queryString:""});
+    }
+    if (this.state.categoryId !== nextState.categoryId) {
+      this.props.updateCatId(nextState.categoryId);
+      this.setState({categoryId: ""});
     }
   }
 
@@ -45,6 +50,15 @@ class Questions extends React.Component {
    };
   }
 
+  updateCatId(val) {
+    return e => {
+      this.setState({
+        categoryId: this.state.categoryId.concat("," + val),
+        questionIdx: this.state.questionIdx + 1
+      });
+   };
+  }
+
   boolIconPic(currentQuestion, upOrDown) {
     const thumbsUpUrl = "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502566896/Thumbs-Up-Circle-300px_c2gary.png";
     const thumbsDownUrl = "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502566896/Thumbs-Down-Circle-300px_n26eb6.png";
@@ -54,13 +68,16 @@ class Questions extends React.Component {
       width: "100%",
       backgroundImage: `url(${displayIcon})`
     };
+    console.log("question_state",currentQuestion );
     if (upOrDown === "up") {
       return(
         <div className="icon-show"
           style={iconPic}>
           <input
             type="button"
-            onClick={this.updateQstring(currentQuestion.q_string_add_on)}/>
+            onClick={currentQuestion.answersq_string_add_on !== "" ?
+              this.updateQstring(currentQuestion.q_string_add_on) :
+              this.updateCatId(currentQuestion.category_ids)}/>
         </div>
       );
     } else {
@@ -114,7 +131,9 @@ class Questions extends React.Component {
           key={i}
           type="button"
           value={textNeed}
-          onClick={this.updateQstring(answer.q_string_add_on)}>
+          onClick={answer.q_string_add_on !== "" ?
+            this.updateQstring(answer.q_string_add_on) :
+            this.updateCatId(answer.category_ids)}>
         </input>
       </div>
     );
@@ -164,7 +183,7 @@ class Questions extends React.Component {
     } else {
       questionDisplay = this.noMoreQuestions();
     }
-
+    console.log("question_state", this.state);
     return(
       <div>
         {questionDisplay}
