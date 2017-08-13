@@ -5996,7 +5996,7 @@ a:hover {
   justify-content: center;
   align-items: center; }
 
-.header-container {
+.landing-page-container {
   background-image: url(http://res.cloudinary.com/syriebianco/image/upload/v1502555762/31178_slow_cooker_pork_ramen_3000_yzf35r.jpg);
   background-size: cover;
   min-height: 475px;
@@ -6016,19 +6016,15 @@ a:hover {
   display: flex; }
 
 .search-box-container {
-  margin: 115px auto;
+  margin-top: 50px;
   padding: 40px;
   height: 68%;
-  width: 365px;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid white;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
-
-.landing-page {
-  width: 100vw; }
 
 .lp-header-container {
   margin-top: 10px; }
@@ -6080,8 +6076,7 @@ a:hover {
     border-right: 1px solid lightgrey;
     background: none;
     outline: none;
-    min-width: 440px;
-    width: 440px;
+    width: 40vw;
     height: 100%; }
   .lp-searchbar-container .lp-searchbar-input input#searchLocation {
     border-radius: 0px; }
@@ -6100,13 +6095,6 @@ a:hover {
   .lp-searchbar-container .lp-searchbar-button input:hover {
     color: black;
     background-color: white; }
-
-.trending {
-  display: flex;
-  flex-direction: row; }
-  .trending ul {
-    display: flex;
-    flex-direction: row; }
 
 @media only screen and (max-width: 768px) {
   .restaurants-page {
