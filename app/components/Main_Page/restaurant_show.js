@@ -51,7 +51,7 @@ class RestaurantShow extends React.Component {
         <img src={photo}/>
         <h3>{restaurant.name}</h3>
         <h3 className="modal-field">{restaurant.hours ? restaurant.hours.status : "Restaurant hours unavailable"}</h3>
-        <a href={restaurant.url} target="_blank"><h3 className="modal-header">{restaurant.url}</h3></a>
+        <a href={restaurant.url} target="_blank"><h3 className="modal-header">Check out their website</h3></a>
         <h3>FourSquare Rating: {restaurant.rating}</h3>
         <h3 className="modal-info">{restaurant.contact ? restaurant.contact.formattedPhone : ""}</h3>
         <h3>{restaurant.price ? `Price: ${"$".repeat(restaurant.price.tier)}` : "Price information unavailable"}</h3>
