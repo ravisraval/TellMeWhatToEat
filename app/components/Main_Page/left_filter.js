@@ -8,6 +8,7 @@ class FilterBar extends React.Component {
   constructor(props){
     super(props);
     if (this.props.location.state && this.props.location.state.address) {
+      this.searchRadiusDisplay = 8047;
       this.state = {
         price:[1, 3, 4],
         type: this.props.location.state.type,

@@ -187,7 +187,7 @@ render() {
           <button className="more-restaurants-btn" onClick={() => {
               this.reRender = true;
               this.forceUpdate();
-            }}>Show me more</button>
+            }}>Nah, not these</button>
         </ul>
       </div>
 
