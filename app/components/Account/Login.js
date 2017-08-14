@@ -41,6 +41,8 @@ class Login extends React.Component {
   }
 
   render() {
+    // <button onClick={this.handleFacebook.bind(this)} className="btn btn-facebook">Sign in with Facebook</button>
+    // <button onClick={this.handleGoogle.bind(this)} className="btn btn-google">Sign in with Google</button>
     return (
       <div className="login-container container">
         <div className="panel">
@@ -59,10 +61,8 @@ class Login extends React.Component {
               <div className="form-group"><Link to="/forgot"><strong>Forgot your password?</strong></Link></div>
               <button type="submit" className="btn btn-success">Log in</button>
             </form>
-            <div className="hr-title"><span>or</span></div>
+            <div className="hr-title"></div>
             <div className="btn-toolbar text-center">
-        <button onClick={this.handleFacebook.bind(this)} className="btn btn-facebook">Sign in with Facebook</button>
-        <button onClick={this.handleGoogle.bind(this)} className="btn btn-google">Sign in with Google</button>
             </div>
           </div>
         </div>
