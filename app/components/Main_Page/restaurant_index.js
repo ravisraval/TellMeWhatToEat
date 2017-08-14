@@ -124,7 +124,10 @@ render() {
   //LOGIC FOR PICKING RESTAURANTS
   const { receivedRestaurants } = this.state;
   if (receivedRestaurants.length === 0) {return(
-    <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
+    <div>
+      <h1 className="no-restaurants">{'No restaurants match your search :('}</h1>
+      <h1 className="no-restaurants">Try widening your search area or removing filters</h1>
+    </div>
     );
   }
 
