@@ -87,9 +87,10 @@ handleSavedDelete(restaurant) {
 
   this.savedRestaurants.list = this.saveList;
   this.savedRestaurants.forceUpdate();
-
-  this.IndexItem[`${restaurant.id}`].setSavedToList(this.saveList.includes(restaurant));
-  this.IndexItem[`${restaurant.id}`].forceUpdate();
+  if (this.IndexItem[`${restaurant.id}`]) {
+    this.IndexItem[`${restaurant.id}`].setSavedToList(this.saveList.includes(restaurant));
+    this.IndexItem[`${restaurant.id}`].forceUpdate();
+  }
 }
 
 replaceItem(newRestaurant, array_pos) {
@@ -182,7 +183,10 @@ render() {
       <div className="restaurant-index col-sm-5">
         <ul>
           {restaurantListRender}
-          <button onClick={() => {this.forceUpdate()}}>These aren't doing it for me. Show me more.</button>
+          <button onClick={() => {
+              console.log("here");
+              this.forceUpdate();
+            }}>These aren't doing it for me. Show me more.</button>
           <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
         </ul>
       </div>
@@ -190,6 +194,7 @@ render() {
       <section className="right-bar">
 
         <RightMapDisplay
+          style="z-index: 1;"
           openModal={this.openModal}
           closeModal={this.closeModal}
           restaurants={restaurants}
