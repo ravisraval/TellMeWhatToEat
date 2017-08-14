@@ -230,9 +230,13 @@ class Questions extends React.Component {
   appliedTags() {
     const tags = this.state.answerTags;
     const appTag = tags.length === 0 ? "" : "Applied Tags:";
+    const appTagName = tags.length === 0 ? "none-tag" : "app-tag";
     return(
       <div className="applied-tags">
-      {appTag}
+        <div id={appTagName}>
+          {appTag}
+        </div>
+
       {tags.map((answer,i) => (
         <li key={i}>{answer}</li>
       ))}

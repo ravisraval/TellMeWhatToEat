@@ -6424,6 +6424,16 @@ ul {
     font-size: 20px;
     font-weight: lighter; }
 
+#app-tag {
+  width: 90px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid lightgrey; }
+
+.applied-tags {
+  margin-left: 20px; }
+  .applied-tags li {
+    margin-left: 20px; }
+
 .icon-show-alt {
   background-size: cover;
   cursor: pointer; }
