@@ -90,8 +90,8 @@ ul.restaurant-index-list {
 
 
 .foursquare-logo {
-    vertical-align: middle;
-    position: absolute;
-    bottom: 44px;
-    right: 0px;
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
+  z-index: 2;
 }

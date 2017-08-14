@@ -6274,7 +6274,8 @@ nav.filter-bar {
   font-size: 25px;
   text-align: center;
   padding: 3px;
-  border-bottom: 1px gray solid; }
+  border-bottom: 1px gray solid;
+  padding-bottom: 10px; }
 
 .filter-section-header {
   margin: 20px 0;
@@ -6370,6 +6371,9 @@ input[type="range"] {
 
 ul {
   list-style: none; }
+
+.question-component {
+  height: 70%; }
 
 .question {
   display: flex;
@@ -6513,7 +6517,7 @@ ul.restaurant-index-list {
     margin: 5px auto; }
 
 .foursquare-logo {
-  vertical-align: middle;
   position: absolute;
-  bottom: 44px;
-  right: 0px; }
+  bottom: -5px;
+  right: 0px;
+  z-index: 2; }
