@@ -5840,9 +5840,9 @@ footer {
   border-top: 1px solid #e0e0e0; }
 
 .app {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: stretch; }
 
 .login-container {
@@ -6163,12 +6163,13 @@ h2.top-rated-header {
   .restaurant-index-and-map {
     flex-direction: column; } }
 
-.filter-bar {
-  height: 100%; }
+.body {
+  height: 94vh; }
 
 .restaurants-page {
   display: flex;
   flex-direction: row;
+  height: 86.5vh;
   min-height: 500px; }
 
 .restaurant-index-and-map {
@@ -6177,7 +6178,7 @@ h2.top-rated-header {
   justify-content: space-around;
   width: 100%;
   min-width: 700px;
-  background: rgba(255, 255, 255, 0.3); }
+  background: rgba(255, 255, 255, 0.5); }
 
 .restaurant-index {
   min-width: 400px; }

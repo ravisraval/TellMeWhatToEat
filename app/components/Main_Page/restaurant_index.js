@@ -101,8 +101,8 @@ replaceItem(newRestaurant, array_pos) {
 
 getRestaurants(location) {
   const foursquare = require('react-foursquare')({
-    clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
-    clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
+    clientID: process.env.FOURSQUARE_CLIENT_ID || '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
+    clientSecret: process.env.FOURSQUARE_CLIENT_SECRET || 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
   });
   const params = {
     "ll": `${this.state.position.lat},${this.state.position.lng}`,
@@ -181,11 +181,11 @@ render() {
       <div className="restaurant-index col-sm-5">
         <ul>
           {restaurantListRender}
-          <button onClick={() => {
+          <button className="more-restaurants-btn" onClick={() => {
               this.reRender = true;
               this.forceUpdate();
             }}>These aren't doing it for me. Show me more.</button>
-          <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
+          <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-logo" />
         </ul>
       </div>
 
