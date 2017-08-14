@@ -48,7 +48,10 @@ html {
 }
 
 body {
-  margin-bottom: 44px;
+  height: 100vh;
+}
+#app, .app {
+  height: 100%;
 }
 
 footer {
