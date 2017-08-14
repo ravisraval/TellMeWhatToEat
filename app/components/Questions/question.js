@@ -1,5 +1,5 @@
 import React from 'react';
-import questionArray from "../../../docs/data/questions/questions_export.js";
+import { questionsArray, questionsObject } from "../../../docs/data/questions/questions_export.js";
 
 
 class Questions extends React.Component {
@@ -12,7 +12,7 @@ class Questions extends React.Component {
     };
 
 
-    this.questions = questionArray;
+    this.questions = questionsArray;
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
     // this.optionQuestionDisplay = this.optionQuestionDisplay.bind(this);
   }
@@ -173,6 +173,8 @@ class Questions extends React.Component {
   }
 
   render() {
+    console.log(questionsArray);
+    console.log(questionsObject);
     let questionDisplay;
 
     if (this.state.questionIdx  < this.questions.length) {
