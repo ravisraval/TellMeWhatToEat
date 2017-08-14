@@ -177,7 +177,6 @@ class FilterBar extends React.Component {
           </div>
         </section>
 
-        <section className="spacer-section">.</section>        
       </div>
 
     </nav>
