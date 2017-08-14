@@ -49,6 +49,9 @@ class LandingPage extends React.Component {
   render() {
     // <Link to="/restaurants" position={this.state.position}>
     // </Link>
+    // <div className="lp-searchbar-dropdown">
+    //   {this.dineType()}
+    // </div>
     const {type, position, address} = this.state;
     return (
       <div className="landing-page">
@@ -60,9 +63,7 @@ class LandingPage extends React.Component {
             </div>
 
             <div className="lp-searchbar-container">
-              <div className="lp-searchbar-dropdown">
-                {this.dineType()}
-              </div>
+
 
               <div className="lp-searchbar-input">
                 <AddressSearch
