@@ -14,24 +14,22 @@
   height: 94vh;
 }
 .restaurants-page {
+
   display: flex;
   flex-direction: row;
   height: 100%;
-  min-height: 500px;
+  margin-bottom: 44px;
 }
 
 .restaurant-index-and-map {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  min-width: 700px;
-  min-height: 757px;
   background: rgba(255,255,255,.5);
 }
 
 .restaurant-index {
-  min-width: 400px;
 }
 
 
@@ -130,6 +128,7 @@ nav.filter-bar {
     color: grey;
     border-style: none;
     text-align: center;
+    outline:none;
   }
 
   input:hover, input:focus {
