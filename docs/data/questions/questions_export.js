@@ -9,6 +9,7 @@ const blacklist = blacklistFile.blacklist;
 const addBlacklistToAnswers = (As, Qs, bL) => {
   As.forEach( answer => {
     answer.blacklist = [];
+    let blackList = [];
     let whitelist = [];
 
     bL.forEach( blackListItem => {
@@ -16,7 +17,7 @@ const addBlacklistToAnswers = (As, Qs, bL) => {
       if (blackListItem.answer_id !== answer.id) return;
 
       // push blacklisted question ids into answer's blacklist array
-      answer.blacklist.push( blackListItem.blacklist_id );
+      blackList.push( blackListItem.blacklist_id );
 
       // if there is a whitelist, push the id into the answer's whitelist array
       if (blackListItem.whitelist_id) {
@@ -30,10 +31,18 @@ const addBlacklistToAnswers = (As, Qs, bL) => {
       // add every non-whitelisted question id
       Qs.forEach( question => {
         whitelist.forEach( id => {
-          if (question.id !== id && !answer.blacklist.includes(id)) answer.blacklist.push(id);
+          if (question.id !== id) blackList.push(id);
         });
       });
     }
+
+    blackList.forEach( el => {
+      if ( answer.blacklist.includes(el) ) return;
+      if ( el === "" ) return;
+
+      answer.blacklist.push(el);
+
+    });
 
   });
 };
