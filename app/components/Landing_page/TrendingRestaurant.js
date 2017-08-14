@@ -26,7 +26,6 @@ class TrendingRestaurant extends React.Component {
     };
     foursquare.venues.getVenue(params)
       .then(res => {
-        console.log(res.response.venue);
         this.setState({ restaurant: res.response.venue });
       });
   }

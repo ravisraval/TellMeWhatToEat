@@ -70,7 +70,6 @@ class Questions extends React.Component {
       width: "100%",
       backgroundImage: `url(${displayIcon})`
     };
-    console.log("question_state",currentQuestion );
     if (upOrDown === "up") {
       return(
         <div className="icon-show"
@@ -119,7 +118,6 @@ class Questions extends React.Component {
   }
 
   iconPic(answer, i) {
-    console.log(answer);
     const iconPic = {
       height: "100%",
       width: "100%",
@@ -144,7 +142,6 @@ class Questions extends React.Component {
 
   optionQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
-    console.log("ANSWERRRR", currentQuestion.answers);
       return(
         <div className="question">
           <div className="question-title">{currentQuestion.body}</div>
@@ -185,7 +182,6 @@ class Questions extends React.Component {
     } else {
       questionDisplay = this.noMoreQuestions();
     }
-    console.log("question_state", this.state);
     return(
       <div>
         {questionDisplay}

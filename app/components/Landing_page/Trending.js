@@ -42,7 +42,6 @@ getTrending(lat, lng) {
 
   foursquare.venues.explore(params)
     .then(res => {
-      console.log("recieved venues", res.response.groups[0].items);
       this.setState({ receivedRestaurants: res.response.groups[0].items });
     });
 }

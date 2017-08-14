@@ -103,7 +103,6 @@ getRestaurants(location) {
     clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
     clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
   });
-  console.log("radius", this.state.searchRadius);
   const params = {
     "ll": `${this.state.position.lat},${this.state.position.lng}`,
     "query": this.state.query,
@@ -137,10 +136,7 @@ render() {
       if (!this.restaurantList.includes(randomRestaurant)) {
         this.restaurantList.push(randomRestaurant);
       }
-      console.log(`receivedRestaurants`, receivedRestaurants);
-      console.log(`restaurantList`, this.restaurantList);
     }
-    console.log("i chose new rests, and they are", this.restaurantList);
   }
 
   const restaurants = [];
@@ -332,10 +328,7 @@ export default RestaurantIndex;
 //
 //   foursquare.venues.explore(exploreParams)
 //   .then(res => {
-//     console.log(res.response.groups[0].items);
 //     res.response.groups[0].items.forEach(item => {
-//       console.log(searchRestsIds.includes(
-//                                     item.venue.id));
 //       if /*searchRests includes*/ (searchRestsIds.includes(
 //                                     item.venue.id)) {
 //         // if /*price*/(this.state.price.includes(item.venue.price.tier)) {
@@ -352,7 +345,6 @@ export default RestaurantIndex;
 //         // }
 //       }
 //     });
-//     console.log(exploreRests);
 //     this.setState({ receivedRestaurants: exploreRests});
 //   })
 //
@@ -361,15 +353,10 @@ export default RestaurantIndex;
 // // isRestWithinPriceRange(restId) {
 // //   foursquare.venues.getVenue({venue_id: restId})
 // //     .then(res => {
-// //       // console.log(res.response.venue);
 // //       if (res.response.venue.price &&
 // //           this.state.price.includes(res.response.venue.price.tier)) {
-// //             // console.log("I think this price is good");
-// //             // console.log("state.price", this.state.price);
-// //             // console.log("venue.price", res.response.venue.price.tier);
 // //             return true;
 // //       } else {
-// //         // console.log("I think this price is bad");
 // //         return false;
 // //       }
 // //     });

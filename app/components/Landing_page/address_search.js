@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 class AddressSearch extends React.Component {
   constructor(props){
     super(props);
-    console.log("ADDRESS", this.props.address);
     this.state = {
       lng: null,
       lat: null,

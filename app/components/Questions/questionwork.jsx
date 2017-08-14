@@ -15,7 +15,6 @@ class Questions extends React.Component {
     this.questions = this.sampleQuestions();
   }
   componentDidMount() {
-    console.log("STATTTEE", this.state);
   }
 
   sampleQuestions() {
@@ -85,7 +84,6 @@ class Questions extends React.Component {
   boolQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
     // const currentQuestion = this.questions;
-    console.log("currentQuestion", currentQuestion);
     return(
       <div>
         <div>{currentQuestion.question_body}</div>
