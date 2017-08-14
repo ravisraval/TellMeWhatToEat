@@ -248,7 +248,7 @@ class Questions extends React.Component {
       questionDisplay = this.noMoreQuestions();
     }
     return(
-      <div>
+      <div className="question-component">
         {questionDisplay}
         {appliedTags}
       </div>

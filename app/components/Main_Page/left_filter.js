@@ -117,8 +117,8 @@ class FilterBar extends React.Component {
 
   renderAddressSearchBar() {
     return(
-      <div>
-        Your Address:
+      <div className="filter-address-search">
+        <h6>Your Current Address</h6>
         <AddressSearch
           updateAddress={this.updateAddress}
           updatePosition={this.updatePosition}
@@ -145,34 +145,39 @@ class FilterBar extends React.Component {
 
     return (
     <nav className="filter-bar">
+
       <div>
         {this.renderAddressSearchBar()}
       </div>
+
       <h1 className="title">Restaurant Picker</h1>
+
+      <div className="filters">
         <section className="question-section">
           <h2 className="filter-section-header">Help Me Decide</h2>
           <Questions updateQstring={this.updateQstring} updateCatId={this.updateCatId}/>
         </section>
 
 
-      <section className="search-radius-section">
-        <h2 className="filter-section-header">Search Radius</h2>
-        {this.renderSliderBarHeader()}
-        <div className="slider-bar-div">
-          <span> 1 </span>
-          <input
-            className="slider-bar"
-            type="range"
-            min="1610"
-            max="16100"
-            value={this.state.searchRadiusDisplay}
-            onChange={this.handleMouseDown}
-            onMouseUp={this.update("searchRadius")}
-          />
-        <span> 10 </span>
-      </div>
-      </section>
+        <section className="search-radius-section">
+          <h2 className="filter-section-header">Search Radius</h2>
+          {this.renderSliderBarHeader()}
+          <div className="slider-bar-div">
+            <span> 1 </span>
+            <input
+              className="slider-bar"
+              type="range"
+              min="1610"
+              max="16100"
+              value={this.state.searchRadiusDisplay}
+              onChange={this.handleMouseDown}
+              onMouseUp={this.update("searchRadius")}
+              />
+            <span> 10 </span>
+          </div>
+        </section>
 
+      </div>
 
     </nav>
     );
