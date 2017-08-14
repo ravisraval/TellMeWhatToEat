@@ -57,7 +57,7 @@ class SavedRestaurants extends React.Component {
 
     // <button onClick={this.handleSaveList}>Remember this list</button>
     return(
-      <div>
+      <div className="saved-restaurant-container">
         <h2>Saved Restaurant List</h2>
         <ul className="saved-restaurant-list">
           {restaurantNames}
