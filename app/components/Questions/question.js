@@ -165,8 +165,9 @@ class Questions extends React.Component {
       backgroundImage: `url(${answer.img_url})`
     };
     const textNeed = answer.img_url === "" ? answer.text : "";
+    const classNameChange = answer.img_url !== "" ? "icon-show" : "icon-show-alt";
     return(
-      <div className="icon-show"
+      <div className={classNameChange}
         style={iconPic}>
         <input
           key={i}
@@ -201,7 +202,7 @@ class Questions extends React.Component {
 
   noMoreQuestions() {
     return(
-      <div>
+      <div className="no-more-questions">
         <div>
           No More Questions
         </div>
@@ -221,7 +222,6 @@ class Questions extends React.Component {
 
   genRandomQuestion() {
     let randoTierQs = this.state.questions.filter( el => el.tier === this.state.tier);
-    console.log("randoTierQs", randoTierQs);
     let len = randoTierQs.length;
     let randoQ = randoTierQs[Math.floor(Math.random() * len)];
     return randoQ;
@@ -229,10 +229,16 @@ class Questions extends React.Component {
 
   appliedTags() {
     const tags = this.state.answerTags;
+    const appTag = tags.length === 0 ? "" : "Applied Tags:";
+    const appTagName = tags.length === 0 ? "none-tag" : "app-tag";
     return(
-      <div>
-      {tags.map((answer) => (
-        <div>{answer}</div>
+      <div className="applied-tags">
+        <div id={appTagName}>
+          {appTag}
+        </div>
+
+      {tags.map((answer,i) => (
+        <li key={i}>{answer}</li>
       ))}
       </div>
     );
