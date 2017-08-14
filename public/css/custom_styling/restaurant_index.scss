@@ -1,7 +1,14 @@
 .restaurant-index {
+  width: 520px;
+  margin: 0 20px;
   margin-bottom: 44px;
+  padding-left: 30px;
 }
 
+.right-bar {
+  width: 400px;
+  margin: 0 20px;
+}
 
 ul.restaurant-index-list {
   padding: 0;
@@ -17,6 +24,7 @@ ul.restaurant-index-list {
   display: flex;
   padding: 20px;
   border-radius: 2px;
+  width: 520px;
 }
 
 .restaurant-index-item:hover {
@@ -51,6 +59,7 @@ ul.restaurant-index-list {
     text-align: center;
     border-bottom: 1px solid lightgray;
     margin: 10px;
+
   }
 
   h5 {
