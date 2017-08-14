@@ -1,6 +1,8 @@
 
 exports.up = function(knex, Promise) {
   return Promise.all([
+    knex.schema.dropTableIfExists('blacklist'),
+
     knex.schema.createTable('blacklist', function(table) {
       table.increments();
       table.integer('answer_id');
@@ -11,6 +13,9 @@ exports.up = function(knex, Promise) {
   ]);
 };
 
+
 exports.down = function(knex, Promise) {
-  knex.schema.dropTable('black');
+  return Promise.all([
+    knex.schema.dropTable('blacklist')
+  ]);
 };

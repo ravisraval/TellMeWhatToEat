@@ -5,7 +5,7 @@ module.exports.answers =
     "question_id": 1,
     "text": "Hot",
     "q_string_add_on": "hot",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502494736/Hot-Food-Icon-1_mkl4va.png"
   },
   {
@@ -13,7 +13,7 @@ module.exports.answers =
     "question_id": 1,
     "text": "Cold",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502494739/weather_nnq91s.png"
   },
   {
@@ -21,7 +21,7 @@ module.exports.answers =
     "question_id": 101,
     "text": "Sandwiches",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1c5941735",
+    "category_id": "4bf58dd8d48988d1c5941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502558768/sandwhich_mbsazy.png"
   },
   {
@@ -29,7 +29,7 @@ module.exports.answers =
     "question_id": 101,
     "text": "Salad",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1bd941735",
+    "category_id": "4bf58dd8d48988d1bd941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502558747/salad_fqvp16.svg"
   },
   {
@@ -37,7 +37,7 @@ module.exports.answers =
     "question_id": 101,
     "text": "Sushi",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1d2941735",
+    "category_id": "4bf58dd8d48988d1d2941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502558675/sushi_abv72i.svg"
   },
   {
@@ -45,7 +45,7 @@ module.exports.answers =
     "question_id": 102,
     "text": "Soup",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1dd931735",
+    "category_id": "4bf58dd8d48988d1dd931735",
     "img_url": ""
   },
   {
@@ -53,7 +53,7 @@ module.exports.answers =
     "question_id": 2,
     "text": "European",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -61,7 +61,7 @@ module.exports.answers =
     "question_id": 2,
     "text": "American",
     "q_string_add_on": "",
-    "category_ids": " 4bf58dd8d48988d14e941735 ",
+    "category_id": " 4bf58dd8d48988d14e941735 ",
     "img_url": ""
   },
   {
@@ -69,7 +69,7 @@ module.exports.answers =
     "question_id": 2,
     "text": "Asian",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d142941735",
+    "category_id": "4bf58dd8d48988d142941735",
     "img_url": ""
   },
   {
@@ -77,7 +77,7 @@ module.exports.answers =
     "question_id": 201,
     "text": "Latin American",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1be941735",
+    "category_id": "4bf58dd8d48988d1be941735",
     "img_url": ""
   },
   {
@@ -85,7 +85,7 @@ module.exports.answers =
     "question_id": 201,
     "text": "European",
     "q_string_add_on": "european",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -93,7 +93,7 @@ module.exports.answers =
     "question_id": 201,
     "text": "American",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d14e941735",
+    "category_id": "4bf58dd8d48988d14e941735",
     "img_url": ""
   },
   {
@@ -101,7 +101,7 @@ module.exports.answers =
     "question_id": 20101,
     "text": "Mexican",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1c1941735",
+    "category_id": "4bf58dd8d48988d1c1941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/mexico_ltcdbb.svg"
   },
   {
@@ -109,7 +109,7 @@ module.exports.answers =
     "question_id": 20101,
     "text": "South American",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1cd941735",
+    "category_id": "4bf58dd8d48988d1cd941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571222/south_america_vtvto6.svg"
   },
   {
@@ -117,7 +117,7 @@ module.exports.answers =
     "question_id": 2010101,
     "text": "Brazilian",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d16b941735",
+    "category_id": "4bf58dd8d48988d16b941735",
     "img_url": ""
   },
   {
@@ -125,7 +125,7 @@ module.exports.answers =
     "question_id": 20102,
     "text": "Mediterranean",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1c0941735",
+    "category_id": "4bf58dd8d48988d1c0941735",
     "img_url": ""
   },
   {
@@ -133,7 +133,7 @@ module.exports.answers =
     "question_id": 2010201,
     "text": "Greek",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d10e941735",
+    "category_id": "4bf58dd8d48988d10e941735",
     "img_url": ""
   },
   {
@@ -141,7 +141,7 @@ module.exports.answers =
     "question_id": 20103,
     "text": "French",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d10c941735",
+    "category_id": "4bf58dd8d48988d10c941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571342/cwasoint_nszmim.svg"
   },
   {
@@ -149,7 +149,7 @@ module.exports.answers =
     "question_id": 20103,
     "text": "Italian",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d110941735",
+    "category_id": "4bf58dd8d48988d110941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571342/comfot_gx8sbm.svg"
   },
   {
@@ -157,7 +157,7 @@ module.exports.answers =
     "question_id": 20104,
     "text": "Burgers",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d16c941735",
+    "category_id": "4bf58dd8d48988d16c941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502558646/123278_ionkpp.svg"
   },
   {
@@ -165,7 +165,7 @@ module.exports.answers =
     "question_id": 20104,
     "text": "Wings",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d14c941735",
+    "category_id": "4bf58dd8d48988d14c941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571360/wing_w7dnmr.svg"
   },
   {
@@ -173,7 +173,7 @@ module.exports.answers =
     "question_id": 202,
     "text": "Chineese",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d145941735",
+    "category_id": "4bf58dd8d48988d145941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571331/china_aghulf.png"
   },
   {
@@ -181,7 +181,7 @@ module.exports.answers =
     "question_id": 202,
     "text": "Japanese",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d111941735",
+    "category_id": "4bf58dd8d48988d111941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/japan_fzumda.svg"
   },
   {
@@ -189,7 +189,7 @@ module.exports.answers =
     "question_id": 20201,
     "text": "Ramen",
     "q_string_add_on": "",
-    "category_ids": "55a59bace4b013909087cb24",
+    "category_id": "55a59bace4b013909087cb24",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571353/ramen_mznlil.png"
   },
   {
@@ -197,7 +197,7 @@ module.exports.answers =
     "question_id": 20201,
     "text": "Sushi",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1d2941735",
+    "category_id": "4bf58dd8d48988d1d2941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571356/sushi_cxhz7h.svg"
   },
   {
@@ -205,7 +205,7 @@ module.exports.answers =
     "question_id": 20203,
     "text": "Thai",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d149941735",
+    "category_id": "4bf58dd8d48988d149941735",
     "img_url": ""
   },
   {
@@ -213,7 +213,7 @@ module.exports.answers =
     "question_id": 3,
     "text": "Meal",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/meal_a8afr4.svg"
   },
   {
@@ -221,7 +221,7 @@ module.exports.answers =
     "question_id": 3,
     "text": "Snack",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1c7941735",
+    "category_id": "4bf58dd8d48988d1c7941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571356/snack_efs45s.svg"
   },
   {
@@ -229,7 +229,7 @@ module.exports.answers =
     "question_id": 301,
     "text": "Dim-sum",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1f5931735",
+    "category_id": "4bf58dd8d48988d1f5931735",
     "img_url": ""
   },
   {
@@ -237,7 +237,7 @@ module.exports.answers =
     "question_id": 302,
     "text": "Tapas",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1db931735",
+    "category_id": "4bf58dd8d48988d1db931735",
     "img_url": ""
   },
   {
@@ -245,7 +245,7 @@ module.exports.answers =
     "question_id": 4,
     "text": "Sweet",
     "q_string_add_on": "sweets, desserts",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571357/sweet_a71ahz.svg"
   },
   {
@@ -253,7 +253,7 @@ module.exports.answers =
     "question_id": 4,
     "text": "Savory",
     "q_string_add_on": "savory",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571356/savory_kpfckq.svg"
   },
   {
@@ -261,7 +261,7 @@ module.exports.answers =
     "question_id": 5,
     "text": "Spicy",
     "q_string_add_on": "spicy",
-    "category_ids": "spicy",
+    "category_id": "spicy",
     "img_url": ""
   },
   {
@@ -269,7 +269,7 @@ module.exports.answers =
     "question_id": 6,
     "text": "Noodles",
     "q_string_add_on": "noodles",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/noodles_r9jlqc.svg"
   },
   {
@@ -277,7 +277,7 @@ module.exports.answers =
     "question_id": 7,
     "text": "Vegetarian",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1d3941735",
+    "category_id": "4bf58dd8d48988d1d3941735",
     "img_url": ""
   },
   {
@@ -285,7 +285,7 @@ module.exports.answers =
     "question_id": 8,
     "text": "Healthy",
     "q_string_add_on": "healthy",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571360/veggie_pix8ko.svg"
   },
   {
@@ -293,7 +293,7 @@ module.exports.answers =
     "question_id": 8,
     "text": "Comfort",
     "q_string_add_on": "",
-    "category_ids": "52e81612bcbc57f1066b7a00",
+    "category_id": "52e81612bcbc57f1066b7a00",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571342/comfot_gx8sbm.svg"
   },
   {
@@ -301,7 +301,7 @@ module.exports.answers =
     "question_id": 9,
     "text": "Meat",
     "q_string_add_on": "meat",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/meal_a8afr4.svg"
   },
   {
@@ -309,7 +309,7 @@ module.exports.answers =
     "question_id": 9,
     "text": "Carbs",
     "q_string_add_on": "carbs",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571327/carbs_mkosbz.svg"
   },
   {
@@ -317,7 +317,7 @@ module.exports.answers =
     "question_id": 9,
     "text": "Veggies",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1d3941735",
+    "category_id": "4bf58dd8d48988d1d3941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571345/healthy_yvdnqk.svg"
   },
   {
@@ -325,7 +325,7 @@ module.exports.answers =
     "question_id": 901,
     "text": "Chicken",
     "q_string_add_on": "chicken",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571329/chicken_gohy4q.svg"
   },
   {
@@ -333,7 +333,7 @@ module.exports.answers =
     "question_id": 901,
     "text": "Red Meat",
     "q_string_add_on": "steak",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571342/cow_ncvtpu.svg"
   },
   {
@@ -341,7 +341,7 @@ module.exports.answers =
     "question_id": 901,
     "text": "Fish",
     "q_string_add_on": "fish",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571342/fish_n84k5k.svg"
   },
   {
@@ -349,7 +349,7 @@ module.exports.answers =
     "question_id": 902,
     "text": "Pasta",
     "q_string_add_on": "pasta",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/italian_ypqto4.svg"
   },
   {
@@ -357,7 +357,7 @@ module.exports.answers =
     "question_id": 902,
     "text": "Noodles",
     "q_string_add_on": "noodles",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/noodles_r9jlqc.svg"
   },
   {
@@ -365,7 +365,7 @@ module.exports.answers =
     "question_id": 902,
     "text": "Rice Bowl",
     "q_string_add_on": "rice bowl",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571353/rice_ukl2zg.svg"
   },
   {
@@ -373,7 +373,7 @@ module.exports.answers =
     "question_id": 10,
     "text": "Breakfast/Brunch",
     "q_string_add_on": "breakfast",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571356/savory_kpfckq.svg"
   },
   {
@@ -381,7 +381,7 @@ module.exports.answers =
     "question_id": 10,
     "text": "Lunch",
     "q_string_add_on": "lunch",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571356/sandwhich_f7gbm3.png"
   },
   {
@@ -389,7 +389,7 @@ module.exports.answers =
     "question_id": 10,
     "text": "Dinner",
     "q_string_add_on": "dinner",
-    "category_ids": "",
+    "category_id": "",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571342/dinner_uxkfhp.svg"
   },
   {
@@ -397,7 +397,7 @@ module.exports.answers =
     "question_id": 11,
     "text": "Kosher",
     "q_string_add_on": "",
-    "category_ids": "52e81612bcbc57f1066b79fc",
+    "category_id": "52e81612bcbc57f1066b79fc",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/kosher-symbol_vsjmun.png"
   },
   {
@@ -405,7 +405,7 @@ module.exports.answers =
     "question_id": 11,
     "text": "Halal",
     "q_string_add_on": "",
-    "category_ids": "52e81612bcbc57f1066b79ff",
+    "category_id": "52e81612bcbc57f1066b79ff",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571217/halal_jpta23.svg"
   },
   {
@@ -413,7 +413,7 @@ module.exports.answers =
     "question_id": 12,
     "text": "Mexican",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1c1941735",
+    "category_id": "4bf58dd8d48988d1c1941735",
     "img_url": "http://res.cloudinary.com/dluh2fsyd/image/upload/v1502571352/mexico_ltcdbb.svg"
   },
   {
@@ -421,7 +421,7 @@ module.exports.answers =
     "question_id": 13,
     "text": "Pizza",
     "q_string_add_on": "",
-    "category_ids": "4bf58dd8d48988d1ca941735",
+    "category_id": "4bf58dd8d48988d1ca941735",
     "img_url": ""
   },
   {
@@ -429,7 +429,7 @@ module.exports.answers =
     "question_id": 14,
     "text": "Quick",
     "q_string_add_on": "quick",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -437,7 +437,7 @@ module.exports.answers =
     "question_id": 15,
     "text": "Poke",
     "q_string_add_on": "poke",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -445,7 +445,7 @@ module.exports.answers =
     "question_id": "",
     "text": "",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -453,7 +453,7 @@ module.exports.answers =
     "question_id": "",
     "text": "",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -461,7 +461,7 @@ module.exports.answers =
     "question_id": "",
     "text": "",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -469,7 +469,7 @@ module.exports.answers =
     "question_id": "",
     "text": "",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -477,7 +477,7 @@ module.exports.answers =
     "question_id": "",
     "text": "",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   },
   {
@@ -485,7 +485,7 @@ module.exports.answers =
     "question_id": "",
     "text": "",
     "q_string_add_on": "",
-    "category_ids": "",
+    "category_id": "",
     "img_url": ""
   }
 ]

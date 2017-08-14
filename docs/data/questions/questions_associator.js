@@ -1,5 +1,3 @@
-const fs = require('fs');
-
 const questionsFile = require('./questions.js');
 const answersFile = require('../answers/answers.js');
 const blacklistFile = require('../blacklist/blacklist.js');
