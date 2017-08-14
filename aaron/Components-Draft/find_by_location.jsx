@@ -28,7 +28,6 @@ class FindByLocation extends React.Component {
     return(
       <div>
         <input id='searchLocation' placeholder='Enter your address'></input>
-        console.log("hello");
       </div>
     );
   }

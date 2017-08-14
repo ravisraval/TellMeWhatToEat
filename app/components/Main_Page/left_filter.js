@@ -89,7 +89,6 @@ class FilterBar extends React.Component {
 
   updateCatId(newCatId) {
     // this.setState({categoryId: this.state.categoryId.concat(newCatId)});
-    console.log("CATTT", newCatId);
     if (newCatId) {
       this.setState({categoryId: newCatId});
     }
@@ -307,7 +306,6 @@ class FilterBar extends React.Component {
   }
 
   render(){
-    console.log("LEFT FILTER STATE", this.state);
     return (
       <div className="restaurants-page row">
         {this.renderFilterBar()}

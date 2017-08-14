@@ -1,5 +1,5 @@
 import React from 'react';
-import questionArray from "../../../docs/data/questions/questions_export.js";
+import { questionsArray, questionsObject } from "../../../docs/data/questions/questions_export.js";
 
 
 class Questions extends React.Component {
@@ -12,7 +12,7 @@ class Questions extends React.Component {
     };
 
 
-    this.questions = questionArray;
+    this.questions = questionsArray;
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
     // this.optionQuestionDisplay = this.optionQuestionDisplay.bind(this);
   }
@@ -70,7 +70,6 @@ class Questions extends React.Component {
       width: "100%",
       backgroundImage: `url(${displayIcon})`
     };
-    console.log("question_state",currentQuestion );
     if (upOrDown === "up") {
       return(
         <div className="icon-show"
@@ -119,7 +118,6 @@ class Questions extends React.Component {
   }
 
   iconPic(answer, i) {
-    console.log(answer);
     const iconPic = {
       height: "100%",
       width: "100%",
@@ -144,7 +142,6 @@ class Questions extends React.Component {
 
   optionQuestionDisplay() {
     const currentQuestion = this.questions[this.state.questionIdx];
-    console.log("ANSWERRRR", currentQuestion.answers);
       return(
         <div className="question">
           <div className="question-title">{currentQuestion.body}</div>
@@ -176,6 +173,8 @@ class Questions extends React.Component {
   }
 
   render() {
+    console.log(questionsArray);
+    console.log(questionsObject);
     let questionDisplay;
 
     if (this.state.questionIdx  < this.questions.length) {
@@ -185,7 +184,6 @@ class Questions extends React.Component {
     } else {
       questionDisplay = this.noMoreQuestions();
     }
-    console.log("question_state", this.state);
     return(
       <div>
         {questionDisplay}

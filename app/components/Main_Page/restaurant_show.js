@@ -46,7 +46,6 @@ class RestaurantShow extends React.Component {
     // if (restaurant.location) {
     //   address = `${restaurant.location.address}</h3><h3>${restaurant.location.city}`;
     // }
-    console.log(restaurant);
     return(
       <div className="modal-container">
         <img src={photo}/>
