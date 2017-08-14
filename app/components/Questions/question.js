@@ -1,7 +1,6 @@
 import React from 'react';
 import { questionsArray, questionsObject } from "../../../docs/data/questions/questions_export.js";
 
-
 class Questions extends React.Component {
   constructor(props){
     super(props);
@@ -13,7 +12,9 @@ class Questions extends React.Component {
       categoryId: "",
       blackListedIds: [],
       answerTags: [],
-      tier: 1
+      tier: 1,
+      continue: true,
+      questions: questionsArray
     };
 
 
@@ -37,26 +38,22 @@ class Questions extends React.Component {
     // this.getAll
   }
 
+  updatedQArray() {
+    const newQs = this.state.questions.filter( el => !this.state.blackListedIds.includes(el.id));
+    // this.setState({questions: })
+    return newQs;
+  }
+
   updateIdx() {
-    let idx = 1;
-    while (this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
-      idx += 1;
-    }
     return e => {
       this.setState({
-        questionIdx: this.state.questionIdx + idx
+        questionIdx: this.state.questionIdx + 1
       });
     };
   }
 
   updateQstring(answer, currentQuestion) {
     if (answer) {
-      let idx = 1;
-            console.log("ANSWER TIER", currentQuestion.tier);
-      while (this.state.tier < currentQuestion.tier &&
-        this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
-        idx += 1;
-      }
       let allBlisted = [];
       answer.blacklist.forEach( i => {
         allBlisted.push(i);
@@ -65,11 +62,12 @@ class Questions extends React.Component {
       return e => {
         this.setState({
           queryString: this.state.queryString.concat(" " + answer.q_string_add_on),
-          questionIdx: this.state.questionIdx + idx,
+          questionIdx: this.state.questionIdx + 1,
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
           tier: Number(currentQuestion.tier)+1,
-          answerTags: this.state.answerTags.concat(answer.text)
-        });
+          answerTags: this.state.answerTags.concat(answer.text),
+          continue: Boolean(answer.end_answer)
+        }, this.setState({questions: this.updatedQArray()}));
       };
     }
 
@@ -77,25 +75,19 @@ class Questions extends React.Component {
 
   updateCatId(answer, currentQuestion) {
     if (answer) {
-      let idx = 1;
-      console.log("ANSWER TIER", answer.tier);
-      while (this.state.tier < currentQuestion.tier &&
-        this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
-        idx += 1;
-      }
       let allBlisted = [];
       answer.blacklist.forEach( i => {
         allBlisted.push(i);
       });
-      console.log("ANSWER TIER", this.state);
       return e => {
         this.setState({
           categoryId: this.state.categoryId.concat(answer.category_id),
-          questionIdx: this.state.questionIdx + idx,
+          questionIdx: this.state.questionIdx + 1,
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
           tier: Number(currentQuestion.tier)+1,
-          answerTags: this.state.answerTags.concat(answer.text)
-        });
+          answerTags: this.state.answerTags.concat(answer.text),
+          continue: Boolean(answer.end_answer)
+        }, this.setState({questions: this.updatedQArray()}));
       };
     }
   }
@@ -143,10 +135,10 @@ class Questions extends React.Component {
     );
   }
 
-  boolQuestionDisplay() {
-    const currentQuestion = this.genRandomQuestion();
-    // const currentQuestion = this.questions;
-    const displaySkip = this.state.questionIdx < this.questions.length-2 ? this.skipButton() : "";
+  boolQuestionDisplay(randomQuestion) {
+    const currentQuestion = randomQuestion;
+    // const currentQuestion = this.state.questions;
+    const displaySkip = this.state.questionIdx < this.state.questions.length-2 ? this.skipButton() : "";
     return(
       <div className="question">
         <div className="question-title">{currentQuestion.body}</div>
@@ -186,9 +178,9 @@ class Questions extends React.Component {
 }
 
 
-  optionQuestionDisplay() {
-    const currentQuestion = this.genRandomQuestion();
-    const displaySkip = this.state.questionIdx < this.questions.length-2 ? this.skipButton() : "";
+  optionQuestionDisplay(randomQuestion) {
+    const currentQuestion = randomQuestion;
+    const displaySkip = this.state.questionIdx < this.state.questions.length-2 ? this.skipButton() : "";
       return(
         <div className="question">
           <div className="question-title">{currentQuestion.body}</div>
@@ -220,12 +212,10 @@ class Questions extends React.Component {
   }
 
   genRandomQuestion() {
-    let randoTierQs = this.questions.filter( el => el.tier === this.state.tier);
-    console.log(randoTierQs);
+    let randoTierQs = this.state.questions.filter( el => el.tier === this.state.tier);
+    console.log("randoTierQs", randoTierQs);
     let len = randoTierQs.length;
-    console.log(len);
     let randoQ = randoTierQs[Math.floor(Math.random() * len)];
-    console.log("-----", randoQ);
     return randoQ;
   }
 
@@ -242,17 +232,18 @@ class Questions extends React.Component {
   }
 
   render() {
-    console.log(questionsArray);
-    console.log(questionsObject);
-    console.log(this.state);
     let questionDisplay;
     const appliedTags = this.appliedTags();
     let randomQuestion = this.genRandomQuestion();
-    if ((this.state.questionIdx  < this.questions.length) && randomQuestion) {
+    console.log("RENDER");
+    console.log(this.state);
+    console.log(randomQuestion);
+    console.log(this.state.continue);
+    if ((this.state.questionIdx  < this.state.questions.length) && randomQuestion && this.state.continue) {
 
-      const boolQ = this.boolQuestionDisplay();
-      const qType = this.genRandomQuestion().type;
-      questionDisplay = qType === 'bool' ? boolQ : this.optionQuestionDisplay();
+      const boolQ = this.boolQuestionDisplay(randomQuestion);
+      const qType = randomQuestion.type;
+      questionDisplay = qType === 'bool' ? boolQ : this.optionQuestionDisplay(randomQuestion);
     } else {
       questionDisplay = this.noMoreQuestions();
     }

@@ -6177,11 +6177,7 @@ h2.top-rated-header {
 .restaurants-page {
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-  height: 86.5vh;
-=======
   height: 100%;
->>>>>>> 66a092d62700bdc29e7fd191752899374afca454
   min-height: 500px; }
 
 .restaurant-index-and-map {
