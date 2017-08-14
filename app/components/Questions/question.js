@@ -5,7 +5,6 @@ class Questions extends React.Component {
   constructor(props){
     super(props);
     this.questions = questionsArray;
-
     this.state = {
       queryString: "",
       questionIdx: 0,
@@ -67,7 +66,7 @@ class Questions extends React.Component {
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
           tier: Number(currentQuestion.tier)+1,
           answerTags: this.state.answerTags.concat(answer.text),
-          continue: Boolean(answer.end_answer),
+          continue: Boolean(!answer.end_answer),
           questions: this.updatedQArray(allBlisted)
         });
       };
@@ -88,7 +87,7 @@ class Questions extends React.Component {
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
           tier: Number(currentQuestion.tier)+1,
           answerTags: this.state.answerTags.concat(answer.text),
-          continue: Boolean(answer.end_answer),
+          continue: Boolean(!answer.end_answer),
           questions: this.updatedQArray(allBlisted)
         });
       };
@@ -104,27 +103,31 @@ class Questions extends React.Component {
       width: "100%",
       backgroundImage: `url(${displayIcon})`
     };
-    if (upOrDown === "up") {
-      return(
-        <div className="icon-show"
-          style={iconPic}>
-          <input
-            type="button"
-            onClick={currentQuestion.answers[0].q_string_add_on !== "" ?
-              this.updateQstring(currentQuestion.answers[0], currentQuestion) :
-              this.updateCatId(currentQuestion.answers[0], currentQuestion)}/>
-        </div>
-      );
-    } else {
-      return(
-        <div className="icon-show"
-          style={iconPic}>
-          <input
-            type="button"
-            onClick={this.updateIdx(currentQuestion)}/>
-        </div>
-      );
+    console.log("ANSWERS", currentQuestion.answers);
+    if (currentQuestion.answers) {
+      if (upOrDown === "up") {
+        return(
+          <div className="icon-show"
+            style={iconPic}>
+            <input
+              type="button"
+              onClick={(currentQuestion.answers[0].q_string_add_on) !== "" ?
+                this.updateQstring(currentQuestion.answers[0], currentQuestion) :
+                this.updateCatId(currentQuestion.answers[0], currentQuestion)}/>
+          </div>
+        );
+      } else {
+        return(
+          <div className="icon-show"
+            style={iconPic}>
+            <input
+              type="button"
+              onClick={this.updateIdx(currentQuestion)}/>
+          </div>
+        );
+      }
     }
+
   }
 
   skipButton(randomQuestion) {
@@ -249,7 +252,7 @@ class Questions extends React.Component {
     let questionDisplay;
     const appliedTags = this.appliedTags();
     let randomQuestion = this.genRandomQuestion();
-    if ((this.state.questionIdx  < this.getTierLengthArray()) && randomQuestion && this.state.continue) {
+    if (randomQuestion && this.state.continue) {
 
       const boolQ = this.boolQuestionDisplay(randomQuestion);
       const qType = randomQuestion.type;
