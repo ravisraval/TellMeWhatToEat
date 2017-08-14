@@ -178,14 +178,13 @@ render() {
         <RestaurantShow restID={restID}/>
       </Modal>
 
-      <div className="restaurant-index col-sm-5">
-        <ul>
+      <div className="restaurant-index">
+        <ul className="restaurant-index-list">
           {restaurantListRender}
           <button className="more-restaurants-btn" onClick={() => {
               this.reRender = true;
               this.forceUpdate();
-            }}>These aren't doing it for me. Show me more.</button>
-          <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-logo" />
+            }}>Show me more</button>
         </ul>
       </div>
 
@@ -207,6 +206,9 @@ render() {
         />
 
       </section>
+
+      <img className="foursquare-logo" src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-logo" />
+
     </div>
   );
 }

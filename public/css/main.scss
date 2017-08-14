@@ -48,7 +48,10 @@ html {
 }
 
 body {
-  margin-bottom: 44px;
+  height: 100vh;
+}
+#app, .app {
+  height: 100%;
 }
 
 footer {
@@ -57,8 +60,13 @@ footer {
   padding: 10px 30px;
   background-color: #fff;
   border-top: 1px solid #e0e0e0;
+  position: absolute;
+  bottom: 0;
 }
 
+.home-page-container {
+  position: absolute;
+}
 .app {
   display: flex;
   flex-direction: column;
