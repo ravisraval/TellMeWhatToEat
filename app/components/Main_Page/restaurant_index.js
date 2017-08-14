@@ -111,6 +111,8 @@ getRestaurants(location) {
     "radius": this.state.searchRadius,
     "limit": '50'
   };
+  console.log("cat being sent to foursquare:", this.state.categoryId);
+  console.log("query being sent to foursquare:", this.state.query);
 
   foursquare.venues.getVenues(params)
     .then(res => {
@@ -180,7 +182,6 @@ render() {
         <ul>
           {restaurantListRender}
           <button onClick={() => {
-              console.log("here");
               this.reRender = true;
               this.forceUpdate();
             }}>These aren't doing it for me. Show me more.</button>

@@ -146,8 +146,6 @@ class FilterBar extends React.Component {
     //   deliveryTime = e.target.value
     // );
 
-
-
     return (
     <nav className="filter-bar">
       <div>
