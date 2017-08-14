@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MarkerManager from '../../util/marker_manager';
-// import { withRouter } from 'react-router-dom';
 
 class RightMapDisplay extends React.Component {
   constructor(props) {
@@ -11,11 +10,6 @@ class RightMapDisplay extends React.Component {
 
   componentDidMount() {
     const searchMap = this.refs.searchMap;
-
-    const defaultBounds = {
-      northEast: {lat: 37.873972, lng: -122.331297},
-      southWest: {lat: 37.673972, lng: -122.531297}
-    };
 
     const mapOptions = {
       center: {lat: this.props.homePos.lat,
