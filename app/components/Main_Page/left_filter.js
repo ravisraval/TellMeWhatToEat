@@ -146,10 +146,8 @@ class FilterBar extends React.Component {
     //   deliveryTime = e.target.value
     // );
 
-
-
     return (
-    <nav className="filter-bar col-sm-4">
+    <nav className="filter-bar">
       <div>
         {this.renderAddressSearchBar()}
       </div>
@@ -307,7 +305,7 @@ class FilterBar extends React.Component {
 
   render(){
     return (
-      <div className="restaurants-page row">
+      <div className="restaurants-page">
         {this.renderFilterBar()}
         <RestaurantIndex filterProps={this.state}/>
       </div>
