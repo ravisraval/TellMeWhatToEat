@@ -67,9 +67,9 @@ class RestaurantIndexItem extends React.Component {
 
     let photo;
     if (restaurant ? restaurant.bestPhoto : false) {
-      photo = `${restaurant.bestPhoto.prefix}320x200${restaurant.bestPhoto.suffix}`;
+      photo = `${restaurant.bestPhoto.prefix}300x200${restaurant.bestPhoto.suffix}`;
     } else {
-      photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
+      photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_300/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
 
     let saveButton;
@@ -81,13 +81,23 @@ class RestaurantIndexItem extends React.Component {
     // PHOTO RENDERING INFO : https://developer.foursquare.com/docs/responses/photo
     return (
       <li className="restaurant-index-item">
-        <button onClick={this.handleClick}>
+
+        <button className="index-item-image-container" onClick={this.handleClick}>
           <img src={photo ? photo : ""}/>
         </button>
-        <span> { restaurant ? restaurant.name : ""} </span>
-        <span> FourSquare Rating: { restaurant ? restaurant.rating : "Unavailable" } </span>
-        {saveButton}
-        <button onClick={this.handleAnother}>Gimme Another</button>
+
+        <section className="index-item-info">
+          <div className="index-item-text">
+            <span> { restaurant ? restaurant.name : ""} </span>
+            <span> FourSquare Rating: { restaurant ? restaurant.rating : "Unavailable" } </span>
+          </div>
+
+          <div className="index-item-buttons">
+            {saveButton}
+            <button onClick={this.handleAnother}>Gimme Another</button>
+          </div>
+
+        </section>
       </li>
     );
   }
