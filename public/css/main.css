@@ -6527,6 +6527,7 @@ ul.restaurant-index-list {
     margin: 5px auto; }
 
 .more-restaurants-btn {
+  outline: none;
   position: absolute;
   left: 115px;
   bottom: 12%; }

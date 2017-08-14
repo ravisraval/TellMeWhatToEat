@@ -1,17 +1,20 @@
 Github: [Tell Me What to Eat](https://github.com/ravisraval/TellMeWhatToEat)
 
+Live: [Tell Me What To Eat](https://boiling-waters-62095.herokuapp.com/)
+
 
 Tell Me What To Eat is a decision-making app that uses an algorithm-like process to reduce choice and make satisfying but less difficult choices.
 
 ## Background and Overview
 
-  TellMeWhatToEat solves one of the world's most pressing issues: what should we eat tonight? Who will decide this for us? With so many choices, how can we possibly decide? "Choice overload is a real thing, and that's what we're addressing" - Syrie Bianco. Using your current location, TellMeWhatToEat generates a customized suggestion just for you. Optionally, put in some filters. Want cheap, hot food? We got you. Need to take the prime minister of Malaysia out for a fancy shmancy meal? Let us know, and we'll send you a top shelf suggestion.
+  TellMeWhatToEat solves one of the world's most pressing issues: what should we eat tonight? Who will decide this for us? With so many choices, how can we possibly decide? Choice overload is a real thing, and that's what we're addressing. Using your current location, TellMeWhatToEat generates a customized suggestion just for you. Optionally, put in some filters. Want cheap, hot food? We got you. Need to take the prime minister of Malaysia out for a fancy shmancy meal? Let us know, and we'll send you a top shelf suggestion.
 
 ## Functionality and MVP
   - Users can immediately click a button to generate a small list of random food/restaurant choices based on user location.
-  - Users can optionally add in filters &/or answer questions to narrow down what food they want.
-  - Users can create accounts. They can store moods, preferences, revisit them later.
-  - Use these preferences to bias search results and generate more accurate/personalized recommendations.
+  - Users can optionally respond to filtration questions to narrow down their options.  Additionally, users can set a radius for the search.
+  - Users can create accounts.
+  - Users can temporarily designate restaurants to a list for easier viewing.
+  - A map with the user's location and each restaurant populates upon searching.
 
 ## Technologies and Technical Challenges
 ###### Tech Stack
@@ -19,16 +22,14 @@ Tell Me What To Eat is a decision-making app that uses an algorithm-like process
   *  Frontend: React with a Redux architecture
 
 ###### Retrieving Restaurant Data
-The first technical challenge will be to retrieve data from existing databases, storing it on the front end during the user interaction, and selectively rendering that information.
+A key technical challenge was the retrieving of data from existing databases, storing it on the front end during user interaction, and selectively rendering that information.
 
-The external API we will be using to collect these data are:
-  *  Yelp Fusion API to retrieve restaurant database
-  *  FourSquare API to enhance restaurant information with individual menu items
+Chiefly, we utilize the FourSquare API to collect relevant restaurant information.
 
 ###### Filtering & Processing Restaurant Data
 
-  Upon User inputs location, which makes an API call to Yelp and FourSquare and loads a list of restaurants that deliver to that location.
-  * The user will then input data that will filter results according, and return a list of meaningful restaurant/menu item choices
+  * Users submit their location on the landing page. If they do not provide their location, the app checks their location from browser data. The app then makes an API call to FourSquare and loads a list of pertinent restaurants.
+  * The user then inputs data to filter these results, and the app returns a corresponding list of restaurants.
 
 ###### Sorting Data According to User Input
   *  Generating useful algorithms by which to sort user
@@ -36,7 +37,7 @@ The external API we will be using to collect these data are:
 ## Things Accomplished Over the Weekend
   *  Full stack setup: React, Express, NodeJS, Webpack, PostegreSQL.
   *  Authentication setup.
-  *  Clean up FourSqure/Yelp API data and begin to breakdown possible categorization algorithms
+  *  Clean up FourSquare data and begin to breakdown possible categorization algorithms
   *  Functionally installed GooglePlaces API
 
 ## Group Members and Work Breakdown
