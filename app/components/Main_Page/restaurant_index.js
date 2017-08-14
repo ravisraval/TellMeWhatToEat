@@ -190,21 +190,24 @@ render() {
       </div>
 
       <section className="right-bar">
+        <ul className="right-bar-list">
+          <li><RightMapDisplay
+            openModal={this.openModal}
+            closeModal={this.closeModal}
+            restaurants={restaurants}
+            homePos={position}
+            />
+          </li>
 
-        <RightMapDisplay
-          openModal={this.openModal}
-          closeModal={this.closeModal}
-          restaurants={restaurants}
-          homePos={position}
-        />
-
-        <SavedRestaurants
-          list={this.saveList}
-          onRef={ref => (this.savedRestaurants = ref)}
-          openModal={this.openModal}
-          closeModal={this.closeModal}
-          handleSavedDelete={this.handleSavedDelete}
-        />
+          <li><SavedRestaurants
+            list={this.saveList}
+            onRef={ref => (this.savedRestaurants = ref)}
+            openModal={this.openModal}
+            closeModal={this.closeModal}
+            handleSavedDelete={this.handleSavedDelete}
+            />
+          </li>
+      </ul>
 
       </section>
     </div>
