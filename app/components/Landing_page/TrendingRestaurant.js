@@ -53,9 +53,11 @@ class TrendingRestaurant extends React.Component {
       <li className="trending-restaurant">
         <a href={`https://foursquare.com/v/${restaurant.id}?ref=5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX`} target="_blank">
           <img src={photo ? photo : ""}/>
-      </a>
-        <span> { restaurant ? restaurant.name : ""} </span>
-        <span> FourSquare Rating: { restaurant ? restaurant.rating : "" } </span>
+        </a>
+        <section className="trending-restaurant-text">
+          <span className="restaurant-name"> { restaurant ? restaurant.name : ""} </span>
+          <span className="restaurant-rating"> { restaurant ? restaurant.rating : "" } <p>★</p> </span>
+        </section>
       </li>
     );
   }
