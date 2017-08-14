@@ -180,7 +180,7 @@ class FilterBar extends React.Component {
 
   render(){
     return (
-      <div className="restaurants-page row">
+      <div className="restaurants-page">
         {this.renderFilterBar()}
         <RestaurantIndex filterProps={this.state}/>
       </div>
