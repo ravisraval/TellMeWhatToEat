@@ -1,12 +1,30 @@
-ul {
+.restaurant-index {
+  width: 520px;
+  margin: 0 20px;
+  margin-bottom: 44px;
+  padding-left: 30px;
+}
+
+.right-bar {
+  width: 400px;
+  margin: 0 20px;
+}
+
+ul.restaurant-index-list {
   padding: 0;
   margin: 0;
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .restaurant-index-item {
   display: flex;
   padding: 20px;
   border-radius: 2px;
+  width: 520px;
 }
 
 .restaurant-index-item:hover {
@@ -28,17 +46,52 @@ ul {
 }
 
 .index-item-info {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 
 .index-item-text {
+  h4 {
+    color: #5ea6bc;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+    margin: 10px;
 
+  }
+
+  h5 {
+    text-align: center;
+    color: grey;
+
+    p {
+      display: inline;
+      font-size: 12px;
+    }
+  }
 }
 
 .index-item-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  button {
+    width: 125px;
+    margin: 5px auto;
+  }
 }
 
 .more-restaurants-btn {
-  
+
+}
+
+
+.foursquare-logo {
+    vertical-align: middle;
+    position: absolute;
+    bottom: 44px;
+    right: 0px;
 }

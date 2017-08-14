@@ -67,7 +67,7 @@ class RestaurantIndexItem extends React.Component {
 
     let photo;
     if (restaurant ? restaurant.bestPhoto : false) {
-      photo = `${restaurant.bestPhoto.prefix}300x200${restaurant.bestPhoto.suffix}`;
+      photo = `${restaurant.bestPhoto.prefix}270x180${restaurant.bestPhoto.suffix}`;
     } else {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_300/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
@@ -88,8 +88,8 @@ class RestaurantIndexItem extends React.Component {
 
         <section className="index-item-info">
           <div className="index-item-text">
-            <span> { restaurant ? restaurant.name : ""} </span>
-            <span> FourSquare Rating: { restaurant ? restaurant.rating : "Unavailable" } </span>
+            <h4> { restaurant ? restaurant.name : ""} </h4>
+            <h5> Rating: { restaurant ? restaurant.rating : "Unavailable" } <p>★</p> </h5>
           </div>
 
           <div className="index-item-buttons">
