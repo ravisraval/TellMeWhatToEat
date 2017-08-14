@@ -8,7 +8,7 @@ module.exports.questions =
   },
   {
     "id": 2,
-    "body": "European/American, Asian, Other?",
+    "body": "Asian?",
     "type": "options",
     "tier": 1
   },
@@ -61,22 +61,22 @@ module.exports.questions =
     "tier": 2
   },
   {
-    "id": 11,
-    "body": "Kosher, Halal, No Preference?",
-    "type": "options",
-    "tier": 2
-  },
-  {
     "id": 12,
     "body": "Mexican?",
     "type": "bool",
-    "tier": 2
+    "tier": 4
   },
   {
     "id": 13,
     "body": "Pizza?",
     "type": "bool",
-    "tier": 2
+    "tier": 4
+  },
+  {
+    "id": 15,
+    "body": "Poke?",
+    "type": "bool",
+    "tier": 4
   },
   {
     "id": 14,
@@ -183,6 +183,18 @@ module.exports.questions =
   {
     "id": 2010201,
     "body": "Greek?",
+    "type": "bool",
+    "tier": 4
+  },
+  {
+    "id": 16,
+    "body": "Ice Cream?",
+    "type": "bool",
+    "tier": 4
+  },
+  {
+    "id": 17,
+    "body": "American?",
     "type": "bool",
     "tier": 4
   }
