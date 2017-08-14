@@ -8,9 +8,9 @@ class Questions extends React.Component {
     this.state = {
       queryString: "",
       questionIdx: 0,
-      categoryId: ""
+      categoryId: "",
+      blackListedIds: []
     };
-
 
     this.questions = questionsArray;
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
@@ -42,21 +42,29 @@ class Questions extends React.Component {
   }
 
   updateQstring(val) {
+    let idx = 1;
+    while (this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
+      idx += 1;
+    }
     return e => {
       this.setState({
         queryString: this.state.queryString.concat(" " + val),
-        questionIdx: this.state.questionIdx + 1
+        questionIdx: this.state.questionIdx + idx
       });
    };
   }
 
   updateCatId(val) {
+    let idx = 1;
+    while (this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
+      idx += 1;
+    }
     return e => {
       this.setState({
         // categoryId: this.state.categoryId.concat("," + val),
         // questionIdx: this.state.questionIdx + 1
         categoryId: this.state.categoryId.concat(val),
-        questionIdx: this.state.questionIdx + 1
+        questionIdx: this.state.questionIdx + idx
       });
    };
   }
@@ -78,7 +86,7 @@ class Questions extends React.Component {
             type="button"
             onClick={currentQuestion.answersq_string_add_on !== "" ?
               this.updateQstring(currentQuestion.q_string_add_on) :
-              this.updateCatId(currentQuestion.category_ids)}/>
+              this.updateCatId(currentQuestion.category_id)}/>
         </div>
       );
     } else {
@@ -133,7 +141,7 @@ class Questions extends React.Component {
           value={textNeed}
           onClick={answer.q_string_add_on !== "" ?
             this.updateQstring(answer.q_string_add_on) :
-            this.updateCatId(answer.category_ids)}>
+            this.updateCatId(answer.category_id)}>
         </input>
       </div>
     );

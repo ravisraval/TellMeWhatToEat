@@ -19,7 +19,6 @@ class SavedRestaurants extends React.Component {
   }
 
   // handleSaveList() {
-  //
   // }
 
   handleClick(restId) {
