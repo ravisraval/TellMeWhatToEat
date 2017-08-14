@@ -181,6 +181,7 @@ render() {
           {restaurantListRender}
           <button onClick={() => {
               console.log("here");
+              this.reRender = true;
               this.forceUpdate();
             }}>These aren't doing it for me. Show me more.</button>
           <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
@@ -190,7 +191,6 @@ render() {
       <section className="right-bar">
 
         <RightMapDisplay
-          style="z-index: 1;"
           openModal={this.openModal}
           closeModal={this.closeModal}
           restaurants={restaurants}
