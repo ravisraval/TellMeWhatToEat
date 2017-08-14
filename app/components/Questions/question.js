@@ -38,16 +38,17 @@ class Questions extends React.Component {
     // this.getAll
   }
 
-  updatedQArray() {
-    const newQs = this.state.questions.filter( el => !this.state.blackListedIds.includes(el.id));
-    // this.setState({questions: })
+  updatedQArray(allBlisted) {
+    const newQs = this.state.questions.filter( el => !allBlisted.includes(el.id));
     return newQs;
   }
 
-  updateIdx() {
+  updateIdx(question) {
+    question = question ? question : {};
+    const currIdx = this.state.questions.findIndex( q => q.id === question.id);
     return e => {
       this.setState({
-        questionIdx: this.state.questionIdx + 1
+        questionIdx: currIdx + 1
       });
     };
   }
@@ -66,8 +67,9 @@ class Questions extends React.Component {
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
           tier: Number(currentQuestion.tier)+1,
           answerTags: this.state.answerTags.concat(answer.text),
-          continue: Boolean(answer.end_answer)
-        }, this.setState({questions: this.updatedQArray()}));
+          continue: Boolean(answer.end_answer),
+          questions: this.updatedQArray(allBlisted)
+        });
       };
     }
 
@@ -86,8 +88,9 @@ class Questions extends React.Component {
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
           tier: Number(currentQuestion.tier)+1,
           answerTags: this.state.answerTags.concat(answer.text),
-          continue: Boolean(answer.end_answer)
-        }, this.setState({questions: this.updatedQArray()}));
+          continue: Boolean(answer.end_answer),
+          questions: this.updatedQArray(allBlisted)
+        });
       };
     }
   }
@@ -118,19 +121,19 @@ class Questions extends React.Component {
           style={iconPic}>
           <input
             type="button"
-            onClick={this.updateIdx()}/>
+            onClick={this.updateIdx(currentQuestion)}/>
         </div>
       );
     }
   }
 
-  skipButton() {
+  skipButton(randomQuestion) {
     return(
       <div className="skip-button">
         <input
           type="button"
           value="Skip"
-          onClick={this.updateIdx()}/>
+          onClick={this.updateIdx(randomQuestion)}/>
       </div>
     );
   }
@@ -138,7 +141,7 @@ class Questions extends React.Component {
   boolQuestionDisplay(randomQuestion) {
     const currentQuestion = randomQuestion;
     // const currentQuestion = this.state.questions;
-    const displaySkip = this.state.questionIdx < this.state.questions.length-2 ? this.skipButton() : "";
+    const displaySkip = this.state.questionIdx < this.state.questions.length-2 ? this.skipButton(randomQuestion) : "";
     return(
       <div className="question">
         <div className="question-title">{currentQuestion.body}</div>
@@ -211,6 +214,11 @@ class Questions extends React.Component {
     );
   }
 
+  getTierLengthArray() {
+    const arr = this.state.questions.filter( el => el.tier === this.state.tier);
+    return arr.length;
+  }
+
   genRandomQuestion() {
     let randoTierQs = this.state.questions.filter( el => el.tier === this.state.tier);
     console.log("randoTierQs", randoTierQs);
@@ -235,11 +243,7 @@ class Questions extends React.Component {
     let questionDisplay;
     const appliedTags = this.appliedTags();
     let randomQuestion = this.genRandomQuestion();
-    console.log("RENDER");
-    console.log(this.state);
-    console.log(randomQuestion);
-    console.log(this.state.continue);
-    if ((this.state.questionIdx  < this.state.questions.length) && randomQuestion && this.state.continue) {
+    if ((this.state.questionIdx  < this.getTierLengthArray()) && randomQuestion && this.state.continue) {
 
       const boolQ = this.boolQuestionDisplay(randomQuestion);
       const qType = randomQuestion.type;
