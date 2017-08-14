@@ -181,11 +181,11 @@ render() {
       <div className="restaurant-index col-sm-5">
         <ul>
           {restaurantListRender}
-          <button onClick={() => {
+          <button className="more-restaurants-btn" onClick={() => {
               this.reRender = true;
               this.forceUpdate();
             }}>These aren't doing it for me. Show me more.</button>
-          <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
+          <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-logo" />
         </ul>
       </div>
 
