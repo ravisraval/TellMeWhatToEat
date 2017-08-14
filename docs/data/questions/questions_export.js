@@ -30,7 +30,7 @@ const addBlacklistToAnswers = (As, Qs, bL) => {
       // add every non-whitelisted question id
       Qs.forEach( question => {
         whitelist.forEach( id => {
-          if (question.id !== id) answer.blacklist.push(id);
+          if (question.id !== id && !answer.blacklist.includes(id)) answer.blacklist.push(id);
         });
       });
     }

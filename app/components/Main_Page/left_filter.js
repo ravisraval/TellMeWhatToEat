@@ -147,7 +147,7 @@ class FilterBar extends React.Component {
     // );
 
     return (
-    <nav className="filter-bar col-sm-4">
+    <nav className="filter-bar">
       <div>
         {this.renderAddressSearchBar()}
       </div>
