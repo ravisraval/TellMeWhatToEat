@@ -31,6 +31,7 @@ constructor(props){
   this.replaceItem = this.replaceItem.bind(this);
   this.handleAdd = this.handleAdd.bind(this);
   this.handleSavedDelete = this.handleSavedDelete.bind(this);
+  this.handleResetList = this.handleResetList.bind(this);
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
   this.getRestaurants = this.getRestaurants.bind(this);
 }
@@ -93,6 +94,8 @@ handleSavedDelete(restaurant) {
   }
 }
 
+handleReset(){}
+
 replaceItem(newRestaurant, array_pos) {
   this.reRender = false;
   this.restaurantList[array_pos] = newRestaurant;
@@ -111,8 +114,6 @@ getRestaurants(location) {
     "radius": this.state.searchRadius,
     "limit": '50'
   };
-  console.log("cat being sent to foursquare:", this.state.categoryId);
-  console.log("query being sent to foursquare:", this.state.query);
 
   foursquare.venues.getVenues(params)
     .then(res => {
@@ -124,9 +125,10 @@ render() {
   //LOGIC FOR PICKING RESTAURANTS
   const { receivedRestaurants } = this.state;
   if (receivedRestaurants && receivedRestaurants.length === 0) {return(
-    <div>
-      <h1 className="no-restaurants">{'No restaurants match your search :('}</h1>
-      <h1 className="no-restaurants">Try widening your search area or removing filters</h1>
+    <div className="no-restaurant-div">
+      <h1 className="no-restaurants">No restaurants match these filters</h1>
+      <h1 className="try-again">Try widening your search area or removing filters</h1>
+      <button className="reset-button" onClick={this.handleReset}>Reset Filters</button>
     </div>
     );
   }
