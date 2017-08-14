@@ -9,24 +9,30 @@
 
 
 .saved-restaurant-container {
-  max-height: 485px;
+  max-height: 280px;
 
   h2{
     font-family: Helvetica;
     text-align: center;
     font-weight:200;
-    font-size: 38px;
+    font-size: 28px;
+    border-bottom: solid 1px lightgrey;
   }
 }
 
 .saved-restaurant-list {
   // display: flex;
   flex-direction: column;
-  // justify-content: flex-start;
-  height: 371px;
+  max-height: 280px;
   overflow: auto;
   overflow-x: hidden;
 
+}
+
+.saved-restaurant-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 9px 0px;
+  background: rgba(255,255,255,.3);
+  transition: .5s;
 }
 
 .saved-restaurant-list::-webkit-scrollbar-track
