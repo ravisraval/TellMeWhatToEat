@@ -8,9 +8,9 @@ class Questions extends React.Component {
     this.state = {
       queryString: "",
       questionIdx: 0,
-      categoryId: ""
+      categoryId: "",
+      blackListedIds: []
     };
-
 
     this.questions = questionsArray;
     // this.boolQuestionDisplay = this.boolQuestionDisplay.bind(this);
@@ -42,10 +42,15 @@ class Questions extends React.Component {
   }
 
   updateQstring(val) {
+    let count;
+    let idx = 1;
+    // while (this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
+    //   idx += 1;
+    // }
     return e => {
       this.setState({
         queryString: this.state.queryString.concat(" " + val),
-        questionIdx: this.state.questionIdx + 1
+        questionIdx: this.state.questionIdx + idx
       });
    };
   }
