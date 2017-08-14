@@ -7,14 +7,39 @@ Tell Me What To Eat is a decision-making app that uses an algorithm-like process
 
 ## Background and Overview
 
-  TellMeWhatToEat solves one of the world's most pressing issues: what should we eat tonight? Who will decide this for us? With so many choices, how can we possibly decide? Choice overload is a real thing, and that's what we're addressing. Using your current location, TellMeWhatToEat generates a customized suggestion just for you. Optionally, put in some filters. Want cheap, hot food? We got you. Need to take the prime minister of Malaysia out for a fancy shmancy meal? Let us know, and we'll send you a top shelf suggestion.
+
+  TellMeWhatToEat solves one of the world's most pressing issues: what should we eat tonight? Who will decide this for us? With so many choices, how can we possibly decide? Choice overload is a real thing, and that's what we're addressing. Using your current location, TellMeWhatToEat generates a customized suggestion just for you. Optionally, put in some filters. Want cheap, hot food? We got you. Need to take the prime minister of Malaysia out to one your town's best restaurants? Let us know, and we'll send you a top shelf suggestion.
 
 ## Functionality and MVP
-  - Users can immediately click a button to generate a small list of random food/restaurant choices based on user location.
-  - Users can optionally respond to filtration questions to narrow down their options.  Additionally, users can set a radius for the search.
-  - Users can create accounts.
-  - Users can temporarily designate restaurants to a list for easier viewing.
-  - A map with the user's location and each restaurant populates upon searching.
+
+
+Users can immediately click a button to generate a small list of random food/restaurant choices based on user location.
+
+![Landing Page](/docs/images/landing_page.gif)
+
+Users can optionally respond to filtration questions to narrow down their options.
+
+![Answering Questions](docs/images/question_picker_2.gif)
+
+Additionally, users can set a radius for the search.
+
+![Radius Change](docs/images/move_radius_slider.gif)
+
+
+Users can create accounts.
+
+![Signup](/docs/images/Signup.gif)
+
+
+A map with the user's location and each restaurant populates upon searching.
+
+![Map Rendering](/docs/images/adjust_current_address.gif)
+
+
+Users can temporarily designate restaurants to a list for easier viewing.
+![Save To List](docs/images/save_remove_list.gif)
+
+
 
 ## Technologies and Technical Challenges
 ###### Tech Stack
@@ -32,7 +57,7 @@ Chiefly, we utilize the FourSquare API to collect relevant restaurant informatio
   * The user then inputs data to filter these results, and the app returns a corresponding list of restaurants.
 
 ###### Sorting Data According to User Input
-  *  Generating useful algorithms by which to sort user
+  *  Generating useful algorithms by which to sort user input.
 
 ## Things Accomplished Over the Weekend
   *  Full stack setup: React, Express, NodeJS, Webpack, PostegreSQL.

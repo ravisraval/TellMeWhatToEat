@@ -6019,7 +6019,7 @@ a:hover {
 
 .saved-restaurant-list {
   flex-direction: column;
-  max-height: 280px;
+  max-height: 210px;
   overflow: auto;
   overflow-x: hidden; }
 
@@ -6080,16 +6080,15 @@ a:hover {
 .landing-page-container {
   background-image: url(http://res.cloudinary.com/syriebianco/image/upload/v1502555762/31178_slow_cooker_pork_ramen_3000_yzf35r.jpg);
   background-size: cover;
-  min-height: 475px;
   min-width: 768;
-  height: 60vh;
+  height: 50vh;
   width: 100%;
   position: relative;
   top: -57px; }
 
 .search-box-container {
-  margin-top: 50px;
-  padding: 40px;
+  margin-top: 60px;
+  padding: 10px 40px;
   height: 68%;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid white;
