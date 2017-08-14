@@ -101,8 +101,8 @@ replaceItem(newRestaurant, array_pos) {
 
 getRestaurants(location) {
   const foursquare = require('react-foursquare')({
-    clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
-    clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
+    clientID: 'process.env.FOURSQUARE_CLIENT_ID',
+    clientSecret: 'process.env.FOURSQUARE_CLIENT_SECRET'
   });
   const params = {
     "ll": `${this.state.position.lat},${this.state.position.lng}`,
