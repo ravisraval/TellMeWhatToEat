@@ -5829,21 +5829,23 @@ html {
   position: relative;
   min-height: 100%; }
 
-<<<<<<< HEAD
-=======
 body {
   height: 100vh; }
 
 #app, .app {
   height: 100%; }
 
->>>>>>> 0b3c5cb0f75ca95a83fa6d738296b2bcc662c4a4
 footer {
   width: 100%;
   height: 44px;
   padding: 10px 30px;
   background-color: #fff;
-  border-top: 1px solid #e0e0e0; }
+  border-top: 1px solid #e0e0e0;
+  position: absolute;
+  bottom: 0; }
+
+.home-page-container {
+  position: absolute; }
 
 .app {
   display: flex;
@@ -6175,11 +6177,7 @@ h2.top-rated-header {
 .restaurants-page {
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-  height: 86.5vh;
-=======
   height: 100%;
->>>>>>> 0b3c5cb0f75ca95a83fa6d738296b2bcc662c4a4
   min-height: 500px; }
 
 .restaurant-index-and-map {
