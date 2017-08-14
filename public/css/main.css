@@ -6415,6 +6415,30 @@ ul {
   .question-answers input:hover {
     opacity: 80%; }
 
+.no-more-questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .no-more-questions div {
+    font-size: 20px;
+    font-weight: lighter; }
+
+.icon-show-alt {
+  background-size: cover;
+  cursor: pointer; }
+  .icon-show-alt input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background: orange;
+    border: none;
+    border-radius: 45px;
+    color: white; }
+
+.icon-show-alt:hover {
+  opacity: 0.5; }
+
 .modal-container {
   display: flex;
   flex-direction: column;
