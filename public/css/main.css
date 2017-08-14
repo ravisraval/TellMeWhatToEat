@@ -6245,7 +6245,7 @@ h2.top-rated-header {
 .restaurant-index-and-map {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   min-width: 700px;
   min-height: 757px;

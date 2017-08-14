@@ -59,7 +59,6 @@ const questionArrayBuilder = function (Qs, As) {
         result[i].answers.push(answer);
       }
     }
-
   );
   });
 
@@ -83,6 +82,7 @@ const questionObjectBuilder = function (Qs, As) {
   );
   });
 
+  console.log(qAndA);
   return qAndA;
 };
 
