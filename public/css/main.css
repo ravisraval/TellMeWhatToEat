@@ -6471,9 +6471,17 @@ ul {
   font-size: 20px;
   margin: 10px; }
 
-ul {
+.restaurant-index {
+  margin-bottom: 44px; }
+
+ul.restaurant-index-list {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
 
 .restaurant-index-item {
   display: flex;
@@ -6492,3 +6500,37 @@ ul {
   margin: 0;
   background: transparent;
   border: none; }
+
+.index-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto; }
+
+.index-item-text h4 {
+  color: #5ea6bc;
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  margin: 10px; }
+
+.index-item-text h5 {
+  text-align: center;
+  color: grey; }
+  .index-item-text h5 p {
+    display: inline;
+    font-size: 12px; }
+
+.index-item-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .index-item-buttons button {
+    width: 125px;
+    margin: 5px auto; }
+
+.foursquare-logo {
+  vertical-align: middle;
+  position: absolute;
+  bottom: 44px;
+  right: 0px; }
