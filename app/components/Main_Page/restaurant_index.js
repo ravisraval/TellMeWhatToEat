@@ -23,13 +23,14 @@ constructor(props){
     // obtainType: this.props.filterProps.type,
     categoryId: this.props.filterProps.categoryId,
     query: this.props.filterProps.query,
-    searchRadius: this.props.filterProps.searchRadius || "4000"
+    searchRadius: this.props.filterProps.searchRadius || "2000"
   };
   this.reRender = true;
   this.saveList = [];
   this.openModal = this.openModal.bind(this);
   this.replaceItem = this.replaceItem.bind(this);
   this.handleAdd = this.handleAdd.bind(this);
+  this.handleSavedDelete = this.handleSavedDelete.bind(this);
   this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this);
   this.getRestaurants = this.getRestaurants.bind(this);
 }
@@ -75,8 +76,20 @@ handleAdd(restaurant, restaurantIndexItem) {
 
   this.savedRestaurants.list = this.saveList;
   this.savedRestaurants.forceUpdate();
+
   restaurantIndexItem.setSavedToList(this.saveList.includes(restaurant));
   restaurantIndexItem.forceUpdate();
+}
+
+handleSavedDelete(restaurant) {
+  let idx = this.saveList.indexOf(restaurant);
+  this.saveList.splice(idx,1);
+
+  this.savedRestaurants.list = this.saveList;
+  this.savedRestaurants.forceUpdate();
+
+  this.IndexItem[`${restaurant.id}`].setSavedToList(this.saveList.includes(restaurant));
+  this.IndexItem[`${restaurant.id}`].forceUpdate();
 }
 
 replaceItem(newRestaurant, array_pos) {
@@ -90,12 +103,12 @@ getRestaurants(location) {
     clientID: '5BRSE1L5L1ADIHASNWIHSAVWEWLQU0IDEEJXVE3V0DPVP3BX',
     clientSecret: 'CAACNZE0PFJGNTABOT1RA3DYOSJAMQJBM5VQWJVYMF4EIW4B'
   });
-
+  console.log("radius", this.state.searchRadius);
   const params = {
     "ll": `${this.state.position.lat},${this.state.position.lng}`,
     "query": this.state.query,
     "categoryId": this.state.categoryId,
-    "radius": '2500',
+    "radius": this.state.searchRadius,
     "limit": '50'
   };
 
@@ -112,21 +125,27 @@ render() {
     <h1>No restaurants match your search :( Try widening your search area or removing filters</h1>
     );
   }
+
   if (this.reRender) {//get new restaurants, else use old ones
     const ids = Object.keys(receivedRestaurants);
     this.restaurantList = [];
     let randomRestaurant;
-    while (this.restaurantList.length < receivedRestaurants.length && this.restaurantList.length < this.state.numRestaurants) {
-      let idx = Math.floor(Math.random() * ids.length)
+    while (this.restaurantList.length <= receivedRestaurants.length && this.restaurantList.length < this.state.numRestaurants) {
+      let idx = Math.floor(Math.random() * Object.keys(receivedRestaurants).length)
       randomRestaurant = receivedRestaurants[idx];
       receivedRestaurants.splice(idx,1);
       if (!this.restaurantList.includes(randomRestaurant)) {
         this.restaurantList.push(randomRestaurant);
       }
+      console.log(`receivedRestaurants`, receivedRestaurants);
+      console.log(`restaurantList`, this.restaurantList);
     }
+    console.log("i chose new rests, and they are", this.restaurantList);
   }
+
   const restaurants = [];
   const restaurantListRender = [];
+  this.IndexItem = {};
   this.restaurantList.forEach(restaurant => {
 
     restaurantListRender.push(<RestaurantIndexItem
@@ -140,6 +159,7 @@ render() {
      replaceItem={this.replaceItem}
      restaurants={this.state.receivedRestaurants}
      isSavedToList={this.saveList.includes(restaurant)}
+     onRef={ref => (this.IndexItem[`${restaurant.id}`] = ref)}
    />);
 
     restaurants.push({
@@ -152,7 +172,6 @@ render() {
 
   });
   const { restID, position } = this.state;
-  console.log("position", position);
   return(
     <div className="restaurant-index-and-map">
 
@@ -161,9 +180,10 @@ render() {
       </Modal>
 
       <div className="restaurant-index col-sm-5">
-        <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
         <ul>
           {restaurantListRender}
+          <button onClick={() => {this.forceUpdate()}}>These aren't doing it for me. Show me more.</button>
+          <img src="https://res.cloudinary.com/runaway-today/image/upload/v1502564312/Powered-by-Foursquare-full-color-300_pahzsj.png" alt="Powered-by-Foursquare-full-color-300_pahzsj" />
         </ul>
       </div>
 
@@ -181,6 +201,7 @@ render() {
           onRef={ref => (this.savedRestaurants = ref)}
           openModal={this.openModal}
           closeModal={this.closeModal}
+          handleSavedDelete={this.handleSavedDelete}
         />
 
       </section>
