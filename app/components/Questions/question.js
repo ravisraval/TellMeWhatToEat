@@ -12,6 +12,7 @@ class Questions extends React.Component {
       questionIdx: 0,
       categoryId: "",
       blackListedIds: [],
+      answerTags: [],
       tier: 1
     };
 
@@ -48,10 +49,11 @@ class Questions extends React.Component {
     };
   }
 
-  updateQstring(answer) {
+  updateQstring(answer, currentQuestion) {
     if (answer) {
       let idx = 1;
-      while (this.state.tier > answer.tier &&
+            console.log("ANSWER TIER", currentQuestion.tier);
+      while (this.state.tier < currentQuestion.tier &&
         this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
         idx += 1;
       }
@@ -65,17 +67,19 @@ class Questions extends React.Component {
           queryString: this.state.queryString.concat(" " + answer.q_string_add_on),
           questionIdx: this.state.questionIdx + idx,
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
-          tier: answer.tier +1
+          tier: Number(currentQuestion.tier)+1,
+          answerTags: this.state.answerTags.concat(answer.text)
         });
       };
     }
 
   }
 
-  updateCatId(answer) {
+  updateCatId(answer, currentQuestion) {
     if (answer) {
       let idx = 1;
-      while (this.state.tier > answer.tier &&
+      console.log("ANSWER TIER", answer.tier);
+      while (this.state.tier < currentQuestion.tier &&
         this.state.blackListedIds.includes(this.questions[this.state.questionIdx + idx].id)) {
         idx += 1;
       }
@@ -83,13 +87,14 @@ class Questions extends React.Component {
       answer.blacklist.forEach( i => {
         allBlisted.push(i);
       });
-
+      console.log("ANSWER TIER", this.state);
       return e => {
         this.setState({
           categoryId: this.state.categoryId.concat(answer.category_id),
           questionIdx: this.state.questionIdx + idx,
           blackListedIds: this.state.blackListedIds.concat(allBlisted),
-          tier: answer.tier +1
+          tier: Number(currentQuestion.tier)+1,
+          answerTags: this.state.answerTags.concat(answer.text)
         });
       };
     }
@@ -110,9 +115,9 @@ class Questions extends React.Component {
           style={iconPic}>
           <input
             type="button"
-            onClick={currentQuestion.answers.q_string_add_on !== "" ?
-              this.updateQstring(currentQuestion.q_string_add_on) :
-              this.updateCatId(currentQuestion.category_id)}/>
+            onClick={currentQuestion.answers[0].q_string_add_on !== "" ?
+              this.updateQstring(currentQuestion.answers[0], currentQuestion) :
+              this.updateCatId(currentQuestion.answers[0], currentQuestion)}/>
         </div>
       );
     } else {
@@ -158,7 +163,7 @@ class Questions extends React.Component {
     );
   }
 
-  iconPic(answer, i) {
+  iconPic(answer, i, currentQuestion) {
     const iconPic = {
       height: "100%",
       width: "100%",
@@ -173,8 +178,8 @@ class Questions extends React.Component {
           type="button"
           value={textNeed}
           onClick={answer.q_string_add_on !== "" ?
-            this.updateQstring(answer) :
-            this.updateCatId(answer)}>
+            this.updateQstring(answer, currentQuestion) :
+            this.updateCatId(answer, currentQuestion)}>
         </input>
       </div>
     );
@@ -190,7 +195,7 @@ class Questions extends React.Component {
           <div className="question-answers">
           {currentQuestion.answers.map( (answer, i) => (
             <div className="input-container">
-              {this.iconPic(answer, i)}
+              {this.iconPic(answer, i, currentQuestion)}
             </div>
           ))}
         </div>
@@ -202,8 +207,15 @@ class Questions extends React.Component {
   noMoreQuestions() {
     return(
       <div>
-        No More Questions
+        <div>
+          No More Questions
+        </div>
+        <button>
+          <a href="/restaurants">Redo Search?</a>
+        </button>
       </div>
+
+
     );
   }
 
@@ -217,10 +229,24 @@ class Questions extends React.Component {
     return randoQ;
   }
 
+  appliedTags() {
+    const tags = this.state.answerTags;
+    return(
+      <div>
+      {tags.map((answer) => (
+        <div>{answer}</div>
+      ))}
+      </div>
+    );
+
+  }
+
   render() {
     console.log(questionsArray);
     console.log(questionsObject);
+    console.log(this.state);
     let questionDisplay;
+    const appliedTags = this.appliedTags();
     let randomQuestion = this.genRandomQuestion();
     if ((this.state.questionIdx  < this.questions.length) && randomQuestion) {
 
@@ -233,6 +259,7 @@ class Questions extends React.Component {
     return(
       <div>
         {questionDisplay}
+        {appliedTags}
       </div>
     );
   }
