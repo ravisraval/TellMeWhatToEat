@@ -41,6 +41,11 @@ class RestaurantShow extends React.Component {
     } else {
       photo = `http://res.cloudinary.com/runaway-today/image/upload/c_scale,w_320/v1502320378/StockSnap_K8ATWBW0EK_m9o9fc.jpg`
     }
+    if (restaurant.url) {
+      //display the website.. otherwise dont
+    } else {
+
+    }
 
     // let address;
     // if (restaurant.location) {

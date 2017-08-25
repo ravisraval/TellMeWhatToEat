@@ -111,8 +111,6 @@ getRestaurants(location) {
     "radius": this.state.searchRadius,
     "limit": '50'
   };
-  console.log("cat being sent to foursquare:", this.state.categoryId);
-  console.log("query being sent to foursquare:", this.state.query);
 
   foursquare.venues.getVenues(params)
     .then(res => {

@@ -88,7 +88,7 @@ class RestaurantIndexItem extends React.Component {
 
         <section className="index-item-info">
           <div className="index-item-text">
-            <h4> { restaurant ? restaurant.name : ""} </h4>
+            <h4 onClick={this.handleClick}> { restaurant ? restaurant.name : ""} </h4>
             <h5> Rating: { restaurant ? restaurant.rating : "Unavailable" } <p>★</p> </h5>
           </div>
 
