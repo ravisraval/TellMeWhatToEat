@@ -59,41 +59,6 @@ Chiefly, we utilize the FourSquare API to collect relevant restaurant informatio
 ###### Sorting Data According to User Input
   *  Generating useful algorithms by which to sort user input.
 
-## Things Accomplished Over the Weekend
-  *  Full stack setup: React, Express, NodeJS, Webpack, PostegreSQL.
-  *  Authentication setup.
-  *  Clean up FourSquare data and begin to breakdown possible categorization algorithms
-  *  Functionally installed GooglePlaces API
-
-## Group Members and Work Breakdown
-
-  - [x] day 0: Stack set-up, front- and back-end auth
-  - [ ] day 1: Experimenting and finalizing API integration
-    - Aaron: Figuring out backend implementation of API authorization; render search results
-    - Syrie: Clean up data, begin sorting through categories and generating preference-based filtering algorithms
-    - Ravi: Figuring out frontend implementation of API integration; building component structure
-  - [ ] day 2: Building out forms and react components
-    - Ravi: Building out preferences forms back-end to establish preference lists
-    - Aaron: Building out prefereneces front-end
-    - Syrie: Build user profile front and back-end
-  - [ ] day 3: Generate and fine-tune filtering algorithms
-    - Collaborative brain-storming
-    - Syrie: frontend display of sequential preference filtering algorithms
-    - Ravi: frontend but behind the scenes manipulation of API data
-    - Aaron: Testing and debugging and fine-tuning of other front-end elements
-  - [ ] day 4: Perfecting filtering algorithms and UX
-    - continuation of day 3 assignments
-  - [ ] day 5: Styling and continue perfecting algorithms and UX
-    - collaborative brainstorming on how to improve algorithm responses
-    - asssignments: TBA depending on algorithm improvement
-    - Syrie: Styling and UX improvement
-  - [ ] day 6: Bonus features and bug-testing
-    - respective assignments dependant upon progress
-  - [ ] day 7: Styling, seeding and setting pre-set preferences
-    - collaborative brainstorming on preference setting
-    - respective assignments TBD
-
-
 ## STRETCH GOALS:
 *  Add in specific meals for recommendations.
 *  Visualize user preferences on a user dashboard.
